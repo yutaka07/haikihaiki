@@ -1,0 +1,38 @@
+
+.form{
+  margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    @include mq(){
+      margin-top: 0px;
+    }
+}
+
+
+.form-group{
+  margin: 32px;
+    .form-control{
+      border: none;
+      height: 48px;
+      width: 100%;
+      padding: 15px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .form-textarea{
+      border: none;
+      width: 100%;
+      padding: 15px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .is-invalid{
+      background: #ea352d;
+      opacity: .7;
+    }
+    img{
+      width: 100%;
+    }
+}

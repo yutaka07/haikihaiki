@@ -1,0 +1,52 @@
+
+.c-btn-flat-border {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+  margin: 15px;
+  }
+  
+  .c-btn-flat-border:hover {
+  background: #67c5ff;
+  color: white;
+  }
+
+  .c-btn__form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #fff;
+    background: #ea352d;
+    border: solid 2px #ea352d;
+    border-radius: 3px;
+    font-size: 1rem;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+    &__twitter{
+      background: #1da1f2;
+      border: solid 2px #1da1f2;
+    }
+    @include mq(){
+      opacity: 1;
+    }
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  .c-btn__link{
+    display: flex;
+    justify-content: space-between;
+  }
+  

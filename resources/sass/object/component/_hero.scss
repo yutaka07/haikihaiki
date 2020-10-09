@@ -1,0 +1,19 @@
+
+.c-hero {
+  background-image: url("../img/jasmin-sessler-5Wfttm2CjeI-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .c-hero__title {
+  margin-top: 50px;
+  font-size: 2rem;
+  text-shadow: 0 0 20px rgba(227, 123, 137, 0.4), 0 0 50px rgba(0, 0, 0, 0.8);
+  color: #f6f5f4;
+  padding: 10px;
+  }
+  

@@ -1,0 +1,98 @@
+.p-panel{
+  width: 80%;
+  margin: auto;
+  margin-bottom: 100px;
+  @include mq(){
+    width: 90%;
+  }
+  a{
+    cursor: pointer;
+  }
+  &__background{
+    background: #f6f5f4;
+    padding: 50px 0;
+  }
+  &__form{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    @include mq(){
+      padding: 3px;
+      margin-bottom: 7px;
+    }
+  }
+  &__title{
+    font-size: 1.5rem;
+  }
+  &__searchtitle{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    
+  }
+  &__body{
+    width: 20%;
+    height: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    @include mq(){
+      width: 33.333%;
+      padding: 3px;
+      height: 150px;
+    }
+  }
+  &__img{
+    width: 100%;
+    height: 80%;
+    background: #fff;
+    position: relative;
+    @include mq(){
+      height: 70%;
+    }
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    span{
+      padding: 5px;
+      position: absolute;
+      bottom: 0;
+      background: rgba(33,33,33,.5);
+      border-radius: 3px;
+      color: #fff;
+      z-index: 1;
+      @include mq(){
+        font-size: 0.75rem;
+      }
+    }
+  }
+  &__footer{
+    padding: 10px;
+    height: 20%;
+    box-sizing: border-box;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    @include mq(){
+      padding: 5px;
+
+    }
+    span{
+      display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    @include mq(){
+      font-size: 0.75rem;
+    }
+    }
+  }
+}
