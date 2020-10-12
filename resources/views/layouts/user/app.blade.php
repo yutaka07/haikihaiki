@@ -95,7 +95,7 @@
         <main class="main">
             @yield('content')
         </main>
-        <footer class="l-footer">©︎yutaka,inc</footer>
+        <footer class="l-footer">©︎haikishare.inc</footer>
     </div>
 </body>
 </html>

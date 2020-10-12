@@ -54,6 +54,6 @@
     </div>
     </div>
     </div>
-    <footer class="l-footer">©︎yutaka,inc</footer>
+    <footer class="l-footer">©︎haikishare.inc</footer>
     </body>
 </html>
