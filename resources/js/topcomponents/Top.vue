@@ -4,7 +4,7 @@
       <h1 class="title__center">商品一覧</h1>
       <div class="p-panel__background">
      <div class="p-search">
-         <h2 class="p-search__title">検索</h2>
+         <h2 class="p-search__title">検索<span>(必須)</span></h2>
          <div class="p-search__flex">
         <div class="p-search__group">
           都道府県

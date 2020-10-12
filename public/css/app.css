@@ -649,6 +649,10 @@ table {
   font-size: 1.5rem;
 }
 
+.p-search__title span {
+  color: #cc3300;
+}
+
 .p-search__group {
   width: 20%;
   margin: 10px;
