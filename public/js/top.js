@@ -1992,16 +1992,16 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     for (var i = this.products.length - 1; i >= 0; --i) {
       if (this.products[i]["id"] === this.id) {
-        console.log(this.products[i]);
-        this.product = this.products[i];
+        this.product = this.products[i]; //商品情報取得
 
         for (var _i = this.admins.length - 1; _i >= 0; --_i) {
           if (this.admins[_i]["id"] === this.product["admin_id"]) {
-            this.admin = this.admins[_i];
+            this.admin = this.admins[_i]; //admin情報取得
           }
         }
       }
-    }
+    } //twitterのurl
+
 
     this.url = 'https://twitter.com/intent/tweet?url=' + location.origin + location.pathname + '/%23' + this.$route.path + '&text=' + this.product['name'] + '：' + this.product['price'] + '円';
   },
@@ -2131,6 +2131,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products", "prefectures", "admins"],
   data: function data() {
@@ -2145,6 +2149,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     };
   },
   computed: {
+    //商品情報取得
     productbranch: function productbranch() {
       this.branch = [];
 
@@ -2157,15 +2162,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       this.branch = _toConsumableArray(new Set(this.branch));
 
       if (!this.branch.length) {
-        this.branch.push('登録支店がありません');
+        this.branch.push("登録支店がありません");
       }
 
-      console.log(this.branch);
       return this.branch;
     }
   },
   mounted: function mounted() {
-    console.log(this.products);
+    //検索欄に値を代入
     this.searchprefecture = Number(localStorage.getItem("storageprefecture"));
     this.searchbranch = localStorage.getItem("storagebranch");
 
@@ -2188,12 +2192,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       for (var i in this.products) {
         if (this.products[i]["id"] === id) {
           this.searchbranch = this.products[i]["branch"];
-          this.searchprefecture = this.products[i]["prefectures_id"];
+          this.searchprefecture = this.products[i]["prefectures_id"]; //検索欄の値をlocalstorageに保存
+
           localStorage.setItem("storagebranch", this.searchbranch);
           localStorage.setItem("storageprefecture", this.searchprefecture);
           localStorage.setItem("storageprice", this.searchprice);
           localStorage.setItem("storagedate", this.searchdate);
-          console.log(this.searchbranch);
         }
       }
 
@@ -37946,7 +37950,7 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "p-search__flex" }, [
             _c("div", { staticClass: "p-search__group" }, [
-              _vm._v("\n        都道府県\n        "),
+              _vm._v("\n            都道府県\n            "),
               _c(
                 "select",
                 {
@@ -37982,9 +37986,9 @@ var render = function() {
                     { key: index, domProps: { value: prefecture["id"] } },
                     [
                       _vm._v(
-                        "\n            " +
+                        "\n                " +
                           _vm._s(prefecture["name"]) +
-                          "\n          "
+                          "\n              "
                       )
                     ]
                   )
@@ -37994,7 +37998,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "p-search__group" }, [
-              _vm._v("\n        支店\n        "),
+              _vm._v("\n            支店\n            "),
               _c(
                 "select",
                 {
@@ -38027,7 +38031,11 @@ var render = function() {
                   return _c(
                     "option",
                     { key: index, domProps: { value: bran } },
-                    [_vm._v("\n            " + _vm._s(bran) + "\n          ")]
+                    [
+                      _vm._v(
+                        "\n                " + _vm._s(bran) + "\n              "
+                      )
+                    ]
                   )
                 }),
                 0

@@ -86,15 +86,15 @@ export default {
     
     for (let i = this.products.length - 1; i >= 0; --i) {
       if (this.products[i]["id"] === this.id) {
-        console.log(this.products[i]);
-        this.product = this.products[i];
+        this.product = this.products[i]; //商品情報取得
         for (let i = this.admins.length - 1; i >= 0; --i) {
           if (this.admins[i]["id"] === this.product["admin_id"]) {
-            this.admin = this.admins[i];
+            this.admin = this.admins[i]; //admin情報取得
           }
         }
       }
     }
+    //twitterのurl
     this.url = 'https://twitter.com/intent/tweet?url=' +  location.origin + location.pathname +'/%23' + this.$route.path + '&text=' + this.product['name'] + '：' + this.product['price'] + '円'
   },
   methods: {

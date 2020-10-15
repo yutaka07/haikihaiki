@@ -1937,10 +1937,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['products'],
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  },
+  props: ["products"],
   methods: {
     detail: function detail(id) {
       this.$router.push({
@@ -2033,8 +2030,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["id", "products", "admins"],
   data: function data() {
@@ -2047,7 +2042,6 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     for (var i = this.products.length - 1; i >= 0; --i) {
       if (this.products[i]["id"] === this.id) {
-        console.log(this.products[i]);
         this.product = this.products[i];
 
         for (var _i = this.admins.length - 1; _i >= 0; --_i) {
@@ -2060,19 +2054,12 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     buyproductcancel: function buyproductcancel() {
-      var _this = this;
-
-      this.message = '更新されました。';
-      setTimeout(function () {
-        _this.message = false;
-      }, 800);
-
-      if (confirm('購入キャンセルしますか？')) {
+      if (confirm("購入キャンセルしますか？")) {
         axios.post("/user/home", {
           productid: this.id
         }).then(function (response) {
           console.log(response);
-          window.location.href = '/user/home';
+          window.location.href = "/user/home";
         })["catch"](function (error) {
           console.log(error);
         });
@@ -2125,10 +2112,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['products'],
-  mounted: function mounted() {
-    console.log(this.products);
-  },
+  props: ["products"],
   methods: {
     detail: function detail(id) {
       this.$router.push({
@@ -37865,7 +37849,11 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
-                  _vm._v(_vm._s(_vm.product["expiration_date"]))
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(_vm.product["expiration_date"]) +
+                      "\n              "
+                  )
                 ])
               ])
             ]),
@@ -37888,11 +37876,7 @@ var render = function() {
                   attrs: { type: "submit" },
                   on: { click: _vm.buyproductcancel }
                 },
-                [
-                  _vm._v(
-                    "\n                                    購入キャンセル\n                                "
-                  )
-                ]
+                [_vm._v("\n              購入キャンセル\n            ")]
               )
             ])
           ])

@@ -35,13 +35,13 @@ class ProductController extends Controller
         $product->photofile = Storage::disk('s3')->url($path);
         $product->save();
 
-        return redirect('/admin/home')->with('flash_message', __('Registered.'));
+        return redirect('/admin/home');
        
     }
 
     public function destroy(Request $request){
         Product::find($request->productid)->delete();
-        return redirect('/admin/home')->with('flash_message', __('Deleted.'));
+        return redirect('/admin/home');
       }  
 
       public function edit($id){
@@ -70,7 +70,7 @@ class ProductController extends Controller
        }
         $product->save();
 
-        return redirect('/admin/home')->with('flash_message', __('Registered.'));
+        return redirect('/admin/home');
 
       }
 }

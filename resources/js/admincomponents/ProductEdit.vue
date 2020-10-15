@@ -97,11 +97,12 @@ export default {
   }
      }
      this.productname = this.product['name'];
+     //消費期限
      const a = this.product['expiration_date'].slice(0,10);
      const b = 'T';
      const c = this.product['expiration_date'].slice(11);
      this.date = (a+b+c);
-     console.log(this.product) 
+     
     },
     methods:{
         update(){

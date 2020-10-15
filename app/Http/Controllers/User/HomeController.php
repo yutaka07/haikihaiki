@@ -62,7 +62,7 @@ class HomeController extends Controller
         $user = User::find($id);
         $user->fill($request->all())->save();
 
-        return redirect('user/home')->with('flash_message', __('Registered.'));
+        return redirect('user/home');
     }
 
     public function buy(Request $request){

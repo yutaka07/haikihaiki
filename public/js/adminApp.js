@@ -1965,9 +1965,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products"],
-  mounted: function mounted() {
-    console.log(this.products);
-  },
   methods: {
     detail: function detail(id) {
       this.$router.push({
@@ -2055,7 +2052,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["id", "products"],
   data: function data() {
@@ -2065,15 +2061,14 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
+    //idと同じ商品情報取得
     for (var i = this.products.length - 1; i >= 0; --i) {
       if (this.products[i]["id"] === this.id) {
         this.product = this.products[i];
-        console.log(this.product);
       }
     }
 
     this.url = '/admin/products/editproduct/' + this.id;
-    console.log(this.url);
   },
   methods: {
     edit: function edit(product) {
@@ -2082,12 +2077,14 @@ __webpack_require__.r(__webpack_exports__);
         params: this.id
       });
     },
+    //削除
     destroy: function destroy() {
       if (confirm('削除しますか？')) {
         axios.post("/admin/home/delete", {
           productid: this.id
         }).then(function (response) {
           console.log(response);
+          window.location.href = '/admin/home';
         })["catch"](function (error) {
           console.log(error);
         });
@@ -2205,12 +2202,12 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
 
-    this.productname = this.product['name'];
+    this.productname = this.product['name']; //消費期限
+
     var a = this.product['expiration_date'].slice(0, 10);
     var b = 'T';
     var c = this.product['expiration_date'].slice(11);
     this.date = a + b + c;
-    console.log(this.product);
   },
   methods: {
     update: function update() {
@@ -2268,9 +2265,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products"],
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  },
   methods: {
     detail: function detail(id) {
       this.$router.push({
@@ -2326,9 +2320,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products"],
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  },
   methods: {
     detail: function detail(id) {
       this.$router.push({
@@ -38140,10 +38131,10 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c(
-                  "a",
+                  "button",
                   {
                     staticClass: "c-btn__form",
-                    attrs: { href: "/admin/home", type: "submit" },
+                    attrs: { type: "submit" },
                     on: { click: _vm.destroy }
                   },
                   [

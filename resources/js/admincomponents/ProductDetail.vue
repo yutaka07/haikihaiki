@@ -36,13 +36,12 @@
                                     編集
                                 </a>
 
-                                <a
-                                href="/admin/home" 
+                                <button
                                 @click="destroy" 
                                 type="submit" class="c-btn__form"
                                 >
                                     削除
-                                </a>
+                                </button>
                            
                         </div>
                     
@@ -63,25 +62,28 @@ export default {
     };
   },
   mounted(){
+    //idと同じ商品情報取得
      for (let i = this.products.length - 1; i >= 0; --i) {
       if (this.products[i]["id"] === this.id) {
         this.product = this.products[i];
-        console.log(this.product);
+       
   }
      }
      this.url = '/admin/products/editproduct/' + this.id;
-     console.log(this.url);
+    
      },
 methods: {
             edit(product){
                  this.$router.push({ name: "ProductEdit", params: this.id});
             },
+            //削除
             destroy(){
               if(confirm('削除しますか？')){
                 axios
           .post("/admin/home/delete", { productid: this.id })
           .then(function (response) {
             console.log(response);
+            window.location.href = '/admin/home';
           })
           .catch(function (error) {
             console.log(error);

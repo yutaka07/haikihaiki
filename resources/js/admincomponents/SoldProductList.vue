@@ -31,9 +31,6 @@
 <script>
 export default {
       props:["products"],
- mounted() {
-            console.log('Component mounted.')
-        },
         methods: {
             detail(id){
                  this.$router.push({ name: "ProductDetail", params: { id }  });
