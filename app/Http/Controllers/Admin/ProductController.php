@@ -21,7 +21,7 @@ class ProductController extends Controller
     }
 
     public function create(Request $request){
-        
+
         //バリデーション
         $request->validate([
             'name' => 'required | string | max : 255',
@@ -75,7 +75,7 @@ class ProductController extends Controller
             'expiration_date' => 'required',
             'price' => 'required',
             'comment' => 'required',
-            'photofile' => 'required | image ',
+            'photofile' => ' image ',
            
         ]);
 
