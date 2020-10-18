@@ -21,6 +21,17 @@ class ProductController extends Controller
     }
 
     public function create(Request $request){
+        
+        //バリデーション
+        $request->validate([
+            'name' => 'required | string | max : 255',
+            'expiration_date' => 'required',
+            'price' => 'required',
+            'comment' => 'required',
+            'photofile' => 'required | image ',
+           
+        ]);
+
        //商品登録
         $product = new Product();
         $product->name = $request->name;
@@ -57,6 +68,17 @@ class ProductController extends Controller
       }
 
       public function update(Request $request, $id){
+
+        //バリデーション
+        $request->validate([
+            'name' => 'required | string | max : 255',
+            'expiration_date' => 'required',
+            'price' => 'required',
+            'comment' => 'required',
+            'photofile' => 'required | image ',
+           
+        ]);
+
         //商品情報更新
         $product = Product::find($id);
         $product->name = $request->name;
