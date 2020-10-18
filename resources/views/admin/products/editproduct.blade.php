@@ -75,7 +75,7 @@
                             
                             <div class="col-md-6">
                                 
-                                <input placeholder="ファイル"  id="photofile" type="file" class="form-control @error('photofile') is-invalid @enderror" name="photofile" autocomplete="new-photofile">
+                                <input placeholder="ファイル" accept="image/*" id="photofile" type="file" class="form-control @error('photofile') is-invalid @enderror" name="photofile" autocomplete="new-photofile">
 
                                 @error('photofile')
                                     <span class="invalid-feedback" role="alert">
