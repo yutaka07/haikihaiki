@@ -31,7 +31,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //adminのid取得
         $id = Auth::user()->id;
+        //idと同じ商品情報取得
         $products = DB::table('products')->where('admin_id', '=', $id)->orderBy('id', 'desc')->get();
        
         return view('admin.home', ['products' => $products]);
@@ -39,13 +41,15 @@ class HomeController extends Controller
 
 
     public function edit(){
+        //都道府県情報取得
         $prefectures = Prefecture::all();
+        //admin情報取得
         $admin = Auth::user();
         return view('admin.edit', ['admin' => $admin, 'prefectures' => $prefectures]);
     }
 
     public function update(Request $request, $id){
-
+        //adminの情報更新
         $admin = Admin::find($id);
         $admin->fill($request->all())->save();
 

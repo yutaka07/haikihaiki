@@ -21,7 +21,7 @@ class ProductController extends Controller
     }
 
     public function create(Request $request){
-       
+       //商品登録
         $product = new Product();
         $product->name = $request->name;
         $product->expiration_date = $request->expiration_date;
@@ -40,13 +40,14 @@ class ProductController extends Controller
     }
 
     public function destroy(Request $request){
+        //商品削除
         Product::find($request->productid)->delete();
         return redirect('/admin/home');
       }  
 
       public function edit($id){
           $product = Product::find($id);
-
+          //商品の消費期限の文字列を変更
           $a = mb_substr($product['expiration_date'], 0, 10);
           $b = 'T';
           $c = mb_substr($product['expiration_date'], 11);
@@ -56,7 +57,7 @@ class ProductController extends Controller
       }
 
       public function update(Request $request, $id){
-        
+        //商品情報更新
         $product = Product::find($id);
         $product->name = $request->name;
         $product->expiration_date = $request->expiration_date;

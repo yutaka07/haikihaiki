@@ -36,17 +36,22 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //userのid取得
         $id = Auth::user()->id;
-        $products = DB::table('buyproducts')->join('products', 'buyproducts.product_id', '=', 'products.id')->where([['buyproducts.user_id', '=', $id], ['buyproducts.delete_flg', '=', '0'],])->orderBy('products.id', 'desc')->get();
-
+        //購入した商品情報取得
+        $products = DB::table('buyproducts')->join('products', 'buyproducts.product_id', '=', 'products.id')->where([['buyproducts.user_id', '=', $id], ['buyproducts.delete_flg', '=', '0'],])->orderBy('buyproducts.id', 'desc')->get();
+        //admin情報取得
         $admins = admin::all();
 
         return view('user.home', ['products' => $products, 'admins' => $admins]);
     }
     
     public function top(){
+        //商品情報取得
         $products = DB::table('products')->join('admins', 'products.admin_id', '=', 'admins.id')->select('products.*', 'admins.prefectures_id', 'admins.branch')->orderBy('id', 'desc')->get();
+        //都道府県情報取得
         $prefectures = Prefecture::all();
+        //admin情報取得
         $admins = Admin::all();
         return view('user.top', ['products' => $products, 'prefectures' => $prefectures, 'admins' => $admins]);
     }
@@ -66,6 +71,7 @@ class HomeController extends Controller
     }
 
     public function buy(Request $request){
+        //商品購入
         $id = $request->productid;
         $product = Product::find($id);
         $product->buy_flg = true;
@@ -80,7 +86,7 @@ class HomeController extends Controller
 
         $user = Auth::user();
 
-
+        //メールを送信
         Mail::to($user)->send(new BuyEmail($user, $admin, $product));
 
         Mail::to($admin)->send(new SellEmail($user, $admin, $product));
@@ -89,6 +95,7 @@ class HomeController extends Controller
     }
 
     public function cancel(Request $request){
+        //商品購入キャンセル
         $id = $request->productid;
         $product = Product::find($id);
         $product->buy_flg = false;
@@ -102,6 +109,7 @@ class HomeController extends Controller
 
         $user = Auth::user();
 
+        //メールを送信
         Mail::to($user)->send(new BuyCancelEmail($user, $admin, $product));
 
         Mail::to($admin)->send(new SellCancelEmail($user, $admin, $product));
