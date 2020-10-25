@@ -26,7 +26,7 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required | string | max : 255',
             'expiration_date' => 'required | date',
-            'price' => 'required | number | max : 20',
+            'price' => 'required | integer | max : 20',
             'comment' => 'required | string | max : 255',
             'photofile' => 'required | image ',
            
@@ -73,7 +73,7 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required | string | max : 255',
             'expiration_date' => 'required',
-            'price' => 'required | number | max : 20',
+            'price' => 'required | integer | max : 20',
             'comment' => 'required | string | max : 255',
             'photofile' => ' image ',
            
