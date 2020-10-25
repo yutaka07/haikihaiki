@@ -14,7 +14,7 @@
 
                         <div class="form-group row">
                             <div class="col-md-6">
-                               
+                               <label for="name">商品名</label>
                                 <input placeholder="商品名" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
