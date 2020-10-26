@@ -53769,10 +53769,6 @@ $('#photofile').on('change', function (e) {
   reader.readAsDataURL(e.target.files[0]);
 });
 
-function countLength(text, field) {
-  document.getElementById(field).innerHTML = text.length + "文字";
-}
-
 /***/ }),
 
 /***/ "./resources/js/admincomponents/AdminHome.vue":

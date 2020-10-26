@@ -58,8 +58,8 @@
                            
 
                             <div class="col-md-6">
-                            <label for="comment">商品詳細(<span id="textlength">0</span>/255文字)</label>
-                                <textarea cols="30" rows="10" onKeyUp="countLength(value, 'textlength');" id="comment" type="comment" class="form-textarea @error('comment') is-invalid @enderror" name="comment" value="{{ old('comment') }}" maxlength='255' required autocomplete="comment">
+                            <label for="comment">商品詳細(255文字以下)</label>
+                                <textarea cols="30" rows="10" id="comment" type="comment" class="form-textarea @error('comment') is-invalid @enderror" name="comment" value="{{ old('comment') }}" maxlength='255' required autocomplete="comment">
                                 </textarea>
 
                                 @error('comment')
