@@ -15,7 +15,7 @@
                         <div class="form-group row">
                             <div class="col-md-6">
                                <label for="name">商品名</label>
-                                <input placeholder="商品名" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input placeholder="商品名" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" maxlength='255' required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -44,7 +44,7 @@
 
                             <div class="col-md-6">
                             <label for="price">価格（円）</label>
-                                <input placeholder="価格" id="price" type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" required autocomplete="price" autofocus>
+                                <input  id="price" type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" maxlength='6' required autocomplete="price" autofocus>
 
                                 @error('price')
                                     <span class="invalid-feedback" role="alert">
@@ -58,8 +58,8 @@
                            
 
                             <div class="col-md-6">
-                            <label for="comment">商品詳細</label>
-                                <textarea cols="30" rows="10"  id="comment" type="comment" class="form-textarea @error('comment') is-invalid @enderror" name="comment" value="{{ old('comment') }}" required autocomplete="comment">
+                            <label for="comment">商品詳細(<span id="textlength">0</span>/255文字)</label>
+                                <textarea cols="30" rows="10"  id="comment" type="comment" class="form-textarea @error('comment') is-invalid @enderror" name="comment" value="{{ old('comment') }}" maxlength='255' required autocomplete="comment">
                                 </textarea>
 
                                 @error('comment')

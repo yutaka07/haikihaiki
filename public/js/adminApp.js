@@ -53768,6 +53768,9 @@ $('#photofile').on('change', function (e) {
 
   reader.readAsDataURL(e.target.files[0]);
 });
+$('#comment').on('keyup', function (value, textlength) {
+  document.getElementById(textlength).innerHTML = text.length;
+});
 
 /***/ }),
 
