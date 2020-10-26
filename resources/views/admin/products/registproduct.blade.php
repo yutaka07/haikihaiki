@@ -44,7 +44,7 @@
 
                             <div class="col-md-6">
                             <label for="price">価格（円）</label>
-                                <input  id="price" type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" maxlength='6' required autocomplete="price" autofocus>
+                                <input placeholder="999,999以下" id="price" type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" max='999999' required autocomplete="price" autofocus>
 
                                 @error('price')
                                     <span class="invalid-feedback" role="alert">
