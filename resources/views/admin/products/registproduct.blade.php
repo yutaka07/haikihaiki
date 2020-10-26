@@ -15,7 +15,7 @@
                         <div class="form-group row">
                             <div class="col-md-6">
                                <label for="name">商品名</label>
-                                <input placeholder="商品名" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" maxlength='255' required autocomplete="name" autofocus>
+                                <input placeholder="商品名" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" maxlength='190' required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -58,8 +58,9 @@
                            
 
                             <div class="col-md-6">
-                            <label for="comment">商品詳細(255文字以下)</label>
-                                <textarea cols="30" rows="10" id="comment" type="comment" class="form-textarea @error('comment') is-invalid @enderror" name="comment" value="{{ old('comment') }}" maxlength='255' required autocomplete="comment">
+                            <label for="comment">商品詳細(190文字以下)</label>
+                                <textarea cols="30" rows="10" id="comment" type="comment" class="form-textarea @error('comment') is-invalid @enderror" name="comment"  maxlength='190' required autocomplete="comment">
+                                {{ old('comment') }}
                                 </textarea>
 
                                 @error('comment')

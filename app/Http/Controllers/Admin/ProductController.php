@@ -24,10 +24,10 @@ class ProductController extends Controller
 
         //バリデーション
         $request->validate([
-            'name' => 'required | string | max : 255',
+            'name' => 'required | string | max : 190',
             'expiration_date' => 'required | date',
             'price' => 'required | integer | max : 999999',
-            'comment' => 'required | string | max : 255',
+            'comment' => 'required | string | max : 190',
             'photofile' => 'required | image ',
            
         ]);
@@ -71,10 +71,10 @@ class ProductController extends Controller
 
         //バリデーション
         $request->validate([
-            'name' => 'required | string | max : 255',
+            'name' => 'required | string | max : 190',
             'expiration_date' => 'required',
-            'price' => 'required | integer | max : 20',
-            'comment' => 'required | string | max : 255',
+            'price' => 'required | integer | max : 999999',
+            'comment' => 'required | string | max : 190',
             'photofile' => ' image ',
            
         ]);
