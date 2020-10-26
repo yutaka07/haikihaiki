@@ -47,5 +47,5 @@ $('#photofile').on('change', function (e) {
 });
 
   $('#comment').on('keyup', function(value, textlength){
-    document.getElementById(textlength).innerHTML = text.length;
+    document.getElementById(textlength).innerHTML = value.length;
   })
