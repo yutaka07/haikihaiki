@@ -3,6 +3,7 @@
     <div class="row justify-content-center">
       <h1 class="title__center">マイページ</h1>
       <div class="p-panel__background">
+        <div class="p-panel"><a href="/home/edit">プロフィール編集</a></div>
         <div class="p-panel">
           <div class="p-panel__form">
             <h2 class="p-panel__title">購入した商品</h2>
