@@ -74,7 +74,7 @@
               class="p-panel__body"
             >
               <div class="p-panel__img">
-                <span>{{ product["price"] }}円</span>
+                <span>¥{{ product["price"] }}</span>
 
                 <img :src="product['photofile']" alt="" />
               </div>

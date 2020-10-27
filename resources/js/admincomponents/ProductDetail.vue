@@ -27,7 +27,7 @@
             <div class="form-group row">
               <div>
                 <div class="c-detail__title">値段</div>
-                <div class="c-detail__text">{{ product["price"] }}</div>
+                <div class="c-detail__text">¥{{ product["price"] }}</div>
               </div>
             </div>
                     <div v-show="product['buy_flg'] === 0" class="form-group row mb-0">

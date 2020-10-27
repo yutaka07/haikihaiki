@@ -46,7 +46,7 @@
             <div class="form-group row">
               <div>
                 <div class="c-detail__title">値段</div>
-                <div class="c-detail__text">{{ product["price"] }}円</div>
+                <div class="c-detail__text">¥{{ product["price"] }}</div>
               </div>
             </div>
             <div class="form-group row mb-0">

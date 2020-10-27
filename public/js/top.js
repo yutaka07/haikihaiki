@@ -37882,7 +37882,7 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "c-detail__text" }, [
-                      _vm._v(_vm._s(_vm.product["price"]) + "円")
+                      _vm._v("¥" + _vm._s(_vm.product["price"]))
                     ])
                   ])
                 ]),
@@ -38136,7 +38136,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "p-panel__img" }, [
-                    _c("span", [_vm._v(_vm._s(product["price"]) + "円")]),
+                    _c("span", [_vm._v("¥" + _vm._s(product["price"]))]),
                     _vm._v(" "),
                     _c("img", { attrs: { src: product["photofile"], alt: "" } })
                   ]),

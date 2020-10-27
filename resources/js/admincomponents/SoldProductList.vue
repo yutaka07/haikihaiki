@@ -11,7 +11,7 @@
                      v-show="product['buy_flg'] === 1"
                      @click="detail(product['id'])">
                         <div class="p-panel__img">
-                             <span>{{product['price']}}円</span>
+                             <span>¥{{product['price']}}</span>
                             <img :src="product['photofile']" alt="商品">
                         </div>
                         <div class="p-panel__footer">
