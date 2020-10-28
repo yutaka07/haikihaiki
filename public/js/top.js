@@ -2068,7 +2068,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ["products", "prefectures", "admins"],
   methods: {
     search: function search() {
-      this.$router.puch({
+      this.$router.push({
         name: "TopSearch"
       });
     },

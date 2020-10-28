@@ -35,7 +35,7 @@ export default {
   props: ["products", "prefectures", "admins"],
   methods: {
     search(){
-      this.$router.puch({name:"TopSearch"});
+      this.$router.push({ name: "TopSearch" });
     },
     detail(id) {
       this.$router.push({ name: "ProductDetail", params: { id } });
