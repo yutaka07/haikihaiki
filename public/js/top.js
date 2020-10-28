@@ -2032,77 +2032,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2137,70 +2066,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products", "prefectures", "admins"],
-  data: function data() {
-    return {
-      searchprice: "",
-      now: "",
-      date: "",
-      searchdate: "",
-      searchprefecture: "",
-      searchbranch: "",
-      branch: []
-    };
-  },
-  computed: {
-    //商品情報取得
-    productbranch: function productbranch() {
-      this.branch = [];
-
-      for (var i in this.products) {
-        if (this.products[i]["prefectures_id"] === this.searchprefecture) {
-          this.branch.push(this.products[i]["branch"]);
-        }
-      }
-
-      this.branch = _toConsumableArray(new Set(this.branch));
-
-      if (!this.branch.length) {
-        this.branch.push("登録支店がありません");
-      }
-
-      return this.branch;
-    }
-  },
-  mounted: function mounted() {
-    //検索欄に値を代入
-    this.searchprefecture = Number(localStorage.getItem("storageprefecture"));
-    this.searchbranch = localStorage.getItem("storagebranch");
-
-    if (!localStorage.getItem("storagedate")) {
-      this.date = new Date();
-      this.now = this.date.getFullYear() + "-" + ("0" + (this.date.getMonth() + 1)).slice(-2) + "-" + ("0" + this.date.getDate()).slice(-2) + "T" + ("0" + this.date.getHours()).slice(-2) + ":" + ("0" + this.date.getMinutes()).slice(-2);
-      this.searchdate = this.now;
-    } else {
-      this.searchdate = localStorage.getItem("storagedate");
-    }
-
-    if (!localStorage.getItem("storageprice")) {
-      this.searchprice = 1000;
-    } else {
-      this.searchprice = localStorage.getItem("storageprice");
-    }
-  },
   methods: {
+    search: function search() {
+      this.$router.puch({
+        name: "TopSearch"
+      });
+    },
     detail: function detail(id) {
-      for (var i in this.products) {
-        if (this.products[i]["id"] === id) {
-          this.searchbranch = this.products[i]["branch"];
-          this.searchprefecture = this.products[i]["prefectures_id"]; //検索欄の値をlocalstorageに保存
-
-          localStorage.setItem("storagebranch", this.searchbranch);
-          localStorage.setItem("storageprefecture", this.searchprefecture);
-          localStorage.setItem("storageprice", this.searchprice);
-          localStorage.setItem("storagedate", this.searchdate);
-        }
-      }
-
       this.$router.push({
         name: "ProductDetail",
         params: {
@@ -37866,7 +37738,7 @@ var render = function() {
                 _c("div", { staticClass: "form-group row" }, [
                   _c("div", [
                     _c("div", { staticClass: "c-detail__title" }, [
-                      _vm._v("賞味期限")
+                      _vm._v("消費期限")
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "c-detail__text" }, [
@@ -37946,165 +37818,12 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "p-panel__background" }, [
         _c("div", { staticClass: "p-search" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "p-search__flex" }, [
-            _c("div", { staticClass: "p-search__group" }, [
-              _vm._v("\n            都道府県\n            "),
-              _c(
-                "select",
-                {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.searchprefecture,
-                      expression: "searchprefecture"
-                    }
-                  ],
-                  staticClass: "p-search__group__form",
-                  attrs: { id: "prefectures_id", name: "prefectures_id" },
-                  on: {
-                    change: function($event) {
-                      var $$selectedVal = Array.prototype.filter
-                        .call($event.target.options, function(o) {
-                          return o.selected
-                        })
-                        .map(function(o) {
-                          var val = "_value" in o ? o._value : o.value
-                          return val
-                        })
-                      _vm.searchprefecture = $event.target.multiple
-                        ? $$selectedVal
-                        : $$selectedVal[0]
-                    }
-                  }
-                },
-                _vm._l(_vm.prefectures, function(prefecture, index) {
-                  return _c(
-                    "option",
-                    { key: index, domProps: { value: prefecture["id"] } },
-                    [
-                      _vm._v(
-                        "\n                " +
-                          _vm._s(prefecture["name"]) +
-                          "\n              "
-                      )
-                    ]
-                  )
-                }),
-                0
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "p-search__group" }, [
-              _vm._v("\n            支店\n            "),
-              _c(
-                "select",
-                {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.searchbranch,
-                      expression: "searchbranch"
-                    }
-                  ],
-                  staticClass: "p-search__group__form",
-                  on: {
-                    change: function($event) {
-                      var $$selectedVal = Array.prototype.filter
-                        .call($event.target.options, function(o) {
-                          return o.selected
-                        })
-                        .map(function(o) {
-                          var val = "_value" in o ? o._value : o.value
-                          return val
-                        })
-                      _vm.searchbranch = $event.target.multiple
-                        ? $$selectedVal
-                        : $$selectedVal[0]
-                    }
-                  }
-                },
-                _vm._l(_vm.productbranch, function(bran, index) {
-                  return _c(
-                    "option",
-                    { key: index, domProps: { value: bran } },
-                    [
-                      _vm._v(
-                        "\n                " + _vm._s(bran) + "\n              "
-                      )
-                    ]
-                  )
-                }),
-                0
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "p-search__group" }, [
-              _c("span", [_vm._v("値段")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.searchprice,
-                    expression: "searchprice"
-                  }
-                ],
-                staticClass: "p-search__group__form",
-                attrs: { type: "number" },
-                domProps: { value: _vm.searchprice },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.searchprice = $event.target.value
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _vm._m(1)
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "p-search__group" }, [
-              _c("span", [_vm._v("消費期限")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.searchdate,
-                    expression: "searchdate"
-                  }
-                ],
-                staticClass: "p-search__group__form",
-                attrs: { type: "datetime-local" },
-                domProps: { value: _vm.searchdate },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.searchdate = $event.target.value
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _vm._m(2)
-            ])
+          _c("h2", { staticClass: "p-search__title" }, [
+            _c("button", { on: { click: _vm.search } }, [_vm._v("検索")])
           ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "p-panel" }, [
-          _c("h2", { staticClass: "p-panel__searchtitle" }, [
-            _vm._v("検索結果")
-          ]),
-          _vm._v(" "),
           _c(
             "div",
             { staticClass: "p-panel__list" },
@@ -38112,20 +37831,6 @@ var render = function() {
               return _c(
                 "div",
                 {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value:
-                        product["buy_flg"] === 0 &&
-                        product["price"] < _vm.searchprice &&
-                        _vm.searchdate < product["expiration_date"] &&
-                        product["prefectures_id"] === _vm.searchprefecture &&
-                        product["branch"] === _vm.searchbranch,
-                      expression:
-                        "\n              product['buy_flg'] === 0 &&\n              product['price'] < searchprice &&\n              searchdate < product['expiration_date'] &&\n              product['prefectures_id'] === searchprefecture &&\n              product['branch'] === searchbranch\n            "
-                    }
-                  ],
                   key: index,
                   staticClass: "p-panel__body",
                   on: {
@@ -38154,33 +37859,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h2", { staticClass: "p-search__title" }, [
-      _vm._v("検索"),
-      _c("span", [_vm._v("(必須)")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-search__group__sentence" }, [
-      _c("span", [_vm._v("円以下")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-search__group__sentence" }, [
-      _c("span", [_vm._v("以降")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -53485,6 +53164,10 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     path: '/',
     name: "Top",
     component: _topcomponents_Top_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }, {
+    path: '/topsearch',
+    name: 'TopSearch',
+    component: TopSearch
   }, {
     path: '/productdetail/:id',
     name: 'ProductDetail',

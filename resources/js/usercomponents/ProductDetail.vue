@@ -39,7 +39,7 @@
             </div>
             <div class="form-group row">
               <div>
-                <div class="c-detail__title">賞味期限</div>
+                <div class="c-detail__title">消費期限</div>
                 <div class="c-detail__text">
                   {{ product["expiration_date"] }}
                 </div>

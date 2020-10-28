@@ -17,6 +17,11 @@ export default new VueRouter({
     component: Top
   },
   {
+    path: '/topsearch',
+    name: 'TopSearch',
+    component: TopSearch
+  },
+  {
     path: '/productdetail/:id',
     name: 'ProductDetail',
     component: ProductDetail,

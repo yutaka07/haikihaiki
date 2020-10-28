@@ -37849,7 +37849,7 @@ var render = function() {
             _c("div", { staticClass: "form-group row" }, [
               _c("div", [
                 _c("div", { staticClass: "c-detail__title" }, [
-                  _vm._v("賞味期限")
+                  _vm._v("消費期限")
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
