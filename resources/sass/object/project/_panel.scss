@@ -12,6 +12,14 @@
     background: #f6f5f4;
     padding: 50px 0;
   }
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    &--link{
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
   &__form{
     display: flex;
     justify-content: space-between;

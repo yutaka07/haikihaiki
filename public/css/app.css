@@ -474,6 +474,16 @@ table {
   padding: 50px 0;
 }
 
+.p-panel__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-panel__nav--link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .p-panel__form {
   display: flex;
   justify-content: space-between;
