@@ -14,11 +14,13 @@
   }
   &__nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    margin-bottom: 20px;
     &--link{
       cursor: pointer;
       text-decoration: none;
       font-size: 1.25rem;
+      margin-left: 20px;
     }
   }
   &__form{

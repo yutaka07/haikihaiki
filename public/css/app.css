@@ -476,13 +476,15 @@ table {
 
 .p-panel__nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .p-panel__nav--link {
   cursor: pointer;
   text-decoration: none;
   font-size: 1.25rem;
+  margin-left: 20px;
 }
 
 .p-panel__form {
