@@ -4,8 +4,8 @@
       <h1 class="title__center">マイページ</h1>
       <div class="p-panel__background">
         <div class="p-panel__nav">
-          <a class="p-panel__nav--link" href="user/home/edit">プロフィール編集</a>
-          <a class="p-panel__nav--link" href="user/top">プロフィール編集</a>
+          <a class="p-panel__nav--link" href="top">商品一覧</a>
+          <a class="p-panel__nav--link" href="home/edit">プロフィール編集</a>
           </div>
         <div class="p-panel">
           <div class="p-panel__form">

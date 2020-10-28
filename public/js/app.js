@@ -37972,18 +37972,13 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "p-panel__nav" }, [
-      _c(
-        "a",
-        {
-          staticClass: "p-panel__nav--link",
-          attrs: { href: "user/home/edit" }
-        },
-        [_vm._v("プロフィール編集")]
-      ),
+      _c("a", { staticClass: "p-panel__nav--link", attrs: { href: "top" } }, [
+        _vm._v("商品一覧")
+      ]),
       _vm._v(" "),
       _c(
         "a",
-        { staticClass: "p-panel__nav--link", attrs: { href: "user/top" } },
+        { staticClass: "p-panel__nav--link", attrs: { href: "home/edit" } },
         [_vm._v("プロフィール編集")]
       )
     ])
