@@ -2085,6 +2085,196 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/topcomponents/TopSearch.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/topcomponents/TopSearch.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ["products", "prefectures", "admins"],
+  data: function data() {
+    return {
+      searchprice: "",
+      now: "",
+      date: "",
+      searchdate: "",
+      searchprefecture: "",
+      searchbranch: "",
+      branch: []
+    };
+  },
+  computed: {
+    //商品情報取得
+    productbranch: function productbranch() {
+      this.branch = [];
+
+      for (var i in this.products) {
+        if (this.products[i]["prefectures_id"] === this.searchprefecture) {
+          this.branch.push(this.products[i]["branch"]);
+        }
+      }
+
+      this.branch = _toConsumableArray(new Set(this.branch));
+
+      if (!this.branch.length) {
+        this.branch.push("登録支店がありません");
+      }
+
+      return this.branch;
+    }
+  },
+  mounted: function mounted() {
+    //検索欄に値を代入
+    this.searchprefecture = Number(localStorage.getItem("storageprefecture"));
+    this.searchbranch = localStorage.getItem("storagebranch");
+
+    if (!localStorage.getItem("storagedate")) {
+      this.date = new Date();
+      this.now = this.date.getFullYear() + "-" + ("0" + (this.date.getMonth() + 1)).slice(-2) + "-" + ("0" + this.date.getDate()).slice(-2) + "T" + ("0" + this.date.getHours()).slice(-2) + ":" + ("0" + this.date.getMinutes()).slice(-2);
+      this.searchdate = this.now;
+    } else {
+      this.searchdate = localStorage.getItem("storagedate");
+    }
+
+    if (!localStorage.getItem("storageprice")) {
+      this.searchprice = 1000;
+    } else {
+      this.searchprice = localStorage.getItem("storageprice");
+    }
+  },
+  methods: {
+    detail: function detail(id) {
+      for (var i in this.products) {
+        if (this.products[i]["id"] === id) {
+          this.searchbranch = this.products[i]["branch"];
+          this.searchprefecture = this.products[i]["prefectures_id"]; //検索欄の値をlocalstorageに保存
+
+          localStorage.setItem("storagebranch", this.searchbranch);
+          localStorage.setItem("storageprefecture", this.searchprefecture);
+          localStorage.setItem("storageprice", this.searchprice);
+          localStorage.setItem("storagedate", this.searchdate);
+        }
+      }
+
+      this.$router.push({
+        name: "ProductDetail",
+        params: {
+          id: id
+        }
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -37866,6 +38056,268 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/topcomponents/TopSearch.vue?vue&type=template&id=745715cb&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/topcomponents/TopSearch.vue?vue&type=template&id=745715cb& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("h1", { staticClass: "title__center" }, [_vm._v("商品一覧")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "p-panel__background" }, [
+        _c("div", { staticClass: "p-search" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "p-search__flex" }, [
+            _c("div", { staticClass: "p-search__group" }, [
+              _vm._v("\n            都道府県\n            "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.searchprefecture,
+                      expression: "searchprefecture"
+                    }
+                  ],
+                  staticClass: "p-search__group__form",
+                  attrs: { id: "prefectures_id", name: "prefectures_id" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.searchprefecture = $event.target.multiple
+                        ? $$selectedVal
+                        : $$selectedVal[0]
+                    }
+                  }
+                },
+                _vm._l(_vm.prefectures, function(prefecture, index) {
+                  return _c(
+                    "option",
+                    { key: index, domProps: { value: prefecture["id"] } },
+                    [
+                      _vm._v(
+                        "\n                " +
+                          _vm._s(prefecture["name"]) +
+                          "\n              "
+                      )
+                    ]
+                  )
+                }),
+                0
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-search__group" }, [
+              _vm._v("\n            支店\n            "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.searchbranch,
+                      expression: "searchbranch"
+                    }
+                  ],
+                  staticClass: "p-search__group__form",
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.searchbranch = $event.target.multiple
+                        ? $$selectedVal
+                        : $$selectedVal[0]
+                    }
+                  }
+                },
+                _vm._l(_vm.productbranch, function(bran, index) {
+                  return _c(
+                    "option",
+                    { key: index, domProps: { value: bran } },
+                    [
+                      _vm._v(
+                        "\n                " + _vm._s(bran) + "\n              "
+                      )
+                    ]
+                  )
+                }),
+                0
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-search__group" }, [
+              _c("span", [_vm._v("値段")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.searchprice,
+                    expression: "searchprice"
+                  }
+                ],
+                staticClass: "p-search__group__form",
+                attrs: { type: "number" },
+                domProps: { value: _vm.searchprice },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.searchprice = $event.target.value
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm._m(1)
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-search__group" }, [
+              _c("span", [_vm._v("消費期限")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.searchdate,
+                    expression: "searchdate"
+                  }
+                ],
+                staticClass: "p-search__group__form",
+                attrs: { type: "datetime-local" },
+                domProps: { value: _vm.searchdate },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.searchdate = $event.target.value
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm._m(2)
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "p-panel" }, [
+          _c("h2", { staticClass: "p-panel__searchtitle" }, [
+            _vm._v("検索結果")
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "p-panel__list" },
+            _vm._l(_vm.products, function(product, index) {
+              return _c(
+                "div",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value:
+                        product["buy_flg"] === 0 &&
+                        product["price"] < _vm.searchprice &&
+                        _vm.searchdate < product["expiration_date"] &&
+                        product["prefectures_id"] === _vm.searchprefecture &&
+                        product["branch"] === _vm.searchbranch,
+                      expression:
+                        "\n              product['buy_flg'] === 0 &&\n              product['price'] < searchprice &&\n              searchdate < product['expiration_date'] &&\n              product['prefectures_id'] === searchprefecture &&\n              product['branch'] === searchbranch\n            "
+                    }
+                  ],
+                  key: index,
+                  staticClass: "p-panel__body",
+                  on: {
+                    click: function($event) {
+                      return _vm.detail(product["id"])
+                    }
+                  }
+                },
+                [
+                  _c("div", { staticClass: "p-panel__img" }, [
+                    _c("span", [_vm._v("¥" + _vm._s(product["price"]))]),
+                    _vm._v(" "),
+                    _c("img", { attrs: { src: product["photofile"], alt: "" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "p-panel__footer" }, [
+                    _c("span", [_vm._v(_vm._s(product["name"]))])
+                  ])
+                ]
+              )
+            }),
+            0
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h2", { staticClass: "p-search__title" }, [
+      _vm._v("検索"),
+      _c("span", [_vm._v("(必須)")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-search__group__sentence" }, [
+      _c("span", [_vm._v("円以下")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-search__group__sentence" }, [
+      _c("span", [_vm._v("以降")])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -53153,6 +53605,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _topcomponents_Top_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./topcomponents/Top.vue */ "./resources/js/topcomponents/Top.vue");
 /* harmony import */ var _topcomponents_ProductDetail_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./topcomponents/ProductDetail.vue */ "./resources/js/topcomponents/ProductDetail.vue");
+/* harmony import */ var _topcomponents_TopSearch_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./topcomponents/TopSearch.vue */ "./resources/js/topcomponents/TopSearch.vue");
+
 
 
 
@@ -53167,7 +53621,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
   }, {
     path: '/topsearch',
     name: 'TopSearch',
-    component: TopSearch
+    component: _topcomponents_TopSearch_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {
     path: '/productdetail/:id',
     name: 'ProductDetail',
@@ -53380,6 +53834,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Top_vue_vue_type_template_id_43491443___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Top_vue_vue_type_template_id_43491443___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/topcomponents/TopSearch.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/topcomponents/TopSearch.vue ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TopSearch_vue_vue_type_template_id_745715cb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TopSearch.vue?vue&type=template&id=745715cb& */ "./resources/js/topcomponents/TopSearch.vue?vue&type=template&id=745715cb&");
+/* harmony import */ var _TopSearch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TopSearch.vue?vue&type=script&lang=js& */ "./resources/js/topcomponents/TopSearch.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _TopSearch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _TopSearch_vue_vue_type_template_id_745715cb___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _TopSearch_vue_vue_type_template_id_745715cb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/topcomponents/TopSearch.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/topcomponents/TopSearch.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/topcomponents/TopSearch.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TopSearch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./TopSearch.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/topcomponents/TopSearch.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TopSearch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/topcomponents/TopSearch.vue?vue&type=template&id=745715cb&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/topcomponents/TopSearch.vue?vue&type=template&id=745715cb& ***!
+  \*********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TopSearch_vue_vue_type_template_id_745715cb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./TopSearch.vue?vue&type=template&id=745715cb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/topcomponents/TopSearch.vue?vue&type=template&id=745715cb&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TopSearch_vue_vue_type_template_id_745715cb___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TopSearch_vue_vue_type_template_id_745715cb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

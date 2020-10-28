@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Top from './topcomponents/Top.vue';
 import ProductDetail from './topcomponents/ProductDetail.vue';
+import TopSearch from './topcomponents/TopSearch.vue';
 
 
 
