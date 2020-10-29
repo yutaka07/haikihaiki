@@ -1971,6 +1971,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products"],
   methods: {
@@ -38052,26 +38054,26 @@ var staticRenderFns = [
         _vm._v("商品一覧")
       ]),
       _vm._v(" "),
-      _c(
-        "a",
-        { staticClass: "p-panel__nav--link", attrs: { href: "home/edit" } },
-        [_vm._v("プロフィール編集")]
-      )
+      _c("a", { staticClass: "p-panel__nav--link", attrs: { href: "edit" } }, [
+        _vm._v("プロフィール編集")
+      ])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item nav-item__regist " }, [
-      _c(
-        "a",
-        {
-          staticClass: "nav-link nav-link__regist",
-          attrs: { href: "/products/registproduct" }
-        },
-        [_vm._v("\n                    出品 \n                ")]
-      )
+    return _c("ul", { attrs: { id: "nav-drawer" } }, [
+      _c("li", { staticClass: "nav-item nav-item__regist " }, [
+        _c(
+          "a",
+          {
+            staticClass: "nav-link nav-link__regist",
+            attrs: { href: "products/registproduct" }
+          },
+          [_vm._v("\n                    出品 \n                ")]
+        )
+      ])
     ])
   }
 ]

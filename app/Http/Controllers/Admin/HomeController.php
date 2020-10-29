@@ -56,6 +56,16 @@ class HomeController extends Controller
         return redirect('admin/home');
     }
 
+    public function top(){
+        //商品情報取得
+        $products = DB::table('products')->join('admins', 'products.admin_id', '=', 'admins.id')->select('products.*', 'admins.prefectures_id', 'admins.branch')->orderBy('id', 'desc')->get();
+        //都道府県情報取得
+        $prefectures = Prefecture::all();
+        //admin情報取得
+        $admins = Admin::all();
+        return view('user.top', ['products' => $products, 'prefectures' => $prefectures, 'admins' => $admins]);
+    }
+
    
     }
 

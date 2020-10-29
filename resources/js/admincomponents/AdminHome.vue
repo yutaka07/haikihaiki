@@ -5,7 +5,7 @@
             <div class="p-panel__background">
                 <div class="p-panel__nav">
           <a class="p-panel__nav--link" href="top">商品一覧</a>
-          <a class="p-panel__nav--link" href="home/edit">プロフィール編集</a>
+          <a class="p-panel__nav--link" href="edit">プロフィール編集</a>
           </div>
             <div class="p-panel">
                 <div class="p-panel__form">
@@ -52,11 +52,13 @@
                 </div>
                 </div>
             </div>
+            <ul id="nav-drawer">
            <li class="nav-item nav-item__regist ">
-                    <a class="nav-link nav-link__regist" href="/products/registproduct" >
+                    <a class="nav-link nav-link__regist" href="products/registproduct" >
                         出品 
                     </a>
             </li>
+            </ul>
         </div>
     </div>
 </template>

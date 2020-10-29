@@ -58,7 +58,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     // ログイン認証後
     Route::middleware('auth:admin')->group(function () {
 
-     
+        Route::get('/top', 'HomeController@top')->name('top');
         Route::get('/home', 'HomeController@index')->name('home');
         Route::get('/edit', 'HomeController@edit')->name('edit');
         Route::post('/edit/{id}', 'HomeController@update')->name('update');
