@@ -38149,48 +38149,36 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _c(
-              "div",
-              {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.product["buy_flg"] === 0,
-                    expression: "product['buy_flg'] === 0"
-                  }
-                ],
-                staticClass: "form-group row mb-0"
-              },
-              [
-                _c(
-                  "a",
-                  {
-                    staticClass: "c-btn__form",
-                    attrs: { href: _vm.url, type: "submit" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                                    編集\n                                "
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "c-btn__form",
-                    attrs: { type: "submit" },
-                    on: { click: _vm.destroy }
-                  },
-                  [
-                    _vm._v(
-                      "\n                                    削除\n                                "
-                    )
-                  ]
-                )
-              ]
-            )
+            _vm.product["buy_flg"] === 0
+              ? _c("div", { staticClass: "form-group row mb-0" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "c-btn__form",
+                      attrs: { href: _vm.url, type: "submit" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                                    編集\n                                "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "c-btn__form",
+                      attrs: { type: "submit" },
+                      on: { click: _vm.destroy }
+                    },
+                    [
+                      _vm._v(
+                        "\n                                    削除\n                                "
+                      )
+                    ]
+                  )
+                ])
+              : _vm._e()
           ])
         ])
       ])
