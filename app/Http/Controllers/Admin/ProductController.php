@@ -58,13 +58,17 @@ class ProductController extends Controller
 
       public function edit($id){
           $product = Product::find($id);
-          //商品の消費期限の文字列を変更
-          $a = mb_substr($product['expiration_date'], 0, 10);
-          $b = 'T';
-          $c = mb_substr($product['expiration_date'], 11);
-          $date = $a.$b.$c;
-
-          return view('admin.products.editproduct',['product' => $product, 'date' => $date]);
+          if($product->admin_id === Auth::user()->id && $product->buy_flg === 0){
+              //商品の消費期限の文字列を変更
+              $a = mb_substr($product['expiration_date'], 0, 10);
+              $b = 'T';
+              $c = mb_substr($product['expiration_date'], 11);
+              $date = $a.$b.$c;
+    
+              return view('admin.products.editproduct',['product' => $product, 'date' => $date]);
+        }else{
+            return view('admin.home');
+          }
       }
 
       public function update(Request $request, $id){
