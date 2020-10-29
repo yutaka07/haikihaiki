@@ -67,7 +67,7 @@ class ProductController extends Controller
     
               return view('admin.products.editproduct',['product' => $product, 'date' => $date]);
         }else{
-            return view('admin.home');
+            return redirect('/admin/home');
           }
       }
 
