@@ -1963,6 +1963,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products"],
   methods: {
@@ -37921,6 +37929,8 @@ var render = function() {
       _c("h1", { staticClass: "title__center" }, [_vm._v("マイページ")]),
       _vm._v(" "),
       _c("div", { staticClass: "p-panel__background" }, [
+        _vm._m(0),
+        _vm._v(" "),
         _c("div", { staticClass: "p-panel" }, [
           _c("div", { staticClass: "p-panel__form" }, [
             _c("h2", { staticClass: "p-panel__title" }, [
@@ -38026,11 +38036,45 @@ var render = function() {
             0
           )
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _vm._m(1)
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-panel__nav" }, [
+      _c("a", { staticClass: "p-panel__nav--link", attrs: { href: "top" } }, [
+        _vm._v("商品一覧")
+      ]),
+      _vm._v(" "),
+      _c(
+        "a",
+        { staticClass: "p-panel__nav--link", attrs: { href: "home/edit" } },
+        [_vm._v("プロフィール編集")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item nav-item__regist " }, [
+      _c(
+        "a",
+        {
+          staticClass: "nav-link nav-link__regist",
+          attrs: { href: "/products/registproduct" }
+        },
+        [_vm._v("\n                    出品 \n                ")]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 

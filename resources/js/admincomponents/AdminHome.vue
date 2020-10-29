@@ -3,6 +3,10 @@
         <div class="row justify-content-center">
             <h1 class="title__center">マイページ</h1>
             <div class="p-panel__background">
+                <div class="p-panel__nav">
+          <a class="p-panel__nav--link" href="top">商品一覧</a>
+          <a class="p-panel__nav--link" href="home/edit">プロフィール編集</a>
+          </div>
             <div class="p-panel">
                 <div class="p-panel__form">
                 <h2 class="p-panel__title">出品した商品</h2>
@@ -48,7 +52,11 @@
                 </div>
                 </div>
             </div>
-           
+           <li class="nav-item nav-item__regist ">
+                    <a class="nav-link nav-link__regist" href="/products/registproduct" >
+                        出品 
+                    </a>
+            </li>
         </div>
     </div>
 </template>
