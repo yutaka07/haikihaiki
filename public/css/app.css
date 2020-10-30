@@ -196,6 +196,7 @@ table {
 .c-btn__form--sold {
   background: #888888;
   border: solid 2px #888888;
+  cursor: not-allowed;
 }
 
 @media screen and (max-width: 414px) {

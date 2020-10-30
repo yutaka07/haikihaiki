@@ -40,6 +40,7 @@
     &--sold{
       background: #888888;
       border: solid 2px #888888;
+      cursor: not-allowed;
     }
     @include mq(){
       opacity: 1;
