@@ -248,6 +248,13 @@ table {
   align-items: center;
 }
 
+.c-menu__mypageregist {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 /*チェックボックス等は非表示に*/
 
 .nav-unshown {

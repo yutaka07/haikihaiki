@@ -52,13 +52,13 @@
                 </div>
                 </div>
             </div>
-            <ul id="nav-drawer">
-           <li class="nav-item nav-item__regist ">
+            <div class="c-menu__mypageregist">
+             <div class="nav-item nav-item__regist ">
                     <a class="nav-link nav-link__regist" href="products/registproduct" >
                         出品 
                     </a>
-            </li>
-            </ul>
+             </div>
+            </div>
         </div>
     </div>
 </template>
