@@ -63,7 +63,7 @@ class HomeController extends Controller
         $prefectures = Prefecture::all();
         //admin情報取得
         $admins = Admin::all();
-        return view('user.top', ['products' => $products, 'prefectures' => $prefectures, 'admins' => $admins]);
+        return view('admin.top', ['products' => $products, 'prefectures' => $prefectures, 'admins' => $admins]);
     }
 
    
