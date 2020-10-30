@@ -15,7 +15,7 @@
               class="p-panel__body"
             >
               <div class="p-panel__img">
-                <div v-show="product['buy_flg'] === 1" class="p-panel__sold"><span class="p-panel__sold--text">sold</span></div>
+                <div v-show="product['buy_flg'] === 1" class="p-panel__sold">sold</div>
                 <span>¥{{ product["price"] }}</span>
 
                 <img :src="product['photofile']" alt="" />

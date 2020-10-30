@@ -38045,11 +38045,7 @@ var render = function() {
                         ],
                         staticClass: "p-panel__sold"
                       },
-                      [
-                        _c("span", { staticClass: "p-panel__sold--text" }, [
-                          _vm._v("sold")
-                        ])
-                      ]
+                      [_vm._v("sold")]
                     ),
                     _vm._v(" "),
                     _c("span", [_vm._v("¥" + _vm._s(product["price"]))]),
