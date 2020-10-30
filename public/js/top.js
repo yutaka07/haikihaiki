@@ -1979,6 +1979,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["id", "products", "admins"],
   data: function data() {
@@ -37863,94 +37864,88 @@ var render = function() {
       _c("h1", { staticClass: "title__center" }, [_vm._v("商品詳細")]),
       _vm._v(" "),
       _c("div", { staticClass: "form" }, [
-        _vm.product["buy_flg"] === 0
-          ? _c("div", { staticClass: "card" }, [
-              _c("div", { staticClass: "card-header" }, [
-                _vm._v(_vm._s(_vm.product["name"]))
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("div", { staticClass: "form-group row" }, [
-                  _c("div", {}, [
-                    _c("img", {
-                      attrs: { src: _vm.product["photofile"], alt: "" }
-                    })
-                  ])
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _vm._v(_vm._s(_vm.product["name"]))
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c("div", { staticClass: "form-group row" }, [
+              _c("div", {}, [
+                _c("img", { attrs: { src: _vm.product["photofile"], alt: "" } })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group row" }, [
+              _c("div", [
+                _c("div", { staticClass: "c-detail__title" }, [
+                  _vm._v("コンビニ名")
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group row" }, [
-                  _c("div", [
-                    _c("div", { staticClass: "c-detail__title" }, [
-                      _vm._v("コンビニ名")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "c-detail__text" }, [
-                      _vm._v(_vm._s(_vm.admin["name"]))
-                    ])
-                  ])
+                _c("div", { staticClass: "c-detail__text" }, [
+                  _vm._v(_vm._s(_vm.admin["name"]))
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group row" }, [
+              _c("div", [
+                _c("div", { staticClass: "c-detail__title" }, [
+                  _vm._v("支店名")
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group row" }, [
-                  _c("div", [
-                    _c("div", { staticClass: "c-detail__title" }, [
-                      _vm._v("支店名")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "c-detail__text" }, [
-                      _vm._v(_vm._s(_vm.admin["branch"]))
-                    ])
-                  ])
+                _c("div", { staticClass: "c-detail__text" }, [
+                  _vm._v(_vm._s(_vm.admin["branch"]))
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group row" }, [
+              _c("div", [
+                _c("div", { staticClass: "c-detail__title" }, [_vm._v("住所")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "c-detail__text" }, [
+                  _vm._v(_vm._s(_vm.admin["address"]))
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group row" }, [
+              _c("div", [
+                _c("div", { staticClass: "c-detail__title" }, [
+                  _vm._v("商品詳細")
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group row" }, [
-                  _c("div", [
-                    _c("div", { staticClass: "c-detail__title" }, [
-                      _vm._v("住所")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "c-detail__text" }, [
-                      _vm._v(_vm._s(_vm.admin["address"]))
-                    ])
-                  ])
+                _c("div", { staticClass: "c-detail__text" }, [
+                  _vm._v(_vm._s(_vm.product["comment"]))
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group row" }, [
+              _c("div", [
+                _c("div", { staticClass: "c-detail__title" }, [
+                  _vm._v("消費期限")
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group row" }, [
-                  _c("div", [
-                    _c("div", { staticClass: "c-detail__title" }, [
-                      _vm._v("商品詳細")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "c-detail__text" }, [
-                      _vm._v(_vm._s(_vm.product["comment"]))
-                    ])
-                  ])
-                ]),
+                _c("div", { staticClass: "c-detail__text" }, [
+                  _vm._v(_vm._s(_vm.product["expiration_date"]))
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group row" }, [
+              _c("div", [
+                _c("div", { staticClass: "c-detail__title" }, [_vm._v("値段")]),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group row" }, [
-                  _c("div", [
-                    _c("div", { staticClass: "c-detail__title" }, [
-                      _vm._v("消費期限")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "c-detail__text" }, [
-                      _vm._v(_vm._s(_vm.product["expiration_date"]))
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group row" }, [
-                  _c("div", [
-                    _c("div", { staticClass: "c-detail__title" }, [
-                      _vm._v("値段")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "c-detail__text" }, [
-                      _vm._v("¥" + _vm._s(_vm.product["price"]))
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group row mb-0" }, [
+                _c("div", { staticClass: "c-detail__text" }, [
+                  _vm._v("¥" + _vm._s(_vm.product["price"]))
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _vm.product["buy_flg"] === 0
+              ? _c("div", { staticClass: "form-group row mb-0" }, [
                   _c(
                     "button",
                     {
@@ -37964,7 +37959,7 @@ var render = function() {
                   _c(
                     "a",
                     {
-                      staticClass: "c-btn__form c-btn__form__twitter",
+                      staticClass: "c-btn__form c-btn__form--twitter",
                       attrs: {
                         href: _vm.url,
                         target: "_blank",
@@ -37974,9 +37969,15 @@ var render = function() {
                     [_vm._v("Twitterでシェア")]
                   )
                 ])
-              ])
-            ])
-          : _vm._e()
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.product["buy_flg"] === 1
+              ? _c("div", { staticClass: "c-btn__form c-btn__form--sold" }, [
+                  _vm._v("売り切れました")
+                ])
+              : _vm._e()
+          ])
+        ])
       ])
     ])
   ])

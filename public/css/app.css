@@ -188,9 +188,14 @@ table {
   transition: 0.3s;
 }
 
-.c-btn__form__twitter {
+.c-btn__form--twitter {
   background: #1da1f2;
   border: solid 2px #1da1f2;
+}
+
+.c-btn__form--sold {
+  background: #888888;
+  border: solid 2px #888888;
 }
 
 @media screen and (max-width: 414px) {
@@ -550,7 +555,7 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.25rem;
   opacity: 0.8;
 }
 

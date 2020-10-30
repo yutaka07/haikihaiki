@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
       <h1 class="title__center">商品詳細</h1>
       <div class="form">
-        <div class="card" v-if="product['buy_flg'] === 0">
+        <div class="card" >
           <div class="card-header">{{ product["name"] }}</div>
 
           <div class="card-body">
@@ -49,7 +49,7 @@
                 <div class="c-detail__text">¥{{ product["price"] }}</div>
               </div>
             </div>
-            <div class="form-group row mb-0">
+            <div v-if="product['buy_flg'] === 0" class="form-group row mb-0">
               <button
           
                 @click="buyproduct"
@@ -60,8 +60,9 @@
               </button>
               <a :href="url"
               target="_blank" rel="noopener noreferrer"
-              class="c-btn__form c-btn__form__twitter">Twitterでシェア</a>
+              class="c-btn__form c-btn__form--twitter">Twitterでシェア</a>
             </div>
+            <div v-if="product['buy_flg'] === 1" class="c-btn__form c-btn__form--sold">売り切れました</div>
           </div>
         </div>
       </div>
