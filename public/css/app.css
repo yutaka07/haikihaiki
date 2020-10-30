@@ -539,6 +539,21 @@ table {
   }
 }
 
+.p-panel__sold {
+  position: absolute;
+  top: 0;
+  background: #ea352d;
+  color: #fff;
+  z-index: 1;
+  width: 100%;
+  height: 15%;
+  text-align: center;
+}
+
+.p-panel__sold--text {
+  font-size: 1.5rem;
+}
+
 .p-panel__img {
   width: 100%;
   height: 80%;
@@ -550,17 +565,6 @@ table {
   .p-panel__img {
     height: 70%;
   }
-}
-
-.p-panel__img--sold {
-  position: absolute;
-  top: 0;
-  background: #ea352d;
-  color: #fff;
-  z-index: 1;
-  width: 100%;
-  height: 20%;
-  overflow: hidden;
 }
 
 .p-panel__img img {

@@ -59,6 +59,19 @@
       height: 150px;
     }
   }
+  &__sold{
+    position: absolute;
+    top: 0;
+    background: #ea352d;
+    color: #fff;
+    z-index: 1;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    &--text{
+      font-size: 1.5rem;
+    }
+  }
   &__img{
     width: 100%;
     height: 80%;
@@ -66,16 +79,6 @@
     position: relative;
     @include mq(){
       height: 70%;
-    }
-    &--sold{
-      position: absolute;
-      top: 0;
-      background: #ea352d;
-      color: #fff;
-      z-index: 1;
-      width: 100%;
-      height: 20%;
-      overflow: hidden;
     }
     img{
       position: absolute;

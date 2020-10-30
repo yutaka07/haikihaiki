@@ -38043,9 +38043,13 @@ var render = function() {
                             expression: "product['buy_flg'] === 1"
                           }
                         ],
-                        staticClass: "p-panel__img--sold"
+                        staticClass: "p-panel__sold"
                       },
-                      [_vm._v("sold")]
+                      [
+                        _c("span", { staticClass: "p-panel__sold--text" }, [
+                          _vm._v("sold")
+                        ])
+                      ]
                     ),
                     _vm._v(" "),
                     _c("span", [_vm._v("¥" + _vm._s(product["price"]))]),
