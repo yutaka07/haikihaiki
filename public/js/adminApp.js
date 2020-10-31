@@ -1975,6 +1975,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products"],
+  data: function data() {
+    return {
+      soldproduct: []
+    };
+  },
   methods: {
     detail: function detail(id) {
       this.$router.push({
@@ -1994,6 +1999,17 @@ __webpack_require__.r(__webpack_exports__);
         name: "SoldProductList"
       });
     }
+  },
+  computed: {
+    soldproducts: function soldproducts() {
+      for (var i in this.products) {
+        if (this.products[i]["buy_flg"] === 1) {
+          this.soldproduct.push(this.products[i]);
+        }
+      }
+
+      return this.soldproduct;
+    }
   }
 });
 
@@ -2008,6 +2024,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -37974,7 +37992,7 @@ var render = function() {
                         ],
                         staticClass: "p-panel__sold"
                       },
-                      [_vm._v("sold")]
+                      [_vm._v("SOLD")]
                     ),
                     _vm._v(" "),
                     _c("span", [_vm._v("¥" + _vm._s(product["price"]))]),
@@ -38008,7 +38026,7 @@ var render = function() {
           _c(
             "div",
             { staticClass: "p-panel__list" },
-            _vm._l(_vm.products.slice(0, 5), function(product, index) {
+            _vm._l(_vm.soldproducts.slice(0, 5), function(product, index) {
               return _c(
                 "div",
                 {
@@ -38185,6 +38203,12 @@ var render = function() {
                       )
                     ]
                   )
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.product["buy_flg"] === 1
+              ? _c("div", { staticClass: "c-btn__form c-btn__form--sold" }, [
+                  _vm._v("購入されました")
                 ])
               : _vm._e()
           ])
@@ -38435,7 +38459,7 @@ var render = function() {
                         ],
                         staticClass: "p-panel__sold"
                       },
-                      [_vm._v("sold")]
+                      [_vm._v("SOLD")]
                     ),
                     _vm._v(" "),
                     _c("span", [_vm._v("¥" + _vm._s(product["price"]))]),

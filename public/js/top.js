@@ -38046,7 +38046,7 @@ var render = function() {
                         ],
                         staticClass: "p-panel__sold"
                       },
-                      [_vm._v("sold")]
+                      [_vm._v("SOLD")]
                     ),
                     _vm._v(" "),
                     _c("span", [_vm._v("¥" + _vm._s(product["price"]))]),
@@ -38297,7 +38297,7 @@ var render = function() {
                         ],
                         staticClass: "p-panel__sold"
                       },
-                      [_vm._v("sold")]
+                      [_vm._v("SOLD")]
                     ),
                     _vm._v(" "),
                     _c("span", [_vm._v("¥" + _vm._s(product["price"]))]),

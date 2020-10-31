@@ -43,7 +43,9 @@
                                     削除
                                 </button>
                            
-                        </div>
+                    </div>
+                              <div v-if="product['buy_flg'] === 1" class="c-btn__form c-btn__form--sold">購入されました</div>
+
                     
                 </div>
             </div>
