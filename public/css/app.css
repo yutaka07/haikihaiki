@@ -261,6 +261,12 @@ table {
   align-items: flex-end;
 }
 
+@media screen and (max-width: 414px) {
+  .c-menu__mypageregist {
+    display: none;
+  }
+}
+
 /*チェックボックス等は非表示に*/
 
 .nav-unshown {

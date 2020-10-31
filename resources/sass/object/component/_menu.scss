@@ -11,6 +11,9 @@
   display: flex;
     flex-direction: column;
     align-items: flex-end;
+    @include mq(){
+      display: none;
+    }
 }
 
 /*チェックボックス等は非表示に*/
