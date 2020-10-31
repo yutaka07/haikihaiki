@@ -16,7 +16,7 @@ class ProductController extends Controller
 {
    
     public function regist(){
-        $date = date('Y-m-d\TH:i:sP');
+        $date = date('Y-m-d\TH:i:s');
         return view('admin.products.registproduct', ['date' => $date]);
     }
 
