@@ -2080,6 +2080,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["id", "products"],
   data: function data() {
@@ -38231,8 +38232,14 @@ var render = function() {
               : _vm._e(),
             _vm._v(" "),
             _vm.product["buy_flg"] === 1
-              ? _c("button", { staticClass: "c-btn__form c-btn__form--sold" }, [
-                  _vm._v("購入されました")
+              ? _c("div", { staticClass: "form-group row mb-0" }, [
+                  _vm.product["buy_flg"] === 1
+                    ? _c(
+                        "button",
+                        { staticClass: "c-btn__form c-btn__form--sold" },
+                        [_vm._v("購入されました")]
+                      )
+                    : _vm._e()
                 ])
               : _vm._e()
           ])

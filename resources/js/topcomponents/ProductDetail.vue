@@ -63,7 +63,7 @@
               class="c-btn__form c-btn__form--twitter">Twitterでシェア</a>
             </div>
             <div  v-if="product['buy_flg'] === 1" class="form-group row mb-0">
-            <button class="c-btn__form c-btn__form--sold">売り切れました</button>
+               <button class="c-btn__form c-btn__form--sold">売り切れました</button>
             </div>
           </div>
         </div>
