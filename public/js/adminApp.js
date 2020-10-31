@@ -2348,6 +2348,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products"],
+  data: function data() {
+    return {
+      soldproduct: []
+    };
+  },
   methods: {
     detail: function detail(id) {
       this.$router.push({
@@ -2356,6 +2361,17 @@ __webpack_require__.r(__webpack_exports__);
           id: id
         }
       });
+    }
+  },
+  computed: {
+    soldproducts: function soldproducts() {
+      for (var i in this.products) {
+        if (this.products[i]["buy_flg"] === 1) {
+          this.soldproduct.push(this.products[i]);
+        }
+      }
+
+      return this.soldproduct;
     }
   }
 });
@@ -38521,18 +38537,10 @@ var render = function() {
           _c(
             "div",
             { staticClass: "p-panel__list" },
-            _vm._l(_vm.products, function(product, index) {
+            _vm._l(_vm.soldproducts, function(product, index) {
               return _c(
                 "div",
                 {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: product["buy_flg"] === 1,
-                      expression: "product['buy_flg'] === 1"
-                    }
-                  ],
                   key: index,
                   staticClass: "p-panel__body",
                   on: {
@@ -38543,6 +38551,22 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "p-panel__img" }, [
+                    _c(
+                      "div",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: product["buy_flg"] === 1,
+                            expression: "product['buy_flg'] === 1"
+                          }
+                        ],
+                        staticClass: "p-panel__sold"
+                      },
+                      [_vm._v("SOLD")]
+                    ),
+                    _vm._v(" "),
                     _c("span", [_vm._v("¥" + _vm._s(product["price"]))]),
                     _vm._v(" "),
                     _c("img", {
