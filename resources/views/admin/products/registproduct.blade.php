@@ -30,7 +30,7 @@
 
                             <div class="col-md-6">
                               <label for="expiration_date">消費期限</label>
-                                <input  id="expiration_date" type="datetime-local" class="form-control @error('expiration_date') is-invalid @enderror" name="expiration_date" value="{{ old('expiration_date') }}" required autocomplete="expiration_date" autofocus>
+                                <input  id="expiration_date" type="datetime-local" class="form-control @error('expiration_date') is-invalid @enderror" name="expiration_date" value="{{ $date }}" required autocomplete="expiration_date" autofocus>
 
                                 @error('expiration_date')
                                     <span class="invalid-feedback" role="alert">
