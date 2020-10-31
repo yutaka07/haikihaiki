@@ -38030,14 +38030,6 @@ var render = function() {
               return _c(
                 "div",
                 {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: product["buy_flg"] === 1,
-                      expression: "product['buy_flg'] === 1"
-                    }
-                  ],
                   key: index,
                   staticClass: "p-panel__body",
                   on: {
@@ -38048,6 +38040,22 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "p-panel__img" }, [
+                    _c(
+                      "div",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: product["buy_flg"] === 1,
+                            expression: "product['buy_flg'] === 1"
+                          }
+                        ],
+                        staticClass: "p-panel__sold"
+                      },
+                      [_vm._v("SOLD")]
+                    ),
+                    _vm._v(" "),
                     _c("span", [_vm._v("¥" + _vm._s(product["price"]))]),
                     _vm._v(" "),
                     _c("img", {

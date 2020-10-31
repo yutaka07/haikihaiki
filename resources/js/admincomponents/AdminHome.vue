@@ -38,9 +38,9 @@
                 <div class="p-panel__list">
                     <div class="p-panel__body"
                     v-for="(product, index) in soldproducts.slice(0,5)" :key="index"
-                     v-show="product['buy_flg'] === 1"
                      @click="detail(product['id'])">
                         <div class="p-panel__img">
+                            <div v-show="product['buy_flg'] === 1" class="p-panel__sold">SOLD</div>
                              <span>¥{{product['price']}}</span>
                             <img :src="product['photofile']" alt="商品">
                         </div>
