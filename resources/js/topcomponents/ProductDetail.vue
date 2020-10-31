@@ -62,7 +62,7 @@
               target="_blank" rel="noopener noreferrer"
               class="c-btn__form c-btn__form--twitter">Twitterでシェア</a>
             </div>
-            <div v-if="product['buy_flg'] === 1" class="c-btn__form c-btn__form--sold">売り切れました</div>
+            <button v-if="product['buy_flg'] === 1" class="c-btn__form c-btn__form--sold">売り切れました</button>
           </div>
         </div>
       </div>

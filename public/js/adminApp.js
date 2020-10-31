@@ -38231,7 +38231,7 @@ var render = function() {
               : _vm._e(),
             _vm._v(" "),
             _vm.product["buy_flg"] === 1
-              ? _c("div", { staticClass: "c-btn__form c-btn__form--sold" }, [
+              ? _c("button", { staticClass: "c-btn__form c-btn__form--sold" }, [
                   _vm._v("購入されました")
                 ])
               : _vm._e()
