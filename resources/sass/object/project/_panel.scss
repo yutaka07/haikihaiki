@@ -72,6 +72,9 @@
     align-items: center;
     font-size: 1.25rem;
     opacity: 0.8;
+    @include mq(){
+      font-size: 1rem;
+    }
   }
   &__img{
     width: 100%;
