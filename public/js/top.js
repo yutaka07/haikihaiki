@@ -38266,13 +38266,12 @@ var render = function() {
                       name: "show",
                       rawName: "v-show",
                       value:
-                        product["buy_flg"] === 0 &&
                         product["price"] < _vm.searchprice &&
                         _vm.searchdate < product["expiration_date"] &&
                         product["prefectures_id"] === _vm.searchprefecture &&
                         product["branch"] === _vm.searchbranch,
                       expression:
-                        "\n              product['buy_flg'] === 0 &&\n              product['price'] < searchprice &&\n              searchdate < product['expiration_date'] &&\n              product['prefectures_id'] === searchprefecture &&\n              product['branch'] === searchbranch\n            "
+                        "\n              product['price'] < searchprice &&\n              searchdate < product['expiration_date'] &&\n              product['prefectures_id'] === searchprefecture &&\n              product['branch'] === searchbranch\n            "
                     }
                   ],
                   key: index,
@@ -38285,6 +38284,22 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "p-panel__img" }, [
+                    _c(
+                      "div",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: product["buy_flg"] === 1,
+                            expression: "product['buy_flg'] === 1"
+                          }
+                        ],
+                        staticClass: "p-panel__sold"
+                      },
+                      [_vm._v("sold")]
+                    ),
+                    _vm._v(" "),
                     _c("span", [_vm._v("¥" + _vm._s(product["price"]))]),
                     _vm._v(" "),
                     _c("img", { attrs: { src: product["photofile"], alt: "" } })
