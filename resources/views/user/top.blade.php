@@ -58,7 +58,7 @@
                             @endif
                             @else
                             <li class="nav-item ">
-                                <a class="nav-link"  >
+                                <a class="p-top__title"  >
                                     {{ Auth::user()->name }} 
                                 </a>
                             </li>
