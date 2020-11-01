@@ -535,6 +535,11 @@ table {
   text-decoration: none;
   font-size: 1.25rem;
   margin-left: 20px;
+  color: #67c5ff;
+}
+
+.p-panel__nav--link:hover {
+  text-decoration: underline;
 }
 
 .p-panel__form {
