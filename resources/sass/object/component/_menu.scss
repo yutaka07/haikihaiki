@@ -16,6 +16,16 @@
     }
 }
 
+.nav-item__mypageregist{
+  width: 150px;
+    height: 150px;
+    background: #ea352d;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    right: 90px;
+}
+
 /*チェックボックス等は非表示に*/
 .nav-unshown {
   display:none;

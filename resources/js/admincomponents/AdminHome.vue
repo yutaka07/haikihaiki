@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="c-menu__mypageregist">
-             <div class="nav-item nav-item__regist ">
+             <div class="nav-item__mypageregist ">
                     <a class="nav-link nav-link__regist" href="products/registproduct" >
                         出品 
                     </a>

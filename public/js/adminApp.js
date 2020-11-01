@@ -38115,7 +38115,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "c-menu__mypageregist" }, [
-      _c("div", { staticClass: "nav-item nav-item__regist " }, [
+      _c("div", { staticClass: "nav-item__mypageregist " }, [
         _c(
           "a",
           {
