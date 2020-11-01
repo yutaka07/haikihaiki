@@ -41,6 +41,7 @@
               <input
                 class="p-search__group__form"
                 type="number"
+                pattern="\d*"
                 v-model="searchprice"
               />
               <div class="p-search__group__sentence"><span>円以下</span></div>

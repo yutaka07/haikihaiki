@@ -2201,6 +2201,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products", "prefectures", "admins"],
   data: function data() {
@@ -38210,7 +38211,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "p-search__group__form",
-                attrs: { type: "number" },
+                attrs: { type: "number", pattern: "\\d*" },
                 domProps: { value: _vm.searchprice },
                 on: {
                   input: function($event) {
