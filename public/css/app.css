@@ -527,7 +527,7 @@ table {
 .p-panel__nav {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .p-panel__nav--link {
