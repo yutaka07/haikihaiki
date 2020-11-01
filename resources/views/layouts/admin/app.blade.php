@@ -84,8 +84,8 @@
                                     </form>
                               
                             </li>
-                            <li class="nav-item nav-item__regist ">
-                                <a class="nav-link__regist" href="{{ route('admin.products.registproduct') }}" >
+                            <li class="nav-item__regist ">
+                                <a class="nav-link nav-link__regist" href="{{ route('admin.products.registproduct') }}" >
                                     出品 
                                 </a>
                             </li>
