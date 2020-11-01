@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('/js/top.js') }}" defer></script>
+    <script src="{{ asset('/js/admintop.js') }}" defer></script>
     
 
     <!-- Fonts -->
@@ -94,7 +94,7 @@
         </nav>
 
         <main class="main">
-        <div id="app2">
+        <div id="app3">
           <router-view :products="{{ $products }}"
           :prefectures="{{ $prefectures }}" :admins="{{ $admins }}"></router-view>
         </div>
