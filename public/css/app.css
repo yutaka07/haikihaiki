@@ -252,7 +252,6 @@ table {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
 }
 
 .c-menu__mypageregist {
@@ -387,7 +386,7 @@ table {
   height: 150px;
   background: #ea352d;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   bottom: 50px;
 }
 
