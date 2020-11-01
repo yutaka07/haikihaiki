@@ -386,6 +386,8 @@ table {
   height: 150px;
   background: #ea352d;
   border-radius: 50%;
+  position: absolute;
+  bottom: 50px;
 }
 
 .nav-link {
