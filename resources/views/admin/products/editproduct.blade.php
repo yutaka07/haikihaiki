@@ -45,7 +45,7 @@
 
                             <div class="col-md-6">
                             <label for="price">価格（円）</label>
-                                <input placeholder="価格" id="price" type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ $product->price }}" required autocomplete="price" autofocus>
+                                <input placeholder="価格"  id="price" type="number" pattern="\d*" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ $product->price }}" required autocomplete="price" autofocus>
 
                                 @error('price')
                                     <span class="invalid-feedback" role="alert">
