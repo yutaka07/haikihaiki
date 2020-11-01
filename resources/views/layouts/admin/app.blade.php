@@ -28,7 +28,7 @@
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 @else
-                <a class="p-top__title" href="{{ route('admin.home') }}">
+                <a class="p-top__title" href="{{ route('admin.top') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 @endunless
@@ -59,6 +59,11 @@
                             <li class="nav-item ">
                                 <a class="p-top__title" href="#" >
                                     {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                            <a class="nav-link" href="{{ route('admin.top') }}">
+                                    商品一覧
                                 </a>
                             </li>
                             <li class="nav-item ">

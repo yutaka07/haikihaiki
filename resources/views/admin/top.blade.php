@@ -63,6 +63,11 @@
                                 </a>
                             </li>
                             <li class="nav-item ">
+                                <a class="nav-link" href="{{ route('admin.top') }}" >
+                                    商品一覧
+                                </a>
+                            </li>
+                            <li class="nav-item ">
                                 <a class="nav-link" href="{{ route('admin.home') }}" >
                                     マイページ 
                                 </a>

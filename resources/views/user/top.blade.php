@@ -68,6 +68,11 @@
                                 </a>
                             </li>
                             <li class="nav-item ">
+                                <a class="nav-link" href="{{ route('user.top') }}" >
+                                    商品一覧 
+                                </a>
+                            </li>
+                            <li class="nav-item ">
                                 <a class="nav-link" href="{{ route('user.edit') }}" >
                                     プロフィール編集 
                                 </a>
