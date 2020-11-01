@@ -280,6 +280,7 @@ table {
 
 .nav-link__mypageregist {
   font-size: 1.5rem;
+  text-decoration: none;
   color: #fff;
   width: 100%;
   height: 100%;
