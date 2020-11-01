@@ -32,7 +32,7 @@
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 @endunless
-                <div class="" id="nav-drawer">
+                <div class="">
 
                     <!-- Right Side Of Navbar -->
                    
