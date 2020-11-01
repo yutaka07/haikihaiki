@@ -38119,7 +38119,7 @@ var staticRenderFns = [
         _c(
           "a",
           {
-            staticClass: "nav-link nav-link__regist",
+            staticClass: "nav-link nav-link__mypageregist",
             attrs: { href: "products/registproduct" }
           },
           [_vm._v("\n                    出品 \n                ")]
