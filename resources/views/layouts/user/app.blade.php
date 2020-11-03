@@ -99,8 +99,8 @@
 
          <!-- フラッシュメッセージ -->
          @if (session('flash_message'))
-                <div class="alert alert-success">
-                    {{ session('flash_message') }}
+                <div class="c-alert">
+                    {{ session('message') }}
                 </div>
         @endif
 
