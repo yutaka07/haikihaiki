@@ -28,7 +28,7 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
 
 
     // ログイン認証後
-    Route::middlewareGroups('auth:user')->group(function () {
+    Route::group(['middlewareGroups' => ['web', 'auth:user']],function () {
 
        
         
