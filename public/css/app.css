@@ -503,6 +503,12 @@ table {
   text-align: center;
 }
 
+.c-alert {
+  background-color: red;
+  color: #fff;
+  text-align: center;
+}
+
 .p-panel {
   width: 80%;
   margin: auto;
