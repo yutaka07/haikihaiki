@@ -30,7 +30,7 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
     // ログイン認証後
     Route::middleware('auth:user')->group(function () {
 
-        Route::group(['middlewareGroups' => 'web'], function () {
+       
         
         Route::get('/top', 'HomeController@top')->name('top');
 
@@ -41,8 +41,6 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
         Route::get('/home', 'HomeController@index')->name('home');
         Route::get('/home/edit', 'HomeController@edit')->name('edit');
         Route::post('/home/{id}', 'HomeController@update')->name('update');
-
-        });
 
     });
 });
@@ -60,9 +58,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     // ログイン認証後
     Route::middleware('auth:admin')->group(function () {
 
-        Route::group(['middlewareGroups' => 'web'], function () {
-
-        Route::get('/top', 'HomeController@top')->name('top');
+      Route::get('/top', 'HomeController@top')->name('top');
         Route::get('/home', 'HomeController@index')->name('home');
         Route::get('/edit', 'HomeController@edit')->name('edit');
         Route::post('/edit/{id}', 'HomeController@update')->name('update');
@@ -74,7 +70,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         
         Route::post('/home/delete', 'ProductController@destroy');
 
-    });
     });
 
 });
