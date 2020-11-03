@@ -100,9 +100,9 @@
          <!-- フラッシュメッセージ -->
          @if (Session::has('flash_message'))
                 <div class="c-alert">
-                    {{ session('message') }}
+                    {{ session('flash_message') }}
                 </div>
-        @endif
+         @endif
 
         <main class="main">
             @yield('content')
