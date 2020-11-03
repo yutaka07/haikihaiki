@@ -16,6 +16,7 @@ use App\Mail\BuyEmail;
 use App\Mail\SellEmail;
 use App\Mail\BuyCancelEmail;
 use App\Mail\SellCancelEmail;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
