@@ -28,9 +28,9 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
 
 
     // ログイン認証後
-    Route::group(['middlewareGroups' => ['web', 'auth:user']],function () {
+    Route::middleware('auth:user')->group(function () {
 
-        
+       
         
         Route::get('/top', 'HomeController@top')->name('top');
 
