@@ -103,6 +103,9 @@
                     {{ Session::get('flash_message') }}
                 </div>
          @endif
+         <?php
+         var_dump(Session::get('flash_message'));
+         ?>
 
         <main class="main">
             @yield('content')
