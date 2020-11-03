@@ -95,8 +95,8 @@ class HomeController extends Controller
 
         Mail::to($admin)->send(new SellEmail($user, $admin, $product));
         
-        session()->flash('flash_message', '購入しました');
-        return redirect('/user/home');
+        
+        return redirect('/user/home')->with('flash_message', '購入しました');
     }
 
     public function cancel(Request $request){
@@ -119,7 +119,7 @@ class HomeController extends Controller
 
         Mail::to($admin)->send(new SellCancelEmail($user, $admin, $product));
 
-        session()->flash('flash_message', '購入をキャンセルしました');
-        return redirect('/user/home');
+      
+        return redirect('/user/home')->with('flash_message', '購入をキャンセルしました');
     }
 }
