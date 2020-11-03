@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -16,7 +17,6 @@ use App\Mail\BuyEmail;
 use App\Mail\SellEmail;
 use App\Mail\BuyCancelEmail;
 use App\Mail\SellCancelEmail;
-use Session;
 
 class HomeController extends Controller
 {
