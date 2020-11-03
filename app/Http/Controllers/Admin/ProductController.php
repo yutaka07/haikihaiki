@@ -46,14 +46,14 @@ class ProductController extends Controller
         $product->photofile = Storage::disk('s3')->url($path);
         $product->save();
 
-        return redirect('/admin/home');
+        return redirect('/admin/home')->with('flash_message', '登録しました');
        
     }
 
     public function destroy(Request $request){
         //商品削除
         Product::find($request->productid)->delete();
-        return redirect('/admin/home');
+        return redirect('/admin/home')->with('flash_message', '削除しました');
       }  
 
       public function edit($id){
@@ -97,7 +97,7 @@ class ProductController extends Controller
        }
         $product->save();
 
-        return redirect('/admin/home');
+        return redirect('/admin/home')->with('flash_message', '更新しました');
 
       }
 }

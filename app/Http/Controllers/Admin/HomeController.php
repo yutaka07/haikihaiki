@@ -53,7 +53,7 @@ class HomeController extends Controller
         $admin = Admin::find($id);
         $admin->fill($request->all())->save();
 
-        return redirect('admin/home');
+        return redirect('admin/home')->with('flash_message', '更新しました');
     }
 
     public function top(){
