@@ -74,6 +74,9 @@ class HomeController extends Controller
         //商品購入
         $id = $request->productid;
         $product = Product::find($id);
+        if($product->buy_flg === 1){
+            return redirect('user/top');
+        }
         $product->buy_flg = true;
         $product->save();
 
