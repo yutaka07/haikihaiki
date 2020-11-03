@@ -98,7 +98,7 @@
         </nav>
 
          <!-- フラッシュメッセージ -->
-         @if (session('flash_message'))
+         @if (Session::has('flash_message'))
                 <div class="c-alert">
                     {{ session('message') }}
                 </div>
