@@ -117,7 +117,7 @@ class HomeController extends Controller
 
         Mail::to($admin)->send(new SellCancelEmail($user, $admin, $product));
 
-        return redirect('user/home')->with('flash_message', '購入をキャンセルしました');;
+        return redirect('user/home')->with('flash_message', '購入をキャンセルしました');
 
     }
 }
