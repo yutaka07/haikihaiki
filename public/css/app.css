@@ -503,8 +503,16 @@ table {
   text-align: center;
 }
 
+.c-alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 300px;
+  z-index: 10000;
+}
+
 .c-alert__feedback {
-  margin: auto;
   padding: 12px;
   border-radius: 4px;
   text-align: center;
