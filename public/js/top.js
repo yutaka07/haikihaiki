@@ -2013,11 +2013,6 @@ __webpack_require__.r(__webpack_exports__);
       if (confirm('購入しますか？')) {
         axios.post("/user/top", {
           productid: this.id
-        }).then(function (response) {
-          console.log(response);
-          window.location.href = '/user/home';
-        })["catch"](function (error) {
-          console.log(error);
         });
       }
     }
