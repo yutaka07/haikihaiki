@@ -76,7 +76,7 @@ class HomeController extends Controller
         $id = $request->productid;
         $product = Product::find($id);
         if($product->buy_flg === 1){
-            return redirect('user.home')->with('flash_message', '売り切れていて購入できませんでした');
+            return redirect()->route('user.home')->with('flash_message', '売り切れていて購入できませんでした');
         }
         $product->buy_flg = true;
         $product->save();
@@ -97,7 +97,7 @@ class HomeController extends Controller
         
        
         
-        return redirect('user.home')->with('flash_message', '購入しました');
+        return redirect()->route('user.home')->with('flash_message', '購入しました');
     }
 
     public function cancel(Request $request){
@@ -121,6 +121,6 @@ class HomeController extends Controller
         Mail::to($admin)->send(new SellCancelEmail($user, $admin, $product));
 
       
-        return redirect('user.home')->with('flash_message', '購入をキャンセルしました');
+        return redirect()->route('user.home')->with('flash_message', '購入をキャンセルしました');
     }
 }
