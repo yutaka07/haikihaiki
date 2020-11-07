@@ -95,9 +95,9 @@ class HomeController extends Controller
 
         Mail::to($admin)->send(new SellEmail($user, $admin, $product));
         
-        $request->session()->flash('flash_message', '購入しました');
+        session()->flash('flash_message', '購入しました');
         
-        return redirect('/user/home')->with('flash_message', '購入しました');
+        return redirect('/user/home');
     }
 
     public function cancel(Request $request){
