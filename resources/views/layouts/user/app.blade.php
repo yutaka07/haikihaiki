@@ -99,9 +99,11 @@
 
          <!-- フラッシュメッセージ -->
          @if(Session::has('flash_message'))
-                <div class="c-alert">
+         <div class="c-alert">
+                <div class="c-alert__feedback c-alert__success">
                     {{ Session::get('flash_message') }}
                 </div>
+         </div>
          @endif
          <div>
          <?php

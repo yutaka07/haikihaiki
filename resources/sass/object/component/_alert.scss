@@ -1,9 +1,13 @@
 .c-alert{
-  display: block;
-    background-color:  red;
-    width: 500px;
-    height: 500px;
-    z-index: 10000000;
-    color: #fff;
+  &__feedback{
+    margin: auto;
+    padding: 12px;
+    border-radius: 4px;
     text-align: center;
+  }
+  &__success{
+    border: 1px solid green;
+      color: green;
+      font-weight: bold
+  }
 }
