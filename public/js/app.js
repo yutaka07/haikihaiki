@@ -37891,17 +37891,13 @@ var render = function() {
                     [_vm._v("\n              購入キャンセル\n            ")]
                   )
                 ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.product["buy_flg"] === 0
-              ? _c("div", { staticClass: "form-group row mb-0" }, [
+              : _c("div", { staticClass: "form-group row mb-0" }, [
                   _c(
                     "button",
                     { staticClass: "c-btn__form c-btn__form--sold" },
                     [_vm._v("\n              商品がありません\n            ")]
                   )
                 ])
-              : _vm._e()
           ])
         ])
       ])

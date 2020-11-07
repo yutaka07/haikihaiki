@@ -60,7 +60,7 @@
                 購入キャンセル
               </button>
             </div>
-            <div v-if="product['buy_flg'] === 0" class="form-group row mb-0">
+            <div v-else class="form-group row mb-0">
               <button
                 class="c-btn__form c-btn__form--sold"
               >
