@@ -2030,6 +2030,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["id", "products", "admins"],
   data: function data() {
@@ -37872,17 +37879,29 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "form-group row mb-0" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "c-btn__form",
-                  attrs: { type: "submit" },
-                  on: { click: _vm.buyproductcancel }
-                },
-                [_vm._v("\n              購入キャンセル\n            ")]
-              )
-            ])
+            _vm.product["buy_flg"] === 1
+              ? _c("div", { staticClass: "form-group row mb-0" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "c-btn__form",
+                      attrs: { type: "submit" },
+                      on: { click: _vm.buyproductcancel }
+                    },
+                    [_vm._v("\n              購入キャンセル\n            ")]
+                  )
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.product["buy_flg"] === 0
+              ? _c("div", { staticClass: "form-group row mb-0" }, [
+                  _c(
+                    "button",
+                    { staticClass: "c-btn__form c-btn__form--sold" },
+                    [_vm._v("\n              商品がありません\n            ")]
+                  )
+                ])
+              : _vm._e()
           ])
         ])
       ])

@@ -51,13 +51,20 @@
                 <div class="c-detail__text">¥{{ product["price"] }}</div>
               </div>
             </div>
-            <div class="form-group row mb-0">
+            <div v-if="product['buy_flg'] === 1" class="form-group row mb-0">
               <button
                 type="submit"
                 class="c-btn__form"
                 @click="buyproductcancel"
               >
                 購入キャンセル
+              </button>
+            </div>
+            <div v-if="product['buy_flg'] === 0" class="form-group row mb-0">
+              <button
+                class="c-btn__form c-btn__form--sold"
+              >
+                商品がありません
               </button>
             </div>
           </div>
