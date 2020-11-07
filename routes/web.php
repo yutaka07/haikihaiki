@@ -16,6 +16,8 @@ Route::get('/', function () {
 })->name('index');
 
 
+Route::group(['middlewareGroups' => ['web']],function () {
+
 // ユーザー
 Route::namespace('User')->prefix('user')->name('user.')->group(function () {
 
@@ -28,9 +30,7 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
 
 
     // ログイン認証後
-    Route::group(['middlewareGroups' => ['web', 'auth:user']],function () {
-
-       
+        Route::middleware('auth:user')->group(function () {
         
         Route::get('/top', 'HomeController@top')->name('top');
 
@@ -70,6 +70,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         
         Route::post('/home/delete', 'ProductController@destroy');
 
+    });
     });
 
 });
