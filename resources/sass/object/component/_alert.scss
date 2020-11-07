@@ -1,10 +1,7 @@
 .c-alert{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  width: 300px;
+  width: 100%;
   z-index: 10000;
+  position: absolute;
   &__feedback{
     padding: 12px;
     border-radius: 4px;

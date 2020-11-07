@@ -53882,7 +53882,7 @@ $('#photofile').on('change', function (e) {
   reader.readAsDataURL(e.target.files[0]);
 });
 $(function () {
-  $('.c-alert__feedback').fadeOut(3000);
+  $('.c-alert').fadeOut(3000);
 });
 
 /***/ }),

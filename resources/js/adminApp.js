@@ -47,5 +47,5 @@ $('#photofile').on('change', function (e) {
 });
 
 $(function(){
-    $('.c-alert__feedback').fadeOut(3000);
+    $('.c-alert').fadeOut(3000);
 });
