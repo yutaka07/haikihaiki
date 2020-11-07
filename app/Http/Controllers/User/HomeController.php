@@ -97,7 +97,7 @@ class HomeController extends Controller
         
        
         
-        return redirect()->route('user.home')->with('flash_message', '購入しました');
+        return redirect()->route('user.top')->with('flash_message', '購入しました');
     }
 
     public function cancel(Request $request){
