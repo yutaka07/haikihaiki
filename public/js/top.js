@@ -2015,7 +2015,9 @@ __webpack_require__.r(__webpack_exports__);
           productid: this.id
         }).then(function (response) {
           console.log(response);
-          window.location.href = '/user/home';
+          this.$router.push({
+            name: "Top"
+          });
         })["catch"](function (error) {
           console.log(error);
         });
