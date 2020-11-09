@@ -1982,6 +1982,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["id", "products", "admins"],
   data: function data() {
@@ -1989,7 +1990,8 @@ __webpack_require__.r(__webpack_exports__);
       product: [],
       admin: [],
       productid: "",
-      url: ''
+      url: '',
+      msg: ""
     };
   },
   mounted: function mounted() {
@@ -2015,9 +2017,12 @@ __webpack_require__.r(__webpack_exports__);
           productid: this.id
         }).then(function (response) {
           console.log(response);
-          this.$router.push({
-            name: "Top"
-          });
+
+          if (response.success) {
+            this.msg = response.success;
+          } else {
+            window.location.href = "/user/home";
+          }
         })["catch"](function (error) {
           console.log(error);
         });
@@ -37984,7 +37989,9 @@ var render = function() {
                     [_vm._v("売り切れました")]
                   )
                 ])
-              : _vm._e()
+              : _vm._e(),
+            _vm._v(" "),
+            _c("div", [_vm._v(_vm._s(_vm.mag))])
           ])
         ])
       ])

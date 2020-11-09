@@ -76,7 +76,7 @@ class HomeController extends Controller
         $id = $request->productid;
         $product = Product::find($id);
         if($product->buy_flg === 1){
-            return redirect('user/home')->with('flash_message', '売り切れていて購入できませんでした');
+            return response()->json(['success'=>'売り切れていて購入できません']);
         }
         $product->buy_flg = true;
         $product->save();

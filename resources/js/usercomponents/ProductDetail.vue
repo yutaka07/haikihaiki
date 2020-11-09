@@ -102,8 +102,12 @@ export default {
         axios
           .post("/user/home", { productid: this.id })
           .then(function (response) {
-            this.$router.push({ name: "UserHome" });
+            console.log(response);
+            window.location.href = "/user/home";
           })
+          .catch(function (error) {
+            console.log(error);
+          });
       }
     },
   },
