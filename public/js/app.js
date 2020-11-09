@@ -2064,6 +2064,8 @@ __webpack_require__.r(__webpack_exports__);
       if (confirm("購入キャンセルしますか？")) {
         axios.post("/user/home", {
           productid: this.id
+        }).then(function (response) {
+          window.location.href = "/user/home";
         });
       }
     }

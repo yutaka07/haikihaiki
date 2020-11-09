@@ -100,7 +100,10 @@ export default {
     buyproductcancel() {
       if (confirm("購入キャンセルしますか？")) {
         axios
-          .post("/user/home", { productid: this.id });
+          .post("/user/home", { productid: this.id })
+          .then(function (response) {
+            window.location.href = "/user/home";
+          })
       }
     },
   },
