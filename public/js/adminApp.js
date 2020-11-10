@@ -2030,6 +2030,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['message'],
   data: function data() {
@@ -38181,13 +38189,38 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm.message != undefined
-      ? _c("div", [_vm._v(_vm._s(_vm.message))])
-      : _vm._e()
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _vm.message != undefined
+        ? _c("h1", { staticClass: "title__center" }, [
+            _vm._v(_vm._s(_vm.message))
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm._m(0)
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-panel__background" }, [
+      _c("div", { staticClass: "p-panel__nav" }, [
+        _c("a", { staticClass: "p-panel__nav--link", attrs: { href: "top" } }, [
+          _vm._v("商品一覧")
+        ]),
+        _vm._v(" "),
+        _c(
+          "a",
+          { staticClass: "p-panel__nav--link", attrs: { href: "home/edit" } },
+          [_vm._v("プロフィール編集")]
+        )
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
