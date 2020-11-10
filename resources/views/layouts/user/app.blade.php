@@ -105,12 +105,7 @@
                 </div>
          </div>
          @endif
-         <div>
-         <?php
-         var_dump(Session::get('flash_message'));
-         ?>
          
-         </div>
 
         <main class="main">
             @yield('content')

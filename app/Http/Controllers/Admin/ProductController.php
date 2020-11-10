@@ -53,7 +53,7 @@ class ProductController extends Controller
     public function destroy(Request $request){
         //商品削除
         Product::find($request->productid)->delete();
-        return redirect('/admin/home')->with('flash_message', '削除しました');
+        return response()->json(['success'=>'削除しました']);
       }  
 
       public function edit($id){

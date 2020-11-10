@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Top from './topcomponents/Top.vue';
 import ProductDetail from './topcomponents/ProductDetail.vue';
 import TopSearch from './topcomponents/TopSearch.vue';
+import Msg from './topcomponents/Msg.vue';
 
 
 
@@ -27,6 +28,11 @@ export default new VueRouter({
     name: 'ProductDetail',
     component: ProductDetail,
     props: route => ({ id: Number(route.params.id) })
+  },
+  {
+    path: '/msg',
+    name: 'Msg',
+    component: Msg
   },
   {
     path: '*',

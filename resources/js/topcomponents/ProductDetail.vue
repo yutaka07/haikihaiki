@@ -65,7 +65,6 @@
             <div  v-if="product['buy_flg'] === 1" class="form-group row mb-0">
                <button class="c-btn__form c-btn__form--sold">売り切れました</button>
             </div>
-            <div >{{ msg }}</div>
           </div>
         </div>
       </div>
@@ -82,7 +81,6 @@ export default {
       admin: [],
       productid: "",
       url: '',
-      msg:"",
     };
   },
  
@@ -109,11 +107,8 @@ export default {
         .post("/user/top", { productid: this.id })
         .then( (response) => {
           console.log(response);
-          if(response.success){
-              this.msg = response.success;
-            }else{
-             this.$router.push({ name: "Top" });
-            }
+          console.log(response.data.success);
+             this.$router.push({ name: "Msg", params: {message: response.data.success} });
         })
         .catch(function (error) {
           console.log(error);

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import UserHome from './usercomponents/UserHome.vue';
 import ProductDetail from './usercomponents/ProductDetail.vue';
 import BuyProductList from './usercomponents/BuyProductList.vue';
+import Msg from './usercomponents/Msg.vue';
 
 
 Vue.use(VueRouter);
@@ -25,6 +26,11 @@ export default new VueRouter({
     path: '/buyproductlist',
     name: 'BuyProductList',
     component: BuyProductList,
+  },
+  {
+    path: '/msg',
+    name: 'Msg',
+    component: Msg
   },
   {
     path: '*',
