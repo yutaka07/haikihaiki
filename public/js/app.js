@@ -37772,7 +37772,7 @@ var render = function() {
           _c(
             "div",
             { staticClass: "p-panel__list" },
-            _vm._l(_vm.products.slice(0, 5), function(product, index) {
+            _vm._l(_vm.products, function(product, index) {
               return _c(
                 "div",
                 {

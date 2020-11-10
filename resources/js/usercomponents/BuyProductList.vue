@@ -7,7 +7,7 @@
           <div class="p-panel__list">
             <div
               class="p-panel__body"
-              v-for="(product, index) in products.slice(0, 5)"
+              v-for="(product, index) in products"
               :key="index"
               @click="detail(product['id'])"
             >
