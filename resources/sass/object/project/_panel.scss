@@ -8,6 +8,21 @@
   a{
     cursor: pointer;
   }
+  &__msg{
+    border: 2px solid #f6f5f4;
+    width: 400px;
+    height: 200px;
+    margin: 100px auto;
+    @include mq(){
+      width: 100%;
+    }
+    &--title{
+    text-align: center;
+    margin: 50px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #f6f5f4;
+    }
+  }
   &__background{
     background: #f6f5f4;
     padding: 50px 0;

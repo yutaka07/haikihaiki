@@ -37829,9 +37829,9 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
+    _c("div", { staticClass: "p-panel__msg" }, [
       _vm.message != undefined
-        ? _c("h1", { staticClass: "title__center" }, [
+        ? _c("h1", { staticClass: "p-panel__msg--title" }, [
             _vm._v(_vm._s(_vm.message))
           ])
         : _vm._e(),
@@ -37845,7 +37845,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-panel__background" }, [
+    return _c("div", [
       _c("div", { staticClass: "p-panel__nav" }, [
         _c("a", { staticClass: "p-panel__nav--link", attrs: { href: "top" } }, [
           _vm._v("商品一覧")
@@ -37853,8 +37853,8 @@ var staticRenderFns = [
         _vm._v(" "),
         _c(
           "a",
-          { staticClass: "p-panel__nav--link", attrs: { href: "home/edit" } },
-          [_vm._v("プロフィール編集")]
+          { staticClass: "p-panel__nav--link", attrs: { href: "home" } },
+          [_vm._v("マイページ")]
         )
       ])
     ])
@@ -53372,6 +53372,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('user-home', __webpack_requ
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app1',
   router: _router1__WEBPACK_IMPORTED_MODULE_1__["default"]
+});
+$(function () {
+  $('.c-alert').fadeOut(5000);
 });
 
 /***/ }),

@@ -41,3 +41,8 @@ const app = new Vue({
     el: '#app1',
     router,
 });
+
+
+$(function(){
+    $('.c-alert').fadeOut(5000);
+});
