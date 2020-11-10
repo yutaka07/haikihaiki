@@ -84,7 +84,7 @@ methods: {
               if(confirm('削除しますか？')){
                 axios
           .post("/admin/home/delete", { productid: this.id })
-          .then(function (response) {
+          .then((response) => {
             console.log(response);
              this.$router.push({ name: "Msg", params: {message: response.data.success} });
           })

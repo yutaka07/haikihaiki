@@ -101,7 +101,7 @@ export default {
       if (confirm("購入キャンセルしますか？")) {
         axios
           .post("/user/home", { productid: this.id })
-          .then( () => {
+          .then( (response) => {
            this.$router.push({ name: "Msg", params: {message: response.data.success} });
           })
           .catch(function (error) {

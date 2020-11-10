@@ -2132,12 +2132,15 @@ __webpack_require__.r(__webpack_exports__);
     },
     //削除
     destroy: function destroy() {
+      var _this = this;
+
       if (confirm('削除しますか？')) {
         axios.post("/admin/home/delete", {
           productid: this.id
         }).then(function (response) {
           console.log(response);
-          this.$router.push({
+
+          _this.$router.push({
             name: "Msg",
             params: {
               message: response.data.success
