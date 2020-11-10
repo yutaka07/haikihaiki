@@ -107,7 +107,7 @@ export default {
        if(confirm('購入しますか？')){
       axios
         .post("/user/top", { productid: this.id })
-        .then( () => {
+        .then( (response) => {
           console.log(response);
           if(response.success){
               this.msg = response.success;
