@@ -65,7 +65,7 @@
             <div  v-if="product['buy_flg'] === 1" class="form-group row mb-0">
                <button class="c-btn__form c-btn__form--sold">売り切れました</button>
             </div>
-            <div >{{ mag }}</div>
+            <div >{{ msg }}</div>
           </div>
         </div>
       </div>
