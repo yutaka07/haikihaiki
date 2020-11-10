@@ -1965,7 +1965,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['message'],
+  data: function data() {
+    return {};
+  }
+});
 
 /***/ }),
 
@@ -2085,7 +2092,10 @@ __webpack_require__.r(__webpack_exports__);
           productid: this.id
         }).then(function () {
           _this.$router.push({
-            name: "UserHome"
+            name: "Msg",
+            params: {
+              message: response.data.success
+            }
           });
         })["catch"](function (error) {
           console.log(error);
@@ -37810,7 +37820,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", [
+    _vm.message != undefined
+      ? _c("div", [_vm._v(_vm._s(_vm.message))])
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -53419,7 +53433,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
   }, {
     path: '/msg',
     name: 'Msg',
-    component: _usercomponents_Msg_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _usercomponents_Msg_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    props: true
   }, {
     path: '*',
     redirect: '/'

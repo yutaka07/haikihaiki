@@ -86,7 +86,7 @@ methods: {
           .post("/admin/home/delete", { productid: this.id })
           .then(function (response) {
             console.log(response);
-            window.location.href = '/admin/home';
+             this.$router.push({ name: "Msg", params: {message: response.data.success} });
           })
           .catch(function (error) {
             console.log(error);

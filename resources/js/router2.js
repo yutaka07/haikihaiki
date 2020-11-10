@@ -32,7 +32,8 @@ export default new VueRouter({
   {
     path: '/msg',
     name: 'Msg',
-    component: Msg
+    component: Msg,
+    props: true,
   },
   {
     path: '*',

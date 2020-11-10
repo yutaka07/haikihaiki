@@ -53737,7 +53737,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
   }, {
     path: '/msg',
     name: 'Msg',
-    component: _topcomponents_Msg_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _topcomponents_Msg_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    props: true
   }, {
     path: '*',
     redirect: '/'
