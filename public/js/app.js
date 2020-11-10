@@ -2061,12 +2061,15 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     buyproductcancel: function buyproductcancel() {
+      var _this = this;
+
       if (confirm("購入キャンセルしますか？")) {
         axios.post("/user/home", {
           productid: this.id
-        }).then(function (response) {
-          console.log(response);
-          window.location.href = "/user/home";
+        }).then(function () {
+          _this.$router.push({
+            name: "UserHome"
+          });
         })["catch"](function (error) {
           console.log(error);
         });

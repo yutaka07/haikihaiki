@@ -2012,16 +2012,20 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     buyproduct: function buyproduct() {
+      var _this = this;
+
       if (confirm('購入しますか？')) {
         axios.post("/user/top", {
           productid: this.id
-        }).then(function (response) {
+        }).then(function () {
           console.log(response);
 
           if (response.success) {
-            this.msg = response.success;
+            _this.msg = response.success;
           } else {
-            window.location.href = "/user/home";
+            _this.$router.push({
+              name: "Top"
+            });
           }
         })["catch"](function (error) {
           console.log(error);

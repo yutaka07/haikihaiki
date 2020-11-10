@@ -101,9 +101,8 @@ export default {
       if (confirm("購入キャンセルしますか？")) {
         axios
           .post("/user/home", { productid: this.id })
-          .then(function (response) {
-            console.log(response);
-            window.location.href = "/user/home";
+          .then( () => {
+           this.$router.push({ name: "UserHome" });
           })
           .catch(function (error) {
             console.log(error);

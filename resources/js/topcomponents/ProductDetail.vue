@@ -107,12 +107,12 @@ export default {
        if(confirm('購入しますか？')){
       axios
         .post("/user/top", { productid: this.id })
-        .then(function (response) {
+        .then( () => {
           console.log(response);
           if(response.success){
               this.msg = response.success;
             }else{
-              window.location.href = "/user/home";
+             this.$router.push({ name: "Top" });
             }
         })
         .catch(function (error) {
