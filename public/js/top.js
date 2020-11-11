@@ -38113,8 +38113,8 @@ var render = function() {
       _c("div", { staticClass: "p-panel__background" }, [
         _c("div", { staticClass: "p-panel__nav" }, [
           _c(
-            "a",
-            { staticClass: "p-panel__nav--top", on: { click: _vm.search } },
+            "button",
+            { staticClass: "c-btn-flat-border", on: { click: _vm.search } },
             [_vm._v("検索フォーム")]
           )
         ]),
