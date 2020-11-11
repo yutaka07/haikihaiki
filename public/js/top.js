@@ -38111,10 +38111,12 @@ var render = function() {
       _c("h1", { staticClass: "title__center" }, [_vm._v("商品一覧")]),
       _vm._v(" "),
       _c("div", { staticClass: "p-panel__background" }, [
-        _c("div", { staticClass: "p-search" }, [
-          _c("h2", { staticClass: "p-search__title" }, [
-            _c("button", { on: { click: _vm.search } }, [_vm._v("検索")])
-          ])
+        _c("div", { staticClass: "p-panel__nav" }, [
+          _c(
+            "button",
+            { staticClass: "p-panel__nav--link", on: { click: _vm.search } },
+            [_vm._v("検索")]
+          )
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "p-panel" }, [

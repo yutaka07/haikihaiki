@@ -3,9 +3,9 @@
     <div class="row justify-content-center">
       <h1 class="title__center">商品一覧</h1>
       <div class="p-panel__background">
-        <div class="p-search">
-          <h2 class="p-search__title"><button @click="search">検索</button></h2>
-        </div>
+        <div class="p-panel__nav">
+          <button @click="search" class="p-panel__nav--link">検索</button>
+         </div>
         <div class="p-panel">
           <div class="p-panel__list">
             <div
