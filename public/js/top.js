@@ -38115,7 +38115,7 @@ var render = function() {
           _c(
             "button",
             { staticClass: "c-btn-flat-border", on: { click: _vm.search } },
-            [_vm._v("検索フォーム")]
+            [_vm._v("検索ページに行く")]
           )
         ]),
         _vm._v(" "),
