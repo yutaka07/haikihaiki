@@ -540,7 +540,7 @@ table {
 .p-panel__msg {
   border: 2px solid #f6f5f4;
   width: 400px;
-  height: 200px;
+  min-height: 200px;
   margin: 100px auto;
 }
 
