@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
       <h1 class="title__center">商品一覧</h1>
       <div class="p-panel__background">
-         <div >
+         <div class="p-panel__nav--top">
           <button @click="search" class="c-btn-flat-border">検索フォーム</button>
          </div>
         <div class="p-panel">

@@ -37979,10 +37979,10 @@ var render = function() {
       _c("h1", { staticClass: "title__center" }, [_vm._v("商品一覧")]),
       _vm._v(" "),
       _c("div", { staticClass: "p-panel__background" }, [
-        _c("div", { staticClass: "p-panel__nav" }, [
+        _c("div", { staticClass: "p-panel__nav--top" }, [
           _c(
-            "a",
-            { staticClass: "p-panel__nav--top", on: { click: _vm.search } },
+            "button",
+            { staticClass: "c-btn-flat-border", on: { click: _vm.search } },
             [_vm._v("検索フォーム")]
           )
         ]),
