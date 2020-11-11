@@ -45,7 +45,11 @@
                                 <label for="branch">支店名</label>
                                 <input placeholder="支店名" id="branch" type="text" class="form-control @error('branch') is-invalid @enderror" name="branch" value="{{ old('branch') }}" required autocomplete="branch" autofocus>
 
-
+                                @error('branch')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
@@ -70,11 +74,6 @@
                                 <label for="email">メールアドレス</label>
                                 <input placeholder="メールアドレス" id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autocomplete="email">
 
-                                @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
                             </div>
                         </div>
 
@@ -97,10 +96,10 @@
                             <div class="col-md-6">
                                 <label for="password-confirm">パスワード（確認）</label>
                                 <input placeholder="パスワード（確認）" id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                @error('branch')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
