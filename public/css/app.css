@@ -580,6 +580,17 @@ table {
   text-decoration: underline;
 }
 
+.p-panel__nav--top {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #888888;
+}
+
+.p-panel__nav--top:hover {
+  text-decoration: underline;
+}
+
 .p-panel__form {
   display: flex;
   justify-content: space-between;

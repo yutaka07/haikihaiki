@@ -4,7 +4,7 @@
       <h1 class="title__center">商品一覧</h1>
       <div class="p-panel__background">
          <div class="p-panel__nav">
-          <button @click="search" class="p-panel__nav--link">検索</button>
+          <a @click="search" class="p-panel__nav--top">検索フォーム</a>
          </div>
         <div class="p-panel">
           <div class="p-panel__list">

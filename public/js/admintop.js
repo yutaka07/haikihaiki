@@ -37981,9 +37981,9 @@ var render = function() {
       _c("div", { staticClass: "p-panel__background" }, [
         _c("div", { staticClass: "p-panel__nav" }, [
           _c(
-            "button",
-            { staticClass: "p-panel__nav--link", on: { click: _vm.search } },
-            [_vm._v("検索")]
+            "a",
+            { staticClass: "p-panel__nav--top", on: { click: _vm.search } },
+            [_vm._v("検索フォーム")]
           )
         ]),
         _vm._v(" "),
