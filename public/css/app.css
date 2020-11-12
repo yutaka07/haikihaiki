@@ -509,6 +509,18 @@ select {
   display: none;
 }
 
+.form-check-input {
+  background-color: initial;
+  cursor: default;
+  -webkit-appearance: checkbox;
+     -moz-appearance: checkbox;
+          appearance: checkbox;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: initial;
+  border: initial;
+}
+
 .card {
   background: #f6f5f4;
   width: 30%;
