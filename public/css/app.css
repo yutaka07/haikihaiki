@@ -469,13 +469,11 @@ select {
   border: none;
   height: 48px;
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   font-size: 1rem;
   margin: 5px 0px;
   box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  background: #fff;
 }
 
 .form-group .form-textarea {
@@ -816,6 +814,7 @@ select {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
+  margin: 5px 0px;
   box-sizing: border-box;
   background: #fff;
 }
