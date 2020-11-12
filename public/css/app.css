@@ -467,6 +467,9 @@ table {
   font-size: 1rem;
   margin: 5px 0px;
   box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .form-group .form-textarea {
@@ -809,6 +812,8 @@ table {
   font-size: 1rem;
   box-sizing: border-box;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .p-search__group__sentence {

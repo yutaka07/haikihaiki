@@ -13,89 +13,87 @@
                         @csrf
 
                         <div class="form-group row">
-                           
+
                             <div class="col-md-6">
-                            <label for="name">商品名</label>
+                                <label for="name">商品名</label>
                                 <input placeholder="商品名" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $product->name }}" required autocomplete="name" autofocus>
 
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group row">
-                           
+
 
                             <div class="col-md-6">
-                                <div>
-                                    <label for="expiration_date">消費期限</label>
-                                </div>
-                                <input  id="expiration_date" type="datetime-local" class="form-control @error('expiration_date') is-invalid @enderror" name="expiration_date" value="{{ $date }}" required autocomplete="expiration_date" autofocus>
+                                <label for="expiration_date">消費期限</label>
+                                <input id="expiration_date" type="datetime-local" class="form-control @error('expiration_date') is-invalid @enderror" name="expiration_date" value="{{ $date }}" required autocomplete="expiration_date" autofocus>
 
                                 @error('expiration_date')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group row">
-                           
+
 
                             <div class="col-md-6">
-                            <label for="price">価格（円）</label>
-                                <input placeholder="価格"  id="price" type="number" pattern="\d*" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ $product->price }}" required autocomplete="price" autofocus>
+                                <label for="price">価格（円）</label>
+                                <input placeholder="価格" id="price" type="number" pattern="\d*" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ $product->price }}" required autocomplete="price" autofocus>
 
                                 @error('price')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group row">
-                           
+
 
                             <div class="col-md-6">
-                            <label for="comment">商品詳細</label>
-                                <textarea cols="30" rows="10"  id="comment" type="comment" class="form-textarea @error('comment') is-invalid @enderror" name="comment" value="" required autocomplete="comment">{{$product->comment}}
+                                <label for="comment">商品詳細</label>
+                                <textarea cols="30" rows="10" id="comment" type="comment" class="form-textarea @error('comment') is-invalid @enderror" name="comment" value="" required autocomplete="comment">{{$product->comment}}
                                 </textarea>
 
                                 @error('comment')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            
+
                             <div class="col-md-6">
-                            <label for="photofile">写真</label>
+                                <label for="photofile">写真</label>
                                 <input placeholder="ファイル" accept="image/*" id="photofile" type="file" class="form-control @error('photofile') is-invalid @enderror" name="photofile" autocomplete="new-photofile">
 
                                 @error('photofile')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                                 <img id="preview" src="{{$product->photofile}}" alt="" />
                             </div>
                         </div>
 
-                        
+
 
                         <div class="form-group row mb-0">
-                           
-                                <button type="submit" class="c-btn__form">
-                                    更新
-                                </button>
-                           
+
+                            <button type="submit" class="c-btn__form">
+                                更新
+                            </button>
+
                         </div>
                     </form>
                 </div>
