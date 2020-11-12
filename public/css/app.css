@@ -477,6 +477,7 @@ select {
 }
 
 .form-group .form-textarea {
+  margin: 5px 0px;
   border: none;
   width: 100%;
   padding: 15px;
