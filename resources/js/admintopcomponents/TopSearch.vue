@@ -40,11 +40,14 @@
               <div>
               <span>消費期限</span>
               </div>
+              <div class="testtest">
+
               <input
                 class="p-search__group__form"
                 type="datetime-local"
                 v-model="searchdate"
               />
+              </div>
               <div class="p-search__group__sentence"><span>以降</span></div>
             </div>
 

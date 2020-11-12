@@ -804,7 +804,7 @@ table {
 .p-search__group__form {
   border: none;
   height: 48px;
-  width: 300px;
+  width: 100%;
   padding: 15px;
   font-size: 1rem;
   box-sizing: border-box;
@@ -813,6 +813,10 @@ table {
 .p-search__group__sentence {
   display: flex;
   justify-content: flex-end;
+}
+
+.testtest {
+  width: 100%;
 }
 
 .title__center {
