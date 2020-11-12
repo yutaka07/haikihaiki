@@ -36,6 +36,18 @@
               </select>
             </div>
 
+             <div class="p-search__group">
+              <div>
+              <span>消費期限</span>
+              </div>
+              <input
+                class="p-search__group__form"
+                type="datetime-local"
+                v-model="searchdate"
+              />
+              <div class="p-search__group__sentence"><span>以降</span></div>
+            </div>
+
             <div class="p-search__group">
               <span>値段</span>
               <input
@@ -47,15 +59,7 @@
               <div class="p-search__group__sentence"><span>円以下</span></div>
             </div>
 
-            <div class="p-search__group">
-              <span>消費期限</span>
-              <input
-                class="p-search__group__form"
-                type="datetime-local"
-                v-model="searchdate"
-              />
-              <div class="p-search__group__sentence"><span>以降</span></div>
-            </div>
+            
           </div>
         </div>
         <div class="p-panel">

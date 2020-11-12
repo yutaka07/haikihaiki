@@ -2244,6 +2244,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products", "prefectures", "admins"],
   data: function data() {
@@ -38296,35 +38299,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "p-search__group" }, [
-              _c("span", [_vm._v("値段")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.searchprice,
-                    expression: "searchprice"
-                  }
-                ],
-                staticClass: "p-search__group__form",
-                attrs: { type: "number", pattern: "\\d*" },
-                domProps: { value: _vm.searchprice },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.searchprice = $event.target.value
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _vm._m(1)
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "p-search__group" }, [
-              _c("span", [_vm._v("消費期限")]),
+              _vm._m(1),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -38349,6 +38324,34 @@ var render = function() {
               }),
               _vm._v(" "),
               _vm._m(2)
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-search__group" }, [
+              _c("span", [_vm._v("値段")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.searchprice,
+                    expression: "searchprice"
+                  }
+                ],
+                staticClass: "p-search__group__form",
+                attrs: { type: "number", pattern: "\\d*" },
+                domProps: { value: _vm.searchprice },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.searchprice = $event.target.value
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm._m(3)
             ])
           ])
         ]),
@@ -38436,9 +38439,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-search__group__sentence" }, [
-      _c("span", [_vm._v("円以下")])
-    ])
+    return _c("div", [_c("span", [_vm._v("消費期限")])])
   },
   function() {
     var _vm = this
@@ -38446,6 +38447,14 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "p-search__group__sentence" }, [
       _c("span", [_vm._v("以降")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-search__group__sentence" }, [
+      _c("span", [_vm._v("円以下")])
     ])
   }
 ]

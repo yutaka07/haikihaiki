@@ -30,7 +30,9 @@
                            
 
                             <div class="col-md-6">
-                              <label for="expiration_date">消費期限</label>
+                                <div>
+                                    <label for="expiration_date">消費期限</label>
+                                </div>
                                 <input  id="expiration_date" type="datetime-local" class="form-control @error('expiration_date') is-invalid @enderror" name="expiration_date" value="{{ $date }}" required autocomplete="expiration_date" autofocus>
 
                                 @error('expiration_date')
@@ -74,7 +76,7 @@
                         <div class="form-group row">
                             
                             <div class="col-md-6">
-                                
+                            <label for="photofile">写真</label>
                                 <input placeholder="ファイル" accept="image/*" id="photofile" type="file" class="form-control @error('photofile') is-invalid @enderror" name="photofile" autocomplete="new-photofile">
 
                                 @error('photofile')
