@@ -821,10 +821,6 @@ table {
   justify-content: flex-end;
 }
 
-input[type=datetime-local] {
-  -webkit-appearance: none;
-}
-
 .title__center {
   text-align: center;
   margin: 50px;

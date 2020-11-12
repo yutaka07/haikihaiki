@@ -7,7 +7,7 @@
           <h2 class="p-search__title">検索<span>(必須)</span></h2>
           <div class="p-search__flex">
             <div class="p-search__group">
-              都道府県
+              <div><span>都道府県</span></div>
               <select
                 v-model="searchprefecture"
                 class="p-search__group__form"
@@ -24,7 +24,7 @@
               </select>
             </div>
             <div class="p-search__group">
-              支店
+              <div><span>支店</span></div>
               <select v-model="searchbranch" class="p-search__group__form">
                 <option
                   :value="bran"
@@ -37,7 +37,7 @@
             </div>
 
             <div class="p-search__group">
-              <span>消費期限</span>
+              <div><span>消費期限</span></div>
               <input
                 class="p-search__group__form"
                 type="datetime-local"
@@ -47,7 +47,7 @@
             </div>
 
             <div class="p-search__group">
-              <span>値段</span>
+              <div><span>値段</span></div>
               <input
                 class="p-search__group__form"
                 type="number"
