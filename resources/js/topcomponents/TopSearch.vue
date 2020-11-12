@@ -37,9 +37,7 @@
             </div>
 
             <div class="p-search__group">
-              <div>
               <span>消費期限</span>
-              </div>
               <input
                 class="p-search__group__form"
                 type="datetime-local"

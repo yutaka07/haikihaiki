@@ -808,15 +808,12 @@ table {
   padding: 15px;
   font-size: 1rem;
   box-sizing: border-box;
+  -webkit-appearance: none;
 }
 
 .p-search__group__sentence {
   display: flex;
   justify-content: flex-end;
-}
-
-.testtest {
-  width: 100%;
 }
 
 .title__center {

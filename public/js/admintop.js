@@ -2192,10 +2192,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products", "prefectures", "admins"],
   data: function data() {
@@ -38171,33 +38167,31 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "p-search__group" }, [
-              _vm._m(1),
+              _c("span", [_vm._v("消費期限")]),
               _vm._v(" "),
-              _c("div", { staticClass: "testtest" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.searchdate,
-                      expression: "searchdate"
-                    }
-                  ],
-                  staticClass: "p-search__group__form",
-                  attrs: { type: "datetime-local" },
-                  domProps: { value: _vm.searchdate },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.searchdate = $event.target.value
-                    }
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.searchdate,
+                    expression: "searchdate"
                   }
-                })
-              ]),
+                ],
+                staticClass: "p-search__group__form",
+                attrs: { type: "datetime-local" },
+                domProps: { value: _vm.searchdate },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.searchdate = $event.target.value
+                  }
+                }
+              }),
               _vm._v(" "),
-              _vm._m(2)
+              _vm._m(1)
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "p-search__group" }, [
@@ -38225,7 +38219,7 @@ var render = function() {
                 }
               }),
               _vm._v(" "),
-              _vm._m(3)
+              _vm._m(2)
             ])
           ])
         ]),
@@ -38308,12 +38302,6 @@ var staticRenderFns = [
       _vm._v("検索"),
       _c("span", [_vm._v("(必須)")])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("span", [_vm._v("消費期限")])])
   },
   function() {
     var _vm = this
