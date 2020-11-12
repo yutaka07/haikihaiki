@@ -142,6 +142,11 @@ table {
   border-spacing: 0;
 }
 
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 .l-footer {
   background: #222222;
   color: #fff;
@@ -811,9 +816,6 @@ table {
   padding: 15px;
   font-size: 1rem;
   box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 .p-search__group__sentence {
