@@ -495,7 +495,7 @@ select {
 
 .photofilelabel {
   color: #fff;
-  background-color: #67c5ff;
+  background-color: #1da1f2;
   padding: 10px;
   border: double 4px #fff;
   text-align: center;
@@ -512,9 +512,6 @@ select {
 .form-check-input {
   background-color: initial;
   cursor: default;
-  -webkit-appearance: checkbox;
-     -moz-appearance: checkbox;
-          appearance: checkbox;
   box-sizing: border-box;
   margin: 3px 3px 3px 4px;
   padding: initial;
