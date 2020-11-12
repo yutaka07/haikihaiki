@@ -142,7 +142,8 @@ table {
   border-spacing: 0;
 }
 
-input {
+input,
+select {
   -webkit-appearance: none;
   border-radius: 0;
 }
