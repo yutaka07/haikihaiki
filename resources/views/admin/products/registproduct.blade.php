@@ -74,7 +74,7 @@
                         <div class="form-group row">
                             
                             <div class="col-md-6">
-                                <label for="photofile">写真</label>
+                                <label class="photofilelabel" for="photofile">写真を選択</label>
                                 <input placeholder="ファイル" accept="image/*" id="photofile" type="file" class="form-control @error('photofile') is-invalid @enderror" name="photofile" required autocomplete="new-photofile">
 
                                 @error('photofile')

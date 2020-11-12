@@ -493,6 +493,22 @@ select {
   width: 100%;
 }
 
+.photofilelabel {
+  color: #fff;
+  background-color: #67c5ff;
+  padding: 10px;
+  border: double 4px #fff;
+  text-align: center;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#photofile {
+  display: none;
+}
+
 .card {
   background: #f6f5f4;
   width: 30%;
