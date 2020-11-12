@@ -817,6 +817,7 @@ select {
   padding: 15px;
   font-size: 1rem;
   box-sizing: border-box;
+  background: #fff;
 }
 
 .p-search__group__sentence {
