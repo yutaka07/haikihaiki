@@ -97,6 +97,7 @@ video {
   color: #333;
   font: inherit;
   vertical-align: baseline;
+  font-family: "Nunito", sans-serif;
 }
 
 /* HTML5 display-role reset for older browsers */

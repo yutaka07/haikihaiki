@@ -8,6 +8,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <meta name="description" content="haikishareのマイページです。">
+    <meta name="keywords" content="コンビニ,お弁当,安い,廃棄">
 
     <!-- Scripts -->
     <script src="{{ asset('/js/app.js') }}" defer></script>

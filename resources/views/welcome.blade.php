@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>HAIKISHARE</title>
+        <meta name="description" content="haikishareでコンビニの廃棄する予定のおにぎり、パン、お弁当、お菓子などたくさんの商品をお安く購入できます。">
+        <meta name="keywords" content="コンビニ,お弁当,安い,廃棄">
 
        <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
