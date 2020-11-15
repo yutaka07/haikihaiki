@@ -163,8 +163,8 @@ select {
   display: inline-block;
   padding: 0.3em 1em;
   text-decoration: none;
-  color: #67c5ff;
-  border: solid 2px #67c5ff;
+  color: #1da1f2;
+  border: solid 2px #1da1f2;
   border-radius: 3px;
   transition: 0.4s;
   margin: 15px;
@@ -172,7 +172,7 @@ select {
 }
 
 .c-btn-flat-border:hover {
-  background: #67c5ff;
+  background: #1da1f2;
   color: white;
 }
 
