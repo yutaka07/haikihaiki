@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="row justify-content-center">
-      <h1 class="title__center">商品一覧</h1>
+      <h1 class="u-title__center">商品一覧</h1>
       <div class="p-panel__background">
         <div class="p-search">
-          <h2 class="p-search__title">検索<span>(必須)</span></h2>
+          <h2 class="p-search__title">検索</h2>
           <div class="p-search__flex">
             <div class="p-search__group">
               <div><span>都道府県</span></div>
@@ -78,12 +78,12 @@
             >
               <div class="p-panel__img">
                 <div v-show="product['buy_flg'] === 1" class="p-panel__sold">SOLD</div>
-                <span>¥{{ product["price"] }}</span>
+                <span class="p-panel__img--text">¥{{ product["price"] }}</span>
 
-                <img :src="product['photofile']" alt="" />
+                <img class="p-panel__img--image" :src="product['photofile']" alt="" />
               </div>
               <div class="p-panel__footer">
-                <span>{{ product["name"] }}</span>
+                <span class="p-panel__footer--text">{{ product["name"] }}</span>
               </div>
             </div>
           </div>

@@ -1,12 +1,7 @@
 
-.title__center{
+.u-title__center{
   text-align: center;
-  margin: 50px;
-  font-size: 2rem;
+  margin: $space_3l;
+  font-size: $font-size_xxl;
 }
 
-.invalid-feedback{
-  strong{
-  color: #ea352d;
-  }
-}

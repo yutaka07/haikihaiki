@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row justify-content-center">
-      <h1 class="title__center">マイページ</h1>
+      <h1 class="u-title__center">マイページ</h1>
       <div class="p-panel__background">
         <div class="p-panel__nav">
           <a class="p-panel__nav--link" href="top">商品一覧</a>
@@ -20,11 +20,11 @@
               @click="detail(product['id'])"
             >
               <div class="p-panel__img">
-                <span>¥{{ product["price"] }}</span>
-                <img :src="product['photofile']" alt="商品" />
+                <span class="p-panel__img--text">¥{{ product["price"] }}</span>
+                <img class="p-panel__img--image" :src="product['photofile']" alt="商品" />
               </div>
               <div class="p-panel__footer">
-                <span>{{ product["name"] }}</span>
+                <span class="p-panel__footer--text">{{ product["name"] }}</span>
               </div>
             </div>
           </div>

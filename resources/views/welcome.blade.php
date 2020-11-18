@@ -21,7 +21,7 @@
         
     </head>
     <body>
-      <header class="nav-container">
+      <header class="l-header">
         
         <h1 class="p-top__title">HAIKISHARE</h1>
       </header>

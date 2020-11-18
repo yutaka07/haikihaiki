@@ -3,92 +3,92 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <h1 class="title__center">コンビニオーナー</h1>
-        <div class="form">
-            <div class="card">
-                <div class="card-header">編集</div>
+        <h1 class="u-title__center">コンビニオーナー</h1>
+        <div class="c-form">
+            <div class="c-card">
+                <div class="c-card__header">編集</div>
 
-                <div class="card-body">
+                <div class="c-card__body">
                     <form method="post" action="{{ route('admin.products.update', $product->id) }}" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="c-form__group row">
 
                             <div class="col-md-6">
                                 <label for="name">商品名</label>
-                                <input placeholder="商品名" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $product->name }}" required autocomplete="name" autofocus>
+                                <input placeholder="商品名" id="name" type="text" class="c-form__group--control @error('name') c-form__error--background @enderror" name="name" value="{{ $product->name }}" required autocomplete="name" autofocus>
 
                                 @error('name')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
+                                <span  role="alert">
+                                    <strong class="c-form__error--text">{{ $message }}</strong>
                                 </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="c-form__group row">
 
 
                             <div class="col-md-6">
                                 <label for="expiration_date">消費期限</label>
-                                <input id="expiration_date" type="datetime-local" class="form-control @error('expiration_date') is-invalid @enderror" name="expiration_date" value="{{ $date }}" required autocomplete="expiration_date" autofocus>
+                                <input id="expiration_date" type="datetime-local" class="c-form__group--control @error('expiration_date') c-form__error--background @enderror" name="expiration_date" value="{{ $date }}" required autocomplete="expiration_date" autofocus>
 
                                 @error('expiration_date')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
+                                <span  role="alert">
+                                    <strong class="c-form__error--text">{{ $message }}</strong>
                                 </span>
                                 @enderror
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <div class="c-form__group row">
 
 
                             <div class="col-md-6">
                                 <label for="price">価格（円）</label>
-                                <input placeholder="価格" id="price" type="number" pattern="\d*" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ $product->price }}" required autocomplete="price" autofocus>
+                                <input placeholder="価格" id="price" type="number" pattern="\d*" class="c-form__group--control @error('price') c-form__error--background @enderror" name="price" value="{{ $product->price }}" required autocomplete="price" autofocus>
 
                                 @error('price')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
+                                <span  role="alert">
+                                    <strong class="c-form__error--text">{{ $message }}</strong>
                                 </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="c-form__group row">
 
 
                             <div class="col-md-6">
                                 <label for="comment">商品詳細</label>
-                                <textarea cols="30" rows="10" id="comment" type="comment" class="form-textarea @error('comment') is-invalid @enderror" name="comment" value="" required autocomplete="comment">{{$product->comment}}
+                                <textarea cols="30" rows="10" id="comment" type="comment" class="c-form__group--textarea @error('comment') c-form__error--background @enderror" name="comment" value="" required autocomplete="comment">{{$product->comment}}
                                 </textarea>
 
                                 @error('comment')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
+                                <span  role="alert">
+                                    <strong class="c-form__error--text">{{ $message }}</strong>
                                 </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="c-form__group row">
 
                             <div class="col-md-6">
-                            <label class="photofilelabel" for="photofile">写真を変更</label>
-                                <input placeholder="ファイル" accept="image/*" id="photofile" type="file" class="form-control form-control__photofile @error('photofile') is-invalid @enderror" name="photofile" autocomplete="new-photofile">
+                            <label class="c-form__group--photofilelabel" for="photofile">写真を変更</label>
+                                <input placeholder="ファイル" accept="image/*" id="photofile" type="file" class="c-form__group--control c-form__group--photofile @error('photofile') c-form__error--background @enderror" name="photofile" autocomplete="new-photofile">
 
                                 @error('photofile')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
+                                <span  role="alert">
+                                    <strong class="c-form__error--text">{{ $message }}</strong>
                                 </span>
                                 @enderror
-                                <img id="preview" src="{{$product->photofile}}" alt="" />
+                                <img class="c-form__group--img" id="preview" src="{{$product->photofile}}" alt="" />
                             </div>
                         </div>
 
 
 
-                        <div class="form-group row mb-0">
+                        <div class="c-form__group row mb-0">
 
                             <button type="submit" class="c-btn__form">
                                 更新

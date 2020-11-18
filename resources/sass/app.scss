@@ -1,14 +1,11 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
-// Variables
-@import 'variables';
-
-
 @import 'foundation/base';
 @import 'foundation/reset';
 
 @import 'layout/footer';
+@import 'layout/header';
 
 @import 'object/component/btn';
 @import 'object/component/hero';

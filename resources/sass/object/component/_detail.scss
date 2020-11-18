@@ -1,15 +1,14 @@
-
-.c-detail{
-  &__title{
-    padding: 5px;
-    border: 2px solid #fff;
-    background: #f6f5f4;
-    text-align: center;
-}
-&__text{
-  padding: 5px;
-    border: 1px solid #fff;
-    min-height: 50px;
-    text-align: center;
-}
+.c-detail {
+    &__title {
+        padding: $space_s;
+        border: 2px solid $white;
+        background: $gray;
+        text-align: center;
+    }
+    &__text {
+        padding: $space_s;
+        border: 1px solid $white;
+        min-height: 50px;
+        text-align: center;
+    }
 }
