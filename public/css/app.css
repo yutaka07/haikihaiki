@@ -315,15 +315,11 @@ select {
   cursor: pointer;
 }
 
-.c-menu__open--line--line:before,
-.c-menu__open--line::before--line:before,
-.c-menu__open--line::after--line:before {
+.c-menu__open--line:before {
   bottom: -8px;
 }
 
-.c-menu__open--line--line:after,
-.c-menu__open--line::before--line:after,
-.c-menu__open--line::after--line:after {
+.c-menu__open--line:after {
   bottom: -16px;
 }
 
