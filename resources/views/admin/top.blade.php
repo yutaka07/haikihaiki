@@ -45,10 +45,10 @@
                         <label class="c-menu__close c-menu__unshown" id="nav-close" for="nav-input"></label>
               
                     
-                 <div id="c-menu__content">
+                 <div class="c-menu__content">
 
                      
-                     <ul id="c-menu__drawer">
+                     <ul class="c-menu__drawer">
                          <!-- Authentication Links -->
                          @unless (Auth::guard('admin')->check())
                          <li class="c-menu__item">
