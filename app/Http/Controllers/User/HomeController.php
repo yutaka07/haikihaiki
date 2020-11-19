@@ -97,7 +97,7 @@ class HomeController extends Controller
         
        
         
-        return  response()->json(['success'=>'購入完了\\n(メールを送信しました。)']);
+        return  response()->json(['success'=>'購入完了', 'emailmsg'=>'(メールを送信しました。)']);
     }
 
     public function cancel(Request $request){
@@ -121,6 +121,6 @@ class HomeController extends Controller
         Mail::to($admin)->send(new SellCancelEmail($user, $admin, $product));
 
       
-        return response()->json(['success'=>'購入キャンセル\\n(メールを送信しました。)']);
+        return response()->json(['success'=>'購入キャンセル', 'emailmsg'=>'(メールを送信しました。)']);
     }
 }

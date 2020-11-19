@@ -1975,8 +1975,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['message'],
+  props: ['message', 'emailmsg'],
   data: function data() {
     return {};
   }
@@ -37837,9 +37838,13 @@ var render = function() {
     _c("div", { staticClass: "p-panel__msg" }, [
       _vm.message != undefined
         ? _c("h1", { staticClass: "p-panel__msg--title" }, [
-            _vm._v(_vm._s(_vm.message))
+            _vm._v(_vm._s(_vm.message)),
+            _c("br"),
+            _vm._v(_vm._s(_vm.emailmsg))
           ])
-        : _vm._e(),
+        : _c("h1", { staticClass: "p-panel__msg--title" }, [
+            _vm._v("ページを移動して下さい")
+          ]),
       _vm._v(" "),
       _vm._m(0)
     ])

@@ -2038,6 +2038,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['message'],
   data: function data() {
@@ -38205,7 +38206,9 @@ var render = function() {
         ? _c("h1", { staticClass: "p-panel__msg--title" }, [
             _vm._v(_vm._s(_vm.message))
           ])
-        : _vm._e(),
+        : _c("h1", { staticClass: "p-panel__msg--title" }, [
+            _vm._v("ページを移動して下さい")
+          ]),
       _vm._v(" "),
       _vm._m(0)
     ])

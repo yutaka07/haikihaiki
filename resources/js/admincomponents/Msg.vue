@@ -2,6 +2,7 @@
  <div class="container">
     <div class="p-panel__msg">
       <h1 class="p-panel__msg--title" v-if="message != undefined">{{message}}</h1>
+      <h1 class="p-panel__msg--title" v-else>ページを移動して下さい</h1>
       <div>
         <div class="p-panel__nav">
           <a class="p-panel__nav--link" href="top">商品一覧</a>
