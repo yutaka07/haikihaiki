@@ -2056,7 +2056,8 @@ __webpack_require__.r(__webpack_exports__);
           _this.$router.push({
             name: "Msg",
             params: {
-              message: response.data.success
+              message: response.data.success,
+              emailmsg: response.data.emailmsg
             }
           });
         })["catch"](function (error) {

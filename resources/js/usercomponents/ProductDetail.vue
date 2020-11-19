@@ -102,7 +102,7 @@ export default {
         axios
           .post("/user/home", { productid: this.id })
           .then( (response) => {
-           this.$router.push({ name: "Msg", params: {message: response.data.success} });
+           this.$router.push({ name: "Msg", params: {message: response.data.success, emailmsg:response.data.emailmsg} });
           })
           .catch(function (error) {
             console.log(error);
