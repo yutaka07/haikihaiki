@@ -173,7 +173,7 @@ select {
   background: #f6f5f4;
 }
 
-.c-btn-flat-border {
+.c-btn__flat--border {
   display: inline-block;
   padding: 5px 15px;
   text-decoration: none;
@@ -183,9 +183,10 @@ select {
   transition: 0.4s;
   margin: 15px;
   font-size: 20px;
+  background: #fff;
 }
 
-.c-btn-flat-border:hover {
+.c-btn__flat--border:hover {
   background: #1da1f2;
   color: #fff;
 }

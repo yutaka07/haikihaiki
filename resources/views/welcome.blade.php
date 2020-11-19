@@ -38,9 +38,9 @@
      <div>
        <p>新規登録　ログイン</p>
        @unless (Auth::guard('admin')->check())
-       <a class="c-btn-flat-border" href="{{ route('admin.login') }}">こちら</a>
+       <a class="c-btn__flat--border" href="{{ route('admin.login') }}">こちら</a>
        @else
-       <a class="c-btn-flat-border" href="{{ route('admin.home') }}">こちら</a>
+       <a class="c-btn__flat--border" href="{{ route('admin.home') }}">こちら</a>
        @endunless
     </div>
     </div>
@@ -49,9 +49,9 @@
     <div>
       <p>新規登録　ログイン</p>
       @unless (Auth::guard('user')->check())
-      <a class="c-btn-flat-border" href="{{ route('user.login') }}">こちら</a>
+      <a class="c-btn__flat--border" href="{{ route('user.login') }}">こちら</a>
       @else
-      <a class="c-btn-flat-border" href="{{ route('user.top') }}">こちら</a>
+      <a class="c-btn__flat--border" href="{{ route('user.top') }}">こちら</a>
       @endunless
     </div>
     </div>

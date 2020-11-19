@@ -38124,7 +38124,7 @@ var render = function() {
         _c("div", { staticClass: "p-panel__nav--top" }, [
           _c(
             "button",
-            { staticClass: "c-btn-flat-border", on: { click: _vm.search } },
+            { staticClass: "c-btn__flat--border", on: { click: _vm.search } },
             [_vm._v("検索ページに行く")]
           )
         ]),
