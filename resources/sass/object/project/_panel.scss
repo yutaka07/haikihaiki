@@ -46,6 +46,7 @@
     &__form {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: $space_m;
     }
     &__title {
