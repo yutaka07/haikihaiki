@@ -49,6 +49,17 @@ class HomeController extends Controller
     }
 
     public function update(Request $request, $id){
+
+         //バリデーション
+         $request->validate([
+            'name'     => ['required', 'string', 'max:190'],
+            'prefectures_id'     => ['required'],
+            'branch'     => ['required', 'string', 'max:190'],
+            'address'     => ['required', 'string', 'max:190'],
+            'email'    => ['required', 'string', 'email', 'max:190', 'unique:admins'],
+           
+        ]);
+
         //adminの情報更新
         $admin = Admin::find($id);
         $admin->fill($request->all())->save();
