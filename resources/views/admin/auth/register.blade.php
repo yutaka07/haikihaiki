@@ -19,7 +19,7 @@
                                 <input placeholder="コンビニ名" id="name" type="text" class="c-form__group--control @error('name') c-form__error--background @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
-                                <span  role="alert">
+                                <span role="alert">
                                     <strong class="c-form__error--text">{{ $message }}</strong>
                                 </span>
                                 @enderror
@@ -46,7 +46,7 @@
                                 <input placeholder="支店名" id="branch" type="text" class="c-form__group--control @error('branch') c-form__error--background @enderror" name="branch" value="{{ old('branch') }}" required autocomplete="branch" autofocus>
 
                                 @error('branch')
-                                <span  role="alert">
+                                <span role="alert">
                                     <strong class="c-form__error--text">{{ $message }}</strong>
                                 </span>
                                 @enderror
@@ -60,7 +60,7 @@
                                 <input placeholder="住所" id="address" type="text" class="c-form__group--control @error('address') c-form__error--background @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
 
                                 @error('address')
-                                <span  role="alert">
+                                <span role="alert">
                                     <strong class="c-form__error--text">{{ $message }}</strong>
                                 </span>
                                 @enderror
@@ -84,7 +84,7 @@
                                 <input placeholder="８文字以上の半角英数字" id="password" type="password" class="c-form__group--control @error('password') c-form__error--background @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
-                                <span  role="alert">
+                                <span role="alert">
                                     <strong class="c-form__error--text">{{ $message }}</strong>
                                 </span>
                                 @enderror
@@ -97,7 +97,7 @@
                                 <label for="password-confirm">パスワード（確認）</label>
                                 <input placeholder="パスワード（確認）" id="password-confirm" type="password" class="c-form__group--control" name="password_confirmation" required autocomplete="new-password">
                                 @error('email')
-                                <span  role="alert">
+                                <span role="alert">
                                     <strong class="c-form__error--text">{{ $message }}</strong>
                                 </span>
                                 @enderror
