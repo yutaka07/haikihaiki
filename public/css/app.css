@@ -167,7 +167,7 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 52px;
+  height: 50px;
   padding: 0.5rem;
   box-sizing: border-box;
   background: #f6f5f4;
@@ -550,6 +550,7 @@ select {
   width: 100%;
   z-index: 10000;
   position: absolute;
+  top: 50px;
 }
 
 .c-alert__feedback {
