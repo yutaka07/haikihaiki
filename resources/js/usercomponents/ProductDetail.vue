@@ -1,43 +1,43 @@
 <template>
   <div class="container">
-    <div class="row justify-content-center">
+    <div>
       <h1 class="u-title__center">商品詳細</h1>
       <div class="c-form">
         <div class="c-card">
           <div class="c-card__header">{{ product["name"] }}</div>
 
           <div class="c-card__body">
-            <div class="c-form__group row">
+            <div class="c-form__group ">
               <div class="">
                 <img class="c-form__group--img" :src="product['photofile']" alt="" />
               </div>
             </div>
 
-            <div class="c-form__group row">
+            <div class="c-form__group ">
               <div>
                 <div class="c-detail__title">コンビニ名</div>
                 <div class="c-detail__text">{{ admin["name"] }}</div>
               </div>
             </div>
-            <div class="c-form__group row">
+            <div class="c-form__group ">
               <div>
                 <div class="c-detail__title">支店名</div>
                 <div class="c-detail__text">{{ admin["branch"] }}</div>
               </div>
             </div>
-            <div class="c-form__group row">
+            <div class="c-form__group ">
               <div>
                 <div class="c-detail__title">住所</div>
                 <div class="c-detail__text">{{ admin["address"] }}</div>
               </div>
             </div>
-            <div class="c-form__group row">
+            <div class="c-form__group ">
               <div>
                 <div class="c-detail__title">商品詳細</div>
                 <div class="c-detail__text">{{ product["comment"] }}</div>
               </div>
             </div>
-            <div class="c-form__group row">
+            <div class="c-form__group ">
               <div>
                 <div class="c-detail__title">消費期限</div>
                 <div class="c-detail__text">
@@ -45,13 +45,13 @@
                 </div>
               </div>
             </div>
-            <div class="c-form__group row">
+            <div class="c-form__group ">
               <div>
                 <div class="c-detail__title">値段</div>
                 <div class="c-detail__text">¥{{ product["price"] }}</div>
               </div>
             </div>
-            <div v-if="product['buy_flg'] === 1" class="c-form__group row mb-0">
+            <div v-if="product['buy_flg'] === 1" class="c-form__group  ">
               <button
                 type="submit"
                 class="c-btn__form"
@@ -60,7 +60,7 @@
                 購入キャンセル
               </button>
             </div>
-            <div v-else class="c-form__group row mb-0">
+            <div v-else class="c-form__group  ">
               <button
                 class="c-btn__form c-btn__form--sold"
               >

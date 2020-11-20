@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row justify-content-center">
+    <div>
         <h1 class="u-title__center">商品編集</h1>
         <div class="c-form">
             <div class="c-card">
@@ -10,19 +10,19 @@
                     <form method="post" action="" enctype="multipart/form-data">
                        
 
-                        <div class="c-form__group row">
+                        <div class="c-form__group">
                            
-                            <div class="col-md-6">
+                            <div>
                                 <input placeholder="商品名" id="name" type="text" class="c-form__group--control " name="name" v-model="productname" required autocomplete="name" autofocus>
 
                                
                             </div>
                         </div>
 
-                        <div class="c-form__group row">
+                        <div class="c-form__group ">
                            
 
-                            <div class="col-md-6">
+                            <div>
                               <label for="expiration_date">消費期限</label>
                                 <input 
                                  id="expiration_date" type="datetime-local" class="c-form__group--control " name="expiration_date" :value="date" required autocomplete="expiration_date" autofocus>
@@ -30,10 +30,10 @@
                              
                             </div>
                         </div>
-                        <div class="c-form__group row">
+                        <div class="c-form__group ">
                            
 
-                            <div class="col-md-6">
+                            <div>
                             <label for="price">価格（円）</label>
                                 <input placeholder="価格" id="price" type="number" class="c-form__group--control " name="price" :value="product['price']" required autocomplete="price" autofocus>
 
@@ -41,10 +41,10 @@
                             </div>
                         </div>
 
-                        <div class="c-form__group row">
+                        <div class="c-form__group ">
                            
 
-                            <div class="col-md-6">
+                            <div>
                             <label for="comment">商品詳細</label>
                                 <textarea cols="30" rows="10"  id="comment" type="comment" class="c-form__group--textarea " name="comment" :value="product['comment']" required autocomplete="comment">
                                 </textarea>
@@ -53,9 +53,9 @@
                             </div>
                         </div>
 
-                        <div class="c-form__group row">
+                        <div class="c-form__group ">
                             
-                            <div class="col-md-6">
+                            <div>
                                 
                                 <input placeholder="ファイル"  id="photofile" type="file" class="c-form__group--control " name="photofile" required autocomplete="new-photofile">
 
@@ -65,7 +65,7 @@
 
                         
 
-                        <div class="c-form__group row mb-0">
+                        <div class="c-form__group  ">
                            
                                 <button type="submit" class="c-btn__form">
                                     更新

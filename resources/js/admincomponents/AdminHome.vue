@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="row justify-content-center">
+        <div>
             <h1 class="u-title__center">マイページ</h1>
             <div class="p-panel__background">
                 <div class="p-panel__nav">

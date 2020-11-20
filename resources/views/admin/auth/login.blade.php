@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div>
         <h1 class="u-title__center">コンビニオーナー</h1>
         <div class="c-form">
             <div class="c-card">
@@ -11,8 +11,8 @@
                 <div class="c-card__body">
                     <form method="POST" action="{{ route('admin.login') }}">
                         @csrf
-                        <div class="c-form__group row">
-                            <div class="col-md-6">
+                        <div class="c-form__group ">
+                            <div>
                                 <input  id="email" type="email" class=" c-form__group--control @error('email') c-form__error--background @enderror" placeholder="メールアドレス" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
@@ -23,10 +23,10 @@
                             </div>
                         </div>
 
-                        <div class="c-form__group row">
+                        <div class="c-form__group ">
                             
 
-                            <div class="col-md-6">
+                            <div>
                                 <input  id="password" type="password" class=" c-form__group--control @error('password') c-form__error--background @enderror" placeholder="パスワード" name="password" required autocomplete="current-password">
 
                                 @error('password')
@@ -37,8 +37,8 @@
                             </div>
                         </div>
 
-                        <div class="c-form__group row">
-                            <div class="col-md-6 offset-md-4">
+                        <div class="c-form__group ">
+                            <div>
                                 <div >
                                     <input class="c-form__group--check" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -49,7 +49,7 @@
                             </div>
                         </div>
 
-                        <div class="c-form__group row mb-0">
+                        <div class="c-form__group  ">
                             <div class="">
                                 <button type="submit" class="c-btn__form">
                                     {{ __('Login') }}

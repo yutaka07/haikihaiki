@@ -38003,7 +38003,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
+    _c("div", [
       _c("h1", { staticClass: "u-title__center" }, [_vm._v("マイページ")]),
       _vm._v(" "),
       _c("div", { staticClass: "p-panel__background" }, [
@@ -38256,7 +38256,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
+    _c("div", [
       _c("h1", { staticClass: "u-title__center" }, [_vm._v("商品詳細")]),
       _vm._v(" "),
       _c("div", { staticClass: "c-form" }, [
@@ -38266,7 +38266,7 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "c-card__body" }, [
-            _c("div", { staticClass: "c-form__group row" }, [
+            _c("div", { staticClass: "c-form__group " }, [
               _c("div", {}, [
                 _c("img", {
                   staticClass: "c-form__group--img",
@@ -38275,7 +38275,7 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "c-form__group row" }, [
+            _c("div", { staticClass: "c-form__group " }, [
               _c("div", [
                 _c("div", { staticClass: "c-detail__title" }, [
                   _vm._v("商品詳細")
@@ -38287,7 +38287,7 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "c-form__group row" }, [
+            _c("div", { staticClass: "c-form__group " }, [
               _c("div", [
                 _c("div", { staticClass: "c-detail__title" }, [
                   _vm._v("消費期限")
@@ -38299,7 +38299,7 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "c-form__group row" }, [
+            _c("div", { staticClass: "c-form__group " }, [
               _c("div", [
                 _c("div", { staticClass: "c-detail__title" }, [_vm._v("値段")]),
                 _vm._v(" "),
@@ -38310,7 +38310,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _vm.product["buy_flg"] === 0
-              ? _c("div", { staticClass: "c-form__group row mb-0" }, [
+              ? _c("div", { staticClass: "c-form__group " }, [
                   _c(
                     "a",
                     {
@@ -38341,7 +38341,7 @@ var render = function() {
               : _vm._e(),
             _vm._v(" "),
             _vm.product["buy_flg"] === 1
-              ? _c("div", { staticClass: "c-form__group row mb-0" }, [
+              ? _c("div", { staticClass: "c-form__group " }, [
                   _vm.product["buy_flg"] === 1
                     ? _c(
                         "button",
@@ -38380,7 +38380,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
+    _c("div", [
       _c("h1", { staticClass: "u-title__center" }, [_vm._v("商品編集")]),
       _vm._v(" "),
       _c("div", { staticClass: "c-form" }, [
@@ -38398,8 +38398,8 @@ var render = function() {
                 }
               },
               [
-                _c("div", { staticClass: "c-form__group row" }, [
-                  _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "c-form__group" }, [
+                  _c("div", [
                     _c("input", {
                       directives: [
                         {
@@ -38432,8 +38432,8 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "c-form__group row" }, [
-                  _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "c-form__group " }, [
+                  _c("div", [
                     _c("label", { attrs: { for: "expiration_date" } }, [
                       _vm._v("消費期限")
                     ]),
@@ -38453,8 +38453,8 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "c-form__group row" }, [
-                  _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "c-form__group " }, [
+                  _c("div", [
                     _c("label", { attrs: { for: "price" } }, [
                       _vm._v("価格（円）")
                     ]),
@@ -38475,8 +38475,8 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "c-form__group row" }, [
-                  _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "c-form__group " }, [
+                  _c("div", [
                     _c("label", { attrs: { for: "comment" } }, [
                       _vm._v("商品詳細")
                     ]),
@@ -38513,8 +38513,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "c-form__group row" }, [
-      _c("div", { staticClass: "col-md-6" }, [
+    return _c("div", { staticClass: "c-form__group " }, [
+      _c("div", [
         _c("input", {
           staticClass: "c-form__group--control ",
           attrs: {
@@ -38533,7 +38533,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "c-form__group row mb-0" }, [
+    return _c("div", { staticClass: "c-form__group  " }, [
       _c("button", { staticClass: "c-btn__form", attrs: { type: "submit" } }, [
         _vm._v(
           "\n                                    更新\n                                "
@@ -38564,7 +38564,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
+    _c("div", [
       _c("h1", { staticClass: "u-title__center" }, [_vm._v("出品した商品")]),
       _vm._v(" "),
       _c("div", { staticClass: "p-panel__background" }, [
@@ -38650,7 +38650,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
+    _c("div", [
       _c("h1", { staticClass: "u-title__center" }, [_vm._v("購入された商品")]),
       _vm._v(" "),
       _c("div", { staticClass: "p-panel__background" }, [
