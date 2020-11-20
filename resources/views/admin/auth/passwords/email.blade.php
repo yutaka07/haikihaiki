@@ -16,7 +16,7 @@
                 <div class="c-card__header">{{ __('Reset Password') }}</div>
 
                 <div class="c-card__body">
-                    
+
                     <form method="POST" action="{{ route('admin.password.email') }}">
                         @csrf
 

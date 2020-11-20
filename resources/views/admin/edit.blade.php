@@ -14,8 +14,8 @@
 
                         <div class="c-form__group ">
 
-                            <div >
-                            <label for="name">コンビニ名</label>
+                            <div>
+                                <label for="name">コンビニ名</label>
                                 <input placeholder="コンビニ名" id="name" type="text" class="c-form__group--control @error('name') c-form__error--background @enderror" name="name" value="{{ $admin->name }}" required autocomplete="name" autofocus>
 
                                 @error('name')
@@ -29,7 +29,7 @@
                         <div class="c-form__group ">
 
                             <div class="col-md-3">
-                            <label for="prefectures_id">都道府県</label>
+                                <label for="prefectures_id">都道府県</label>
                                 <select class="c-form__group--control" id="prefectures_id" name="prefectures_id">
                                     @foreach ($prefectures as $prefecture)
                                     @if ($prefecture->id === $admin->prefectures_id)
@@ -45,8 +45,8 @@
                         <div class="c-form__group ">
 
 
-                            <div >
-                            <label for="branch">支店名</label>
+                            <div>
+                                <label for="branch">支店名</label>
                                 <input placeholder="支店名" id="branch" type="text" class="c-form__group--control @error('branch') c-form__error--background @enderror" name="branch" value="{{ $admin->branch }}" required autocomplete="branch" autofocus>
 
                                 @error('branch')
@@ -59,8 +59,8 @@
                         <div class="c-form__group ">
 
 
-                            <div >
-                            <label for="address">住所</label>
+                            <div>
+                                <label for="address">住所</label>
                                 <input placeholder="住所" id="address" type="text" class="c-form__group--control @error('address') c-form__error--background @enderror" name="address" value="{{ $admin->address }}" required autocomplete="address" autofocus>
 
                                 @error('address')
@@ -74,8 +74,8 @@
                         <div class="c-form__group ">
 
 
-                            <div >
-                            <label for="email">メールアドレス</label>
+                            <div>
+                                <label for="email">メールアドレス</label>
                                 <input placeholder="メールアドレス" id="email" type="email" class="c-form__group--control" name="email" value="{{ $admin->email }}" required autocomplete="email">
 
                                 @error('email')

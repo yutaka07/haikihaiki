@@ -1,17 +1,15 @@
-
 // ==============================
 // 変数
 // ==============================
-$font-family-sans-serif: 'Noto Sans JP', sans-serif;
+$font-family-sans-serif: "Noto Sans JP", sans-serif;
 $font-color_default: #333;
 $font-color_sub1: #888888;
 $black: #333;
 $white: #fff;
-$green: #44D37E;
+$green: #44d37e;
 $blue: #1da1f2;
 $red: #ea352d;
 $gray: #f6f5f4;
-
 
 $font-size_s: 12px;
 $font-size_m: 14px;
@@ -28,22 +26,19 @@ $space_xl: 20px;
 $space_xxl: 30px;
 $space_3l: 50px;
 
-
-
-
 $breakpoints: (
-  "sm": "screen and (max-width: 414px)",
-  "md": "screen and (max-width: 768px)",
-  "lg": "screen and (max-width: 1000px)",
-  "xl": "screen and (max-width: 1200px)",
+    "sm": "screen and (max-width: 414px)",
+    "md": "screen and (max-width: 768px)",
+    "lg": "screen and (max-width: 1000px)",
+    "xl": "screen and (max-width: 1200px)"
 ) !default;
 
 @mixin mq($breakpoint: sm) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
 }
 
-.main{
-  min-height: 100vh;
+.main {
+    min-height: 100vh;
 }

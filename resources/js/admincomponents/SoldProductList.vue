@@ -13,7 +13,7 @@
                             <div v-show="product['buy_flg'] === 1" class="p-panel__sold">SOLD</div>
                              <span class="p-panel__img--text">¥{{product['price']}}</span>
                             <img class="p-panel__img--image" :src="product['photofile']" alt="商品">
-                        </div>
+                         </div>
                         <div class="p-panel__footer">
                             <span class="p-panel__footer--text">{{ product['name'] }}</span>
                         </div>
