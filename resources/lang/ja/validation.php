@@ -146,9 +146,14 @@ return [
     */
 
     'attributes' => [
+        'name' => '名前',
         'email' => 'メールアドレス',
         'password' => 'パスワード',
         'photofile' => '写真',
+        'expiration_date'=> '消費期限',
+        'price' => '価格',
+        'comment' => '商品詳細',
+
     ],
 
 ];
