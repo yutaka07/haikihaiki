@@ -4,9 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require("./bootstrap");
 
-window.Vue = require('vue');
+window.Vue = require("vue");
 
 /**
  * The following block of code may be used to automatically register your
@@ -19,7 +19,7 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('admin-home', require('./admincomponents/AdminHome.vue').default);
+Vue.component("admin-home", require("./admincomponents/AdminHome.vue").default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -27,25 +27,22 @@ Vue.component('admin-home', require('./admincomponents/AdminHome.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import Vue from 'vue';
-import router from './router';
-
-
-
+import Vue from "vue";
+import router from "./router";
 
 const app = new Vue({
-    el: '#app',
+    el: "#app",
     router
 });
 
-$('#photofile').on('change', function (e) {
+$("#photofile").on("change", function(e) {
     var reader = new FileReader();
-    reader.onload = function (e) {
-        $("#preview").attr('src', e.target.result);
-    }
+    reader.onload = function(e) {
+        $("#preview").attr("src", e.target.result);
+    };
     reader.readAsDataURL(e.target.files[0]);
 });
 
-$(function(){
-    $('.c-alert').fadeOut(5000);
+$(function() {
+    $(".c-alert").fadeOut(5000);
 });

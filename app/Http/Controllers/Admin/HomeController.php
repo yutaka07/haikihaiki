@@ -10,7 +10,7 @@ use App\Admin;
 use App\User;
 use App\Prefecture;
 use App\Product;
-use illuminate\Support\Facades\Storage; 
+use illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -35,12 +35,13 @@ class HomeController extends Controller
         $id = Auth::user()->id;
         //idと同じ商品情報取得
         $products = DB::table('products')->where('admin_id', '=', $id)->orderBy('id', 'desc')->get();
-       
+
         return view('admin.home', ['products' => $products]);
     }
 
 
-    public function edit(){
+    public function edit()
+    {
         //都道府県情報取得
         $prefectures = Prefecture::all();
         //admin情報取得
@@ -48,17 +49,17 @@ class HomeController extends Controller
         return view('admin.edit', ['admin' => $admin, 'prefectures' => $prefectures]);
     }
 
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
 
-         //バリデーション
-         $request->validate([
+        //バリデーション
+        $request->validate([
             'name'     => ['required', 'string', 'max:190'],
             'prefectures_id'     => ['required'],
             'branch'     => ['required', 'string', 'max:190'],
             'address'     => ['required', 'string', 'max:190'],
-            'email'    => ['required', 'string', 'email', 'max:190', 'unique:admins,email,'.Auth::user()->id.',id',
-            ],
-           
+            'email'    => ['required', 'string', 'email', 'max:190', 'unique:admins,email,' . Auth::user()->id . ',id',],
+
         ]);
 
         //adminの情報更新
@@ -68,7 +69,8 @@ class HomeController extends Controller
         return redirect('admin/home')->with('flash_message', '更新しました');
     }
 
-    public function top(){
+    public function top()
+    {
         //商品情報取得
         $products = DB::table('products')->join('admins', 'products.admin_id', '=', 'admins.id')->select('products.*', 'admins.prefectures_id', 'admins.branch')->orderBy('id', 'desc')->get();
         //都道府県情報取得
@@ -77,8 +79,4 @@ class HomeController extends Controller
         $admins = Admin::all();
         return view('admin.top', ['products' => $products, 'prefectures' => $prefectures, 'admins' => $admins]);
     }
-
-   
-    }
-
-
+}

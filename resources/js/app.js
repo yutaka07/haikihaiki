@@ -4,9 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require("./bootstrap");
 
-window.Vue = require('vue');
+window.Vue = require("vue");
 
 /**
  * The following block of code may be used to automatically register your
@@ -24,8 +24,7 @@ window.Vue = require('vue');
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-
-Vue.component('user-home', require('./usercomponents/UserHome.vue').default);
+Vue.component("user-home", require("./usercomponents/UserHome.vue").default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -33,16 +32,14 @@ Vue.component('user-home', require('./usercomponents/UserHome.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import Vue from 'vue';
-import router from './router1';
-
+import Vue from "vue";
+import router from "./router1";
 
 const app = new Vue({
-    el: '#app1',
-    router,
+    el: "#app1",
+    router
 });
 
-
-$(function(){
-    $('.c-alert').fadeOut(5000);
+$(function() {
+    $(".c-alert").fadeOut(5000);
 });
