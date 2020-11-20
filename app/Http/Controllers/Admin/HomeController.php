@@ -56,7 +56,8 @@ class HomeController extends Controller
             'prefectures_id'     => ['required'],
             'branch'     => ['required', 'string', 'max:190'],
             'address'     => ['required', 'string', 'max:190'],
-            'email'    => ['required', 'string', 'email', 'max:190', 'unique:admins'],
+            'email'    => ['required', 'string', 'email', 'max:190', 'unique:admins,email,'.Auth::user()->id.',id',
+            ],
            
         ]);
 
