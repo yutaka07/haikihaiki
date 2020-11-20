@@ -456,12 +456,6 @@ select {
   margin-top: 50px;
 }
 
-@media screen and (max-width: 414px) {
-  .c-form {
-    margin-top: 0px;
-  }
-}
-
 .c-form__group {
   margin: 30px;
 }
