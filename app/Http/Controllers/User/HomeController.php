@@ -65,6 +65,14 @@ class HomeController extends Controller
 
     public function update(Request $request, $id){
 
+        //バリデーション
+        $request->validate([
+            'name'     => ['required', 'string', 'max:190'],
+            'email'    => ['required', 'string', 'email', 'max:190', 'unique:users,email,'.Auth::user()->id.',id',
+            ],
+           
+        ]);
+
         $user = User::find($id);
         $user->fill($request->all())->save();
 

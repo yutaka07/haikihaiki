@@ -58,7 +58,7 @@ class ProductController extends Controller
 
       public function edit($id){
           $product = Product::find($id);
-          if($product->admin_id === Auth::user()->id && $product->buy_flg === 0){
+          if(!empty($product) && $product->admin_id === Auth::user()->id && $product->buy_flg === 0){
               //商品の消費期限の文字列を変更
               $a = mb_substr($product['expiration_date'], 0, 10);
               $b = 'T';
