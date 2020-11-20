@@ -92,7 +92,7 @@
                                     </form>
                               
                             </li>
-                            <li class="c-menu__item__regist ">
+                            <li class="c-menu__item--regist ">
                                 <a class="c-menu__link c-menu__link--regist" href="{{ route('admin.products.registproduct') }}" >
                                     出品 
                                 </a>
