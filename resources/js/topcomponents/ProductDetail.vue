@@ -141,18 +141,15 @@ export default {
                 axios
                     .post("/user/top", { productid: this.id })
                     .then(response => {
-                        console.log(response);
-                        console.log(response.data.success);
                         this.$router.push({
                             name: "Msg",
                             params: {
-                                message: response.data.success,
+                                message: "購入できたよ",
                                 emailmsg: response.data.emailmsg
                             }
                         });
                     })
                     .catch(function(error) {
-                        console.log(error);
                     });
             }
         }

@@ -102,14 +102,12 @@ export default {
                 axios
                     .post("/admin/home/delete", { productid: this.id })
                     .then(response => {
-                        console.log(response);
                         this.$router.push({
                             name: "Msg",
                             params: { message: response.data.success }
                         });
                     })
                     .catch(function(error) {
-                        console.log(error);
                     });
             }
         }
