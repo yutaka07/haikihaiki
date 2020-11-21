@@ -144,7 +144,7 @@ export default {
                         this.$router.push({
                             name: "Msg",
                             params: {
-                                message: "購入できたよ",
+                                message: response.data.success,
                                 emailmsg: response.data.emailmsg
                             }
                         });

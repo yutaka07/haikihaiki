@@ -11,13 +11,14 @@
                     <a class="p-panel__nav--link" href="home">マイページ</a>
                 </div>
             </div>
+            <div v-if="num === 100"><span>できたよ</span></div>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    props: ["message", "emailmsg"],
+    props: ["message", "emailmsg", "num"],
     data() {
         return {};
     }

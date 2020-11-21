@@ -120,8 +120,9 @@ export default {
                         this.$router.push({
                             name: "Msg",
                             params: {
-                                message: キャンセルしたよ,
-                                emailmsg: response.data.emailmsg
+                                message: response.data.success,
+                                emailmsg: response.data.emailmsg,
+                                num: 100,
                             }
                         });
                     })
