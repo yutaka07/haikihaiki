@@ -122,7 +122,7 @@ export default {
                             params: {
                                 message: response.data.success,
                                 emailmsg: response.data.emailmsg,
-                                num: 100,
+                                numerror: 100,
                             }
                         });
                     })

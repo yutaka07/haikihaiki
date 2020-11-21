@@ -11,16 +11,19 @@
                     <a class="p-panel__nav--link" href="home">マイページ</a>
                 </div>
             </div>
-            <div v-if="num === 100"><span>できたよ</span></div>
+            <div v-if="numerror = 100"><span>できたよ</span></div>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    props: ["message", "emailmsg", "num"],
+    props: ["message", "emailmsg", "numerror"],
     data() {
         return {};
+    },
+    mounted() {
+        console.log(num);
     }
 };
 </script>
