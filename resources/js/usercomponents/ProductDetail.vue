@@ -121,8 +121,7 @@ export default {
                             name: "Msg",
                             params: {
                                 message: response.data.success,
-                                emailmsg: response.data.emailmsg,
-                                numerror: 100,
+                                emailmsg: response.data.emailmsg
                             }
                         });
                     })
