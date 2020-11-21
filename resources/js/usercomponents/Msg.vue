@@ -23,7 +23,7 @@ export default {
         return {};
     },
     mounted() {
-        console.log(num);
+        console.log(this.numerror);
     }
 };
 </script>
