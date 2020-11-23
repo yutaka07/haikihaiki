@@ -1,0 +1,21 @@
+.p-error__page {
+    color: $font-color_sub1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+    &--code {
+        border-bottom: 2px solid;
+        font-size: $font-size_xl;
+        padding: 0 $space_l 0 $space_l;
+        text-align: center;
+    }
+
+    &--message {
+        font-size: $font-size_l;
+        text-align: center;
+        padding: $space_m;
+    }
+}
