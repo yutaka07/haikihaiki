@@ -2081,7 +2081,7 @@ __webpack_require__.r(__webpack_exports__);
           _this.$router.push({
             name: "Msg",
             params: {
-              message: response.data.success,
+              message: "出来た",
               emailmsg: response.data.emailmsg
             }
           });
