@@ -840,7 +840,6 @@ select {
 }
 
 .p-error__page {
-  color: #888888;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -849,6 +848,7 @@ select {
 }
 
 .p-error__page--code {
+  color: #888888;
   border-bottom: 2px solid;
   font-size: 24px;
   padding: 0 15px 0 15px;
@@ -856,6 +856,7 @@ select {
 }
 
 .p-error__page--message {
+  color: #888888;
   font-size: 20px;
   text-align: center;
   padding: 10px;

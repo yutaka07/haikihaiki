@@ -1,5 +1,4 @@
 .p-error__page {
-    color: $font-color_sub1;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -7,6 +6,7 @@
     height: 100vh;
 
     &--code {
+      color: $font-color_sub1;
         border-bottom: 2px solid;
         font-size: $font-size_xl;
         padding: 0 $space_l 0 $space_l;
@@ -14,6 +14,7 @@
     }
 
     &--message {
+      color: $font-color_sub1;
         font-size: $font-size_l;
         text-align: center;
         padding: $space_m;
