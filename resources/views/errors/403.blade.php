@@ -1,4 +1,4 @@
-@extends('minimal')
+@extends('layouts.minimal')
 
 @section('title', __('Forbidden'))
 @section('code', '403')
