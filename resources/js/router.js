@@ -4,7 +4,6 @@ import AdminHome from "./admincomponents/AdminHome.vue";
 import ProductDetail from "./admincomponents/ProductDetail.vue";
 import RegistProductList from "./admincomponents/RegistProductList.vue";
 import SoldProductList from "./admincomponents/SoldProductList.vue";
-import ProductEdit from "./admincomponents/ProductEdit.vue";
 import Msg from "./admincomponents/Msg.vue";
 
 Vue.use(VueRouter);

@@ -554,8 +554,8 @@ select {
 }
 
 .c-alert__success {
-  border: 1px solid #44D37E;
-  color: #44D37E;
+  border: 1px solid #44d37e;
+  color: #44d37e;
   font-weight: bold;
 }
 
@@ -837,6 +837,28 @@ select {
 .p-search__group__sentence {
   display: flex;
   justify-content: flex-end;
+}
+
+.p-error__page {
+  color: #888888;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.p-error__page--code {
+  border-bottom: 2px solid;
+  font-size: 24px;
+  padding: 0 15px 0 15px;
+  text-align: center;
+}
+
+.p-error__page--message {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
 }
 
 .u-title__center {

@@ -1936,6 +1936,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products"],
   methods: {
@@ -1976,8 +1984,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['message', 'emailmsg'],
+  props: ["message", "emailmsg"],
   data: function data() {
     return {};
   }
@@ -1994,6 +2004,21 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2107,9 +2132,7 @@ __webpack_require__.r(__webpack_exports__);
               emailmsg: response.data.emailmsg
             }
           });
-        })["catch"](function (error) {
-          console.log(error);
-        });
+        })["catch"](function (error) {});
       }
     }
   }
@@ -2126,6 +2149,16 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -37839,9 +37872,9 @@ var render = function() {
     _c("div", { staticClass: "p-panel__msg" }, [
       _vm.message != undefined
         ? _c("h1", { staticClass: "p-panel__msg--title" }, [
-            _vm._v(_vm._s(_vm.message)),
+            _vm._v("\n            " + _vm._s(_vm.message)),
             _c("br"),
-            _vm._v(_vm._s(_vm.emailmsg))
+            _vm._v(_vm._s(_vm.emailmsg) + "\n        ")
           ])
         : _c("h1", { staticClass: "p-panel__msg--title" }, [
             _vm._v("ページを移動して下さい")
@@ -37919,7 +37952,11 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
-                  _vm._v(_vm._s(_vm.admin["name"]))
+                  _vm._v(
+                    "\n                                " +
+                      _vm._s(_vm.admin["name"]) +
+                      "\n                            "
+                  )
                 ])
               ])
             ]),
@@ -37931,7 +37968,11 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
-                  _vm._v(_vm._s(_vm.admin["branch"]))
+                  _vm._v(
+                    "\n                                " +
+                      _vm._s(_vm.admin["branch"]) +
+                      "\n                            "
+                  )
                 ])
               ])
             ]),
@@ -37941,7 +37982,11 @@ var render = function() {
                 _c("div", { staticClass: "c-detail__title" }, [_vm._v("住所")]),
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
-                  _vm._v(_vm._s(_vm.admin["address"]))
+                  _vm._v(
+                    "\n                                " +
+                      _vm._s(_vm.admin["address"]) +
+                      "\n                            "
+                  )
                 ])
               ])
             ]),
@@ -37953,7 +37998,11 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
-                  _vm._v(_vm._s(_vm.product["comment"]))
+                  _vm._v(
+                    "\n                                " +
+                      _vm._s(_vm.product["comment"]) +
+                      "\n                            "
+                  )
                 ])
               ])
             ]),
@@ -37966,9 +38015,9 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
                   _vm._v(
-                    "\n                " +
+                    "\n                                " +
                       _vm._s(_vm.product["expiration_date"]) +
-                      "\n              "
+                      "\n                            "
                   )
                 ])
               ])
@@ -37979,7 +38028,11 @@ var render = function() {
                 _c("div", { staticClass: "c-detail__title" }, [_vm._v("値段")]),
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
-                  _vm._v("¥" + _vm._s(_vm.product["price"]))
+                  _vm._v(
+                    "\n                                ¥" +
+                      _vm._s(_vm.product["price"]) +
+                      "\n                            "
+                  )
                 ])
               ])
             ]),
@@ -37993,14 +38046,22 @@ var render = function() {
                       attrs: { type: "submit" },
                       on: { click: _vm.buyproductcancel }
                     },
-                    [_vm._v("\n              購入キャンセル\n            ")]
+                    [
+                      _vm._v(
+                        "\n                            購入キャンセル\n                        "
+                      )
+                    ]
                   )
                 ])
               : _c("div", { staticClass: "c-form__group  " }, [
                   _c(
                     "button",
                     { staticClass: "c-btn__form c-btn__form--sold" },
-                    [_vm._v("\n              商品がありません\n            ")]
+                    [
+                      _vm._v(
+                        "\n                            商品がありません\n                        "
+                      )
+                    ]
                   )
                 ])
           ])
@@ -53379,7 +53440,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('user-home', __webpack_require__(/*! ./usercomponents/UserHome.vue */ "./resources/js/usercomponents/UserHome.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component("user-home", __webpack_require__(/*! ./usercomponents/UserHome.vue */ "./resources/js/usercomponents/UserHome.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -53389,11 +53450,11 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('user-home', __webpack_requ
 
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#app1',
+  el: "#app1",
   router: _router1__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 $(function () {
-  $('.c-alert').fadeOut(5000);
+  $(".c-alert").fadeOut(5000);
 });
 
 /***/ }),
@@ -53426,7 +53487,7 @@ try {
 
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
@@ -53469,12 +53530,12 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: "hash",
   routes: [{
-    path: '/',
+    path: "/",
     name: "UserHome",
     component: _usercomponents_UserHome_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
-    path: '/productdetail/:id',
-    name: 'ProductDetail',
+    path: "/productdetail/:id",
+    name: "ProductDetail",
     component: _usercomponents_ProductDetail_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
     props: function props(route) {
       return {
@@ -53482,17 +53543,17 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
       };
     }
   }, {
-    path: '/buyproductlist',
-    name: 'BuyProductList',
+    path: "/buyproductlist",
+    name: "BuyProductList",
     component: _usercomponents_BuyProductList_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {
-    path: '/msg',
-    name: 'Msg',
+    path: "/msg",
+    name: "Msg",
     component: _usercomponents_Msg_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
     props: true
   }, {
-    path: '*',
-    redirect: '/'
+    path: "*",
+    redirect: "/"
   }],
   scrollBehavior: function scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

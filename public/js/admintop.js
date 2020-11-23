@@ -1969,6 +1969,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["id", "products", "admins"],
   data: function data() {
@@ -1976,7 +1994,7 @@ __webpack_require__.r(__webpack_exports__);
       product: [],
       admin: [],
       productid: "",
-      url: ''
+      url: ""
     };
   },
   mounted: function mounted() {
@@ -1993,21 +2011,7 @@ __webpack_require__.r(__webpack_exports__);
     } //twitterのurl
 
 
-    this.url = 'https://twitter.com/intent/tweet?url=' + location.origin + location.pathname + '/%23' + this.$route.path + '&text=' + this.product['name'] + '：' + this.product['price'] + '円';
-  },
-  methods: {
-    buyproduct: function buyproduct() {
-      if (confirm('購入しますか？')) {
-        axios.post("/user/top", {
-          productid: this.id
-        }).then(function (response) {
-          console.log(response);
-          window.location.href = '/user/home';
-        })["catch"](function (error) {
-          console.log(error);
-        });
-      }
-    }
+    this.url = "https://twitter.com/intent/tweet?url=" + location.origin + location.pathname + "/%23" + this.$route.path + "&text=" + this.product["name"] + "：" + this.product["price"] + "円";
   }
 });
 
@@ -2022,6 +2026,21 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2097,6 +2116,24 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -37879,7 +37916,11 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
-                  _vm._v(_vm._s(_vm.admin["name"]))
+                  _vm._v(
+                    "\n                                " +
+                      _vm._s(_vm.admin["name"]) +
+                      "\n                            "
+                  )
                 ])
               ])
             ]),
@@ -37891,7 +37932,11 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
-                  _vm._v(_vm._s(_vm.admin["branch"]))
+                  _vm._v(
+                    "\n                                " +
+                      _vm._s(_vm.admin["branch"]) +
+                      "\n                            "
+                  )
                 ])
               ])
             ]),
@@ -37901,7 +37946,11 @@ var render = function() {
                 _c("div", { staticClass: "c-detail__title" }, [_vm._v("住所")]),
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
-                  _vm._v(_vm._s(_vm.admin["address"]))
+                  _vm._v(
+                    "\n                                " +
+                      _vm._s(_vm.admin["address"]) +
+                      "\n                            "
+                  )
                 ])
               ])
             ]),
@@ -37913,7 +37962,11 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
-                  _vm._v(_vm._s(_vm.product["comment"]))
+                  _vm._v(
+                    "\n                                " +
+                      _vm._s(_vm.product["comment"]) +
+                      "\n                            "
+                  )
                 ])
               ])
             ]),
@@ -37925,7 +37978,11 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
-                  _vm._v(_vm._s(_vm.product["expiration_date"]))
+                  _vm._v(
+                    "\n                                " +
+                      _vm._s(_vm.product["expiration_date"]) +
+                      "\n                            "
+                  )
                 ])
               ])
             ]),
@@ -37935,7 +37992,11 @@ var render = function() {
                 _c("div", { staticClass: "c-detail__title" }, [_vm._v("値段")]),
                 _vm._v(" "),
                 _c("div", { staticClass: "c-detail__text" }, [
-                  _vm._v("¥" + _vm._s(_vm.product["price"]))
+                  _vm._v(
+                    "\n                                ¥" +
+                      _vm._s(_vm.product["price"]) +
+                      "\n                            "
+                  )
                 ])
               ])
             ]),
@@ -37954,7 +38015,9 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "c-form__group " }, [
       _c("button", { staticClass: "c-btn__form c-btn__form--sold" }, [
-        _vm._v("コンビニは購入できません")
+        _vm._v(
+          "\n                            コンビニは購入できません\n                        "
+        )
       ])
     ])
   }
@@ -37989,7 +38052,7 @@ var render = function() {
           _c(
             "button",
             { staticClass: "c-btn__flat--border", on: { click: _vm.search } },
-            [_vm._v("検索ページに行く")]
+            [_vm._v("\n                    検索ページに行く\n                ")]
           )
         ]),
         _vm._v(" "),
@@ -38024,7 +38087,11 @@ var render = function() {
                         ],
                         staticClass: "p-panel__sold"
                       },
-                      [_vm._v("SOLD")]
+                      [
+                        _vm._v(
+                          "\n                                SOLD\n                            "
+                        )
+                      ]
                     ),
                     _vm._v(" "),
                     _c("span", { staticClass: "p-panel__img--text" }, [
@@ -38121,9 +38188,9 @@ var render = function() {
                     { key: index, domProps: { value: prefecture["id"] } },
                     [
                       _vm._v(
-                        "\n                " +
+                        "\n                                " +
                           _vm._s(prefecture["name"]) +
-                          "\n              "
+                          "\n                            "
                       )
                     ]
                   )
@@ -38169,7 +38236,9 @@ var render = function() {
                     { key: index, domProps: { value: bran } },
                     [
                       _vm._v(
-                        "\n                " + _vm._s(bran) + "\n              "
+                        "\n                                " +
+                          _vm._s(bran) +
+                          "\n                            "
                       )
                     ]
                   )
@@ -38258,7 +38327,7 @@ var render = function() {
                         product["prefectures_id"] === _vm.searchprefecture &&
                         product["branch"] === _vm.searchbranch,
                       expression:
-                        "\n              product['price'] < searchprice &&\n              searchdate < product['expiration_date'] &&\n              product['prefectures_id'] === searchprefecture &&\n              product['branch'] === searchbranch\n            "
+                        "\n                            product['price'] < searchprice &&\n                                searchdate < product['expiration_date'] &&\n                                product['prefectures_id'] ===\n                                    searchprefecture &&\n                                product['branch'] === searchbranch\n                        "
                     }
                   ],
                   key: index,
@@ -38284,7 +38353,11 @@ var render = function() {
                         ],
                         staticClass: "p-panel__sold"
                       },
-                      [_vm._v("SOLD")]
+                      [
+                        _vm._v(
+                          "\n                                SOLD\n                            "
+                        )
+                      ]
                     ),
                     _vm._v(" "),
                     _c("span", { staticClass: "p-panel__img--text" }, [
@@ -53624,7 +53697,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('admin-top', __webpack_require__(/*! ./admintopcomponents/Top.vue */ "./resources/js/admintopcomponents/Top.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component("admin-top", __webpack_require__(/*! ./admintopcomponents/Top.vue */ "./resources/js/admintopcomponents/Top.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -53634,7 +53707,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('admin-top', __webpack_requ
 
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#app3',
+  el: "#app3",
   router: _router3__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 
@@ -53875,7 +53948,7 @@ try {
 
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
@@ -53916,16 +53989,16 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: "hash",
   routes: [{
-    path: '/',
+    path: "/",
     name: "Top",
     component: _admintopcomponents_Top_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
-    path: '/topsearch',
-    name: 'TopSearch',
+    path: "/topsearch",
+    name: "TopSearch",
     component: _admintopcomponents_TopSearch_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {
-    path: '/productdetail/:id',
-    name: 'ProductDetail',
+    path: "/productdetail/:id",
+    name: "ProductDetail",
     component: _admintopcomponents_ProductDetail_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
     props: function props(route) {
       return {
@@ -53933,8 +54006,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
       };
     }
   }, {
-    path: '*',
-    redirect: '/'
+    path: "*",
+    redirect: "/"
   }],
   scrollBehavior: function scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
