@@ -108,6 +108,12 @@ export default {
                         });
                     })
                     .catch(function(error) {
+                        this.$router.push({
+                            name: "Msg",
+                            params: {
+                                message: "エラーが発生して削除できませんでした。",
+                            }
+                        });
                     });
             }
         }

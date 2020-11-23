@@ -144,12 +144,18 @@ export default {
                         this.$router.push({
                             name: "Msg",
                             params: {
-                                message: "出来た",
+                                message: response.data.success,
                                 emailmsg: response.data.emailmsg
                             }
                         });
                     })
                     .catch(function(error) {
+                        this.$router.push({
+                            name: "Msg",
+                            params: {
+                                message: "エラーが発生して購入できませんでした。",
+                            }
+                        });
                     });
             }
         }

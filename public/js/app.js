@@ -2132,7 +2132,14 @@ __webpack_require__.r(__webpack_exports__);
               emailmsg: response.data.emailmsg
             }
           });
-        })["catch"](function (error) {});
+        })["catch"](function (error) {
+          this.$router.push({
+            name: "Msg",
+            params: {
+              message: "エラーが発生して購入キャンセルできませんでした。"
+            }
+          });
+        });
       }
     }
   }
