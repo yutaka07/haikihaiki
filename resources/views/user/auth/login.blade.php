@@ -11,6 +11,7 @@
                         @csrf
                         <div class="c-form__group ">
                             <div>
+                                <label for="email">メールアドレス</label>
                                 <input
                                     id="email"
                                     type="email"
@@ -35,6 +36,7 @@
 
                         <div class="c-form__group ">
                             <div>
+                                <label for="password">パスワード</label>
                                 <input
                                     id="password"
                                     type="password"

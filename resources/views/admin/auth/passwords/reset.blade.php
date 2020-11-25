@@ -20,6 +20,7 @@
 
                         <div class="c-form__group ">
                             <div>
+                                <label for="email">メールアドレス</label>
                                 <input
                                     placeholder="メールアドレス"
                                     id="email"
@@ -44,6 +45,7 @@
 
                         <div class="c-form__group ">
                             <div>
+                                <label for="password">パスワード</label>
                                 <input
                                     placeholder="パスワード"
                                     id="password"

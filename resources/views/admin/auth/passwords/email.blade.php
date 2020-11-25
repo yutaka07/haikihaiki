@@ -20,6 +20,7 @@
 
                         <div class="c-form__group ">
                             <div>
+                                <label for="email">メールアドレス</label>
                                 <input
                                     placeholder="メールアドレス"
                                     id="email"
