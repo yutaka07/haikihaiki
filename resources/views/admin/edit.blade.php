@@ -48,8 +48,8 @@
                                     id="prefectures_id"
                                     name="prefectures_id"
                                 >
-                                    @foreach ($prefectures as $prefecture) @if
-                                    ($prefecture->id === $admin->prefectures_id)
+                                    @foreach ($prefectures as $prefecture) 
+                                    @if($prefecture->id === $admin->prefectures_id)
                                     <option
                                         value="{{ $prefecture->id }}"
                                         selected
@@ -60,7 +60,8 @@
                                         value="{{ $prefecture->id }}"
                                         >{{ $prefecture->name }}</option
                                     >
-                                    @endif @endforeach
+                                    @endif 
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
