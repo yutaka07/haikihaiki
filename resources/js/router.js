@@ -39,12 +39,6 @@ export default new VueRouter({
             component: SoldProductList
         },
         {
-            path: "/productedit/:id",
-            name: "ProductEdit",
-            component: ProductEdit,
-            props: route => ({ id: Number(route.params.id) })
-        },
-        {
             path: "*",
             redirect: "/"
         }
