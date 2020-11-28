@@ -54251,15 +54251,6 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     name: "SoldProductList",
     component: _admincomponents_SoldProductList_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
   }, {
-    path: "/productedit/:id",
-    name: "ProductEdit",
-    component: ProductEdit,
-    props: function props(route) {
-      return {
-        id: Number(route.params.id)
-      };
-    }
-  }, {
     path: "*",
     redirect: "/"
   }],
