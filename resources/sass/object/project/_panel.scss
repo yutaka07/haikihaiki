@@ -90,6 +90,7 @@
         &--text {
             font-size: $font-size_xl;
             color: $white;
+            vertical-align: middle;
             @include mq() {
             font-size: $font-size_m;
         }
