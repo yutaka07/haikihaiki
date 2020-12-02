@@ -670,15 +670,13 @@ select {
 }
 
 .p-panel__sold--text {
-  font-size: 20px;
+  font-size: 24px;
   color: #fff;
-  vertical-align: middle;
 }
 
 @media screen and (max-width: 414px) {
   .p-panel__sold--text {
     font-size: 14px;
-    vertical-align: initial;
   }
 }
 
