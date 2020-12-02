@@ -88,7 +88,7 @@
         font-size: $font-size_l;
         opacity: 0.8;
         @include mq() {
-            font-size: $font-size_default;
+            font-size: $font-size_m;
         }
     }
     &__img {

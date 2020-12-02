@@ -38259,7 +38259,7 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                                SOLD\n                            "
+                          "\n                                売り切れ\n                            "
                         )
                       ]
                     ),
@@ -38525,7 +38525,7 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                                SOLD\n                            "
+                          "\n                                売り切れ\n                            "
                         )
                       ]
                     ),
