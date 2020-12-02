@@ -2073,6 +2073,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["products", "prefectures", "admins"],
   methods: {
@@ -38074,7 +38075,7 @@ var render = function() {
                 [
                   _c("div", { staticClass: "p-panel__img" }, [
                     _c(
-                      "span",
+                      "div",
                       {
                         directives: [
                           {
@@ -38086,7 +38087,11 @@ var render = function() {
                         ],
                         staticClass: "p-panel__sold"
                       },
-                      [_vm._v("SOLD")]
+                      [
+                        _vm._v(
+                          "\n                                SOLD\n                            "
+                        )
+                      ]
                     ),
                     _vm._v(" "),
                     _c("span", { staticClass: "p-panel__img--text" }, [
