@@ -671,7 +671,6 @@ select {
 
 @media screen and (max-width: 414px) {
   .p-panel__sold {
-    font-size: 14px;
     height: 20%;
   }
 }
@@ -684,7 +683,7 @@ select {
 
 @media screen and (max-width: 414px) {
   .p-panel__sold--text {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 

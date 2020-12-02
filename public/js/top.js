@@ -38258,9 +38258,9 @@ var render = function() {
                         staticClass: "p-panel__sold"
                       },
                       [
-                        _vm._v(
-                          "\n                                sold\n                            "
-                        )
+                        _c("span", { staticClass: "p-panel__sold--text" }, [
+                          _vm._v("SOLD")
+                        ])
                       ]
                     ),
                     _vm._v(" "),
@@ -38524,9 +38524,9 @@ var render = function() {
                         staticClass: "p-panel__sold"
                       },
                       [
-                        _vm._v(
-                          "\n                                sold\n                            "
-                        )
+                        _c("span", { staticClass: "p-panel__sold--text" }, [
+                          _vm._v("SOLD")
+                        ])
                       ]
                     ),
                     _vm._v(" "),
