@@ -38087,11 +38087,7 @@ var render = function() {
                         ],
                         staticClass: "p-panel__sold"
                       },
-                      [
-                        _vm._v(
-                          "\n                                SOLD\n                            "
-                        )
-                      ]
+                      [_c("span", [_vm._v("SOLD")])]
                     ),
                     _vm._v(" "),
                     _c("span", { staticClass: "p-panel__img--text" }, [
