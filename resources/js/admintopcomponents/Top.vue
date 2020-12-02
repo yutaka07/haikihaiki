@@ -17,12 +17,11 @@
                             class="p-panel__body"
                         >
                             <div class="p-panel__img">
-                                <div
+                                <span
                                     v-show="product['buy_flg'] === 1"
                                     class="p-panel__sold"
+                                    >SOLD</span
                                 >
-                                    <span>SOLD</span>
-                                </div>
                                 <span class="p-panel__img--text"
                                     >¥{{ product["price"] }}</span
                                 >
