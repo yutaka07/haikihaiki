@@ -83,6 +83,10 @@
         height: 15%;
         text-align: center;
         opacity: 0.8;
+        @include mq() {
+            font-size: $font-size_m;
+            height: 20%;
+        }
         &--text {
             font-size: $font-size_xl;
             color: $white;

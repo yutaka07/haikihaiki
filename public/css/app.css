@@ -669,6 +669,13 @@ select {
   opacity: 0.8;
 }
 
+@media screen and (max-width: 414px) {
+  .p-panel__sold {
+    font-size: 14px;
+    height: 20%;
+  }
+}
+
 .p-panel__sold--text {
   font-size: 24px;
   color: #fff;
