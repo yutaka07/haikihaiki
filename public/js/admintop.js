@@ -38089,7 +38089,7 @@ var render = function() {
                       },
                       [
                         _c("span", { staticClass: "p-panel__sold--text" }, [
-                          _vm._v("sold")
+                          _vm._v("SOLD")
                         ])
                       ]
                     ),
