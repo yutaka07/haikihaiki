@@ -38089,7 +38089,7 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                                SOLD\n                            "
+                          "\n                                sold\n                            "
                         )
                       ]
                     ),
