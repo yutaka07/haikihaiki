@@ -8,7 +8,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}" />
 
         <title>{{ config("app.name", "Laravel") }}</title>
-        <meta name="description" content="haikishareのマイページです。" />
+        <meta name="description" content="コンビニの安売りのマイページです。" />
         <meta name="keywords" content="コンビニ,お弁当,安い,廃棄" />
 
         <!-- Scripts -->
@@ -146,7 +146,7 @@
             <main class="main">
                 @yield('content')
             </main>
-            <footer class="l-footer">©︎haikishare.inc</footer>
+            <footer class="l-footer">©︎haikihaiki.inc</footer>
         </div>
     </body>
 </html>

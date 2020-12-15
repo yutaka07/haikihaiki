@@ -10,7 +10,7 @@
         <title>{{ config("app.name", "Laravel") }}</title>
         <meta
             name="description"
-            content="haikishareのコンビニオーナーのマイページです。"
+            content="コンビニの安売りのコンビニオーナーのマイページです。"
         />
         <meta name="keywords" content="コンビニ,お弁当,安い,廃棄" />
 
@@ -161,7 +161,7 @@
             <main class="main">
                 @yield('content')
             </main>
-            <footer class="l-footer">©︎haikishare.inc</footer>
+            <footer class="l-footer">©︎haikihaiki.inc</footer>
         </div>
     </body>
 </html>

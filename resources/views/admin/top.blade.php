@@ -10,7 +10,7 @@
         <title>{{ config("app.name", "Laravel") }}</title>
         <meta
             name="description"
-            content="haikishareのコンビニオーナーの商品一覧ページです。"
+            content="コンビニの安売りのコンビニオーナーの商品一覧ページです。"
         />
         <meta name="keywords" content="コンビニ,お弁当,安い,廃棄" />
 
@@ -146,7 +146,7 @@
                     ></router-view>
                 </div>
             </main>
-            <footer class="l-footer">©︎haikishare.inc</footer>
+            <footer class="l-footer">©︎haikihaiki.inc</footer>
         </div>
     </body>
 </html>

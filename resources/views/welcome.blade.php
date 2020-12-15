@@ -4,10 +4,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>HAIKISHARE</title>
+        <title>コンビニの安売り</title>
         <meta
             name="description"
-            content="haikishareでコンビニの廃棄する予定のおにぎり、パン、お弁当、お菓子などたくさんの商品をお安く購入できます。"
+            content="コンビニの安売りでコンビニの廃棄する予定のおにぎり、パン、お弁当、お菓子などたくさんの商品をお安く購入できます。"
         />
         <meta name="keywords" content="コンビニ,お弁当,安い,廃棄" />
 
@@ -26,7 +26,7 @@
 
     <body>
         <header class="l-header">
-            <h1 class="p-top__title">HAIKISHARE</h1>
+            <h1 class="p-top__title">コンビニの安売り</h1>
         </header>
         <section class="c-hero c-contapner__fluid js-float-menu-target">
             <h2 class="c-hero__title">
@@ -34,7 +34,7 @@
             </h2>
         </section>
         <div class="p-top__sentence">
-            <h3 class="p-top__container__title">HAIKISHAREとは</h3>
+            <h3 class="p-top__container__title">コンビニの安売りとは</h3>
             <p>
                 廃棄する予定だったコンビニの商品を安く買うことができるサービスです！
             </p>
@@ -79,6 +79,6 @@
                 </div>
             </div>
         </div>
-        <footer class="l-footer">©︎haikishare.inc</footer>
+        <footer class="l-footer">©︎haikihaiki.inc</footer>
     </body>
 </html>
